@@ -1,0 +1,43 @@
+
+
+{
+    "items": [
+        {
+            "text": "Facebook",
+            "link": "/",
+            "icon": "ic:baseline-facebook",
+            "category": "social"
+        },
+        {
+            "text": "X",
+            "link": "/",
+            "icon": "hugeicons:new-twitter-ellipse",
+            "category": "social"
+
+        },
+        {
+            "text": "Discord",
+            "link": "/",
+            "icon": "ic:baseline-discord",
+            "category": "social"
+        },
+        {
+            "text": "Github",
+            "link": "/",
+            "icon": "mdi:github",
+            "category": "other"
+        },
+        {
+            "text": "T&C",
+            "link": "/",
+            "icon": "ph:read-cv-logo",
+            "category": "other"
+        },
+        {
+            "text": "Privacy",
+            "link": "/",
+            "icon": "ic:baseline-privacy-tip",
+            "category": "other"
+        }
+    ]
+}

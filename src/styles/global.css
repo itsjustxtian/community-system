@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+.nav-links {
+    width: 100%;
+}
+
+.nav-links a {
+    display: block;
+    text-align: center;
+    font-size: 1.2rem;
+    color: white;
+  }
+
+  .nav-links a.selected {
+    text-shadow: 0px 0px 10px #9DF3F3;
+  }
+  
+  .nav-links a:hover,
+  .nav-links a:focus {
+    text-shadow: 0px 0px 10px #9DF3F3;
+  }
+  
+  .expanded {
+    display: unset;
+  }
+  
+  @media screen and (min-width: 636px) {
+    .nav-links {
+      display: block;
+      position: static;
+      width: auto;
+      background: none;
+    }
+  
+    .nav-links a {
+      display: inline-block;
+      padding: 15px 20px;
+    }
+  
+  }

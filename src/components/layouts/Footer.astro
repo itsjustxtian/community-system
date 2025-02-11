@@ -1,0 +1,46 @@
+---
+import footer from './data/footerlinks.json'
+import { Icon } from 'astro-icon/components'
+---
+
+<div class="flex bg-black text-white w-full h-[150px] px-[100px] py-[20px] justify-between">
+    <div id="Column1">
+        <p>This website is not affiliated with Kuro. This is purely for personal purposes.</p>
+    </div>
+    <div id="Column2" class="flex justify-end gap-10">
+        <div id="Column2-1" class="">
+            <h2 class="font-semibold mb-2">Social Links</h1>
+                <ul class="">
+                    {footer.items.map((item) => (
+                        <li>
+                            {item.category === "social" && (<a 
+                            href={item.link}
+                            class="flex items-center gap-1"
+                            >
+                                <Icon name={item.icon}></Icon>
+                                {item.text}
+                                
+                            </a>)}
+                        </li>
+                    ))}
+                </ul>
+        </div>
+        <div id="Column2-2">
+            <h2 class="font-semibold mb-2">Other Links</h1>
+                <ul class="">
+                    {footer.items.map((item) => (
+                        <li>
+                            {item.category === "other" && (<a 
+                            href={item.link}
+                            class="flex items-center gap-1"
+                            >
+                                <Icon name={item.icon}></Icon>
+                                {item.text}
+                                
+                            </a>)}
+                        </li>
+                    ))}
+                </ul>
+        </div>
+    </div>
+</div>

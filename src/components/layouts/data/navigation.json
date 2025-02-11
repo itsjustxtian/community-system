@@ -1,0 +1,29 @@
+{
+    "items": [
+        {
+            "text": "Home",
+            "link": "/",
+            "enable-dropdown": false,
+            "dropdown": []
+        },
+        {
+            "text": "Characters",
+            "link": "/characters",
+            "enable-dropdown": false,
+            "dropdown": []
+        },
+        {
+            "text": "Weapons",
+            "link": "/weapons",
+            "enable-dropdown": false,
+            "dropdown": []
+        },
+        {
+            "text": "Planner",
+            "link": "/planner",
+            "enable-dropdown": false,
+            "dropdown": []
+        }
+    ]
+
+}
