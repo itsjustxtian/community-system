@@ -25,10 +25,10 @@
             "text": "Github",
             "link": "/",
             "icon": "mdi:github",
-            "category": "other"
+            "category": "social"
         },
         {
-            "text": "T&C",
+            "text": "Terms & Conditions",
             "link": "/",
             "icon": "ph:read-cv-logo",
             "category": "other"
