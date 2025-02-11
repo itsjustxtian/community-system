@@ -1,14 +1,50 @@
 ---
 import Layout from "../layouts/Layout.astro"
+import { Image } from "astro:assets";
+import wutheringlogo from '../assets/images/Wuthering-Waves-Logo.png'
+import data from './layouts/data/homedata.json'
 ---
 
-<div class="home">
-    Home
+<div id="homecontent" class="home bg-[#1E1E1E]">
+    <Image src={wutheringlogo} alt="Wuthering Waves Logo"/>
+    <div class="flex gap-x-[20px] justify-center">
+        {data.items.map((item) => (
+            <div class="flex-col bg-[#606265] boxes">
+                <h2 class="">{item.header}</h2>
+                <p>{item.description}</p>
+            </div>
+        ))
+        }
+    </div>
 </div>
 
 <style>
     .home {
+        display: table-cell;
         height: 100%;
         width: 100%;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+    }
+    .boxes {
+        width: 23%;
+        align-items: center;
+        justify-items: center;
+        font-family: "Poppins", sans-serif;
+        color: white;
+        border-radius: 10px;
+        font-size: smaller;
+        padding: 2rem;
+    }
+    .boxes h2{
+        padding-bottom: 20px;
+        font-size: large;
+        font-weight: normal;
+    }
+    .boxes p{
+        font-weight: lighter;
+        text-align: center;
     }
 </style>
