@@ -1,12 +1,23 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import MySelect from "@/components/MySelect"
 
+const filters = [
+    {
+        name: "Ascending",
+        value: "ascending"
+    },
+    {
+        name: "Descending",
+        value: "descending"
+    }
+]
 ---
 
 <Layout title="Characters" pageTitle="Characters" description="View character information here.">
     <div class="characters-content">
         <div id="character-filters" class="character-filters">
-
+            <MySelect client:load placeholder="Sort By" data={filters}/>
         </div>
         <div id="character-list">
 
@@ -16,11 +27,17 @@ import Layout from "../layouts/Layout.astro";
 
 <style>
     .characters-content {
+        height: 100vh;
+        width: 100%;
         padding-top: 75px;
         background-color: #1E1E1E;
         color: white;
     }
     .character-filters {
-        height: 50px;
+        height: 70px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 20px;
     }
 </style>
