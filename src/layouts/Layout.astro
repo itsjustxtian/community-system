@@ -4,7 +4,9 @@ import Footer from "../components/layouts/Footer.astro"
 import '../styles/global.css'
 import '@fontsource-variable/inter';
 import '@fontsource/poppins';
+import { ClientRouter } from "astro:transitions";
 
+const {title, pageTitle, description} = Astro.props;
 ---
 
 <!doctype html>
@@ -14,7 +16,11 @@ import '@fontsource/poppins';
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<meta property="og:url" content={Astro.url} />
+		<meta property="og:description" content={description} />
+		<meta property="og:title" content={title} />
+		<title>{pageTitle}</title>
+		<ClientRouter/>
 	</head>
 	<body>
 		<Header />

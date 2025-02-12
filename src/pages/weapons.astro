@@ -1,0 +1,29 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+
+---
+
+<Layout title="Weapons" pageTitle="Weapons" description="View weapon information here.">
+    <div class="weapon-content">
+        <div id="weapon-filters" class="weapon-filters">
+            <div id="sort-by-filter">
+                <button class="bg-white">Sort By</button>
+            </div>
+        </div>
+        <div id="weapon-list">
+
+        </div>
+    </div>
+</Layout>
+
+<style>
+    .weapon-content {
+        padding-top: 75px;
+        background-color: #1E1E1E;
+        color: white;
+    }
+    .weapon-filters {
+        height: 50px;
+    }
+</style>

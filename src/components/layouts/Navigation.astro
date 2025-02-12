@@ -8,7 +8,7 @@ import navigation from './data/navigation.json';
       <li class="">
         <a 
           href={`${item.link}`}
-          class={`nav-link ${Astro.url?.pathname === item.link ? "selected font-semibold" : ""}`}
+          class={`transition nav-link ${Astro.url?.pathname === item.link ? "selected font-semibold" : ""}`}
         >
           {item.text}
         </a>

@@ -8,19 +8,19 @@
         },
         {
             "text": "Characters",
-            "link": "/characters/",
+            "link": "/characters",
             "enable-dropdown": false,
             "dropdown": []
         },
         {
             "text": "Weapons",
-            "link": "/weapons/",
+            "link": "/weapons",
             "enable-dropdown": false,
             "dropdown": []
         },
         {
             "text": "Planner",
-            "link": "/planner/",
+            "link": "/planner",
             "enable-dropdown": false,
             "dropdown": []
         }

@@ -1,17 +1,26 @@
 ---
 import Layout from "../layouts/Layout.astro";
 
-
 ---
 
-<Layout>
+<Layout title="Characters" pageTitle="Characters" description="View character information here.">
     <div class="characters-content">
-        This is a layout.
+        <div id="character-filters" class="character-filters">
+
+        </div>
+        <div id="character-list">
+
+        </div>
     </div>
 </Layout>
 
 <style>
     .characters-content {
         padding-top: 75px;
+        background-color: #1E1E1E;
+        color: white;
+    }
+    .character-filters {
+        height: 50px;
     }
 </style>
