@@ -1,23 +1,39 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import MySelect from "@/components/MySelect"
+import MySelect from "@/components/shadcn/MySelect"
+import FilterToggles from "@/components/shadcn/ElementFilterToggles"
 
-const filters = [
+import aero from "@/assets/images/element-types-icons/element_aero.png"
+import { Image } from "astro:assets";
+
+
+const sortfilters = [
     {
-        name: "Ascending",
-        value: "ascending"
+        name: "Sort By Name (A-Z)",
+        value: "name-az"
     },
     {
-        name: "Descending",
-        value: "descending"
+        name: "Sort By Name (Z-A)",
+        value: "name-za"
+    },
+    {
+        name: "Sort By Release (New to Old)",
+        value: "release-new-old"
+    },
+    {
+        name: "Sort By Release (Old to New)",
+        value: "release-old-new"
     }
 ]
+
+
 ---
 
 <Layout title="Characters" pageTitle="Characters" description="View character information here.">
     <div class="characters-content">
-        <div id="character-filters" class="character-filters">
-            <MySelect client:load placeholder="Sort By" data={filters}/>
+        <div id="character-filters" class="character-filters items-center gap-2">
+            <MySelect client:load placeholder="Sort By" data={sortfilters}/>
+            <FilterToggles client:load/>
         </div>
         <div id="character-list">
 
@@ -37,6 +53,7 @@ const filters = [
         height: 70px;
         width: 100%;
         display: flex;
+        flex-direction: row;
         justify-content: center;
         padding: 20px;
     }
