@@ -1,11 +1,11 @@
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group"
 
-import aero from "@/assets/images/element-types-icons/element_aero.png"
-import electro from "@/assets/images/element-types-icons/element_electro.png"
-import fusion from "@/assets/images/element-types-icons/element_fusion.png"
-import glacio from "@/assets/images/element-types-icons/element_glacio.png"
-import havoc from "@/assets/images/element-types-icons/element_havoc.png"
-import spectro from "@/assets/images/element-types-icons/element_spectro.png"
+import aero from "@/assets/images/element-types-icons/aero1.png"
+import electro from "@/assets/images/element-types-icons/electro1.png"
+import fusion from "@/assets/images/element-types-icons/fusion1.png"
+import glacio from "@/assets/images/element-types-icons/glacio1.png"
+import havoc from "@/assets/images/element-types-icons/havoc1.png"
+import spectro from "@/assets/images/element-types-icons/spectro1.png"
 
 
 const elementfilters = [
@@ -47,13 +47,13 @@ const elementfilters = [
   }
 ]
 
-const FilterToggles = ({  }) => {
+const ElementFilterToggles = ({  }) => {
   return (
     <div className='flex'>
-      <ToggleGroup type="multiple" className="bg-[#DBD8E0] h-[50px] px-2 rounded-sm">
+      <ToggleGroup type="multiple" className="bg-transparent h-[50px] px-2 rounded-sm">
         {elementfilters.map((item => (<ToggleGroupItem value={item.element}
-          className={`data-[state=on]:bg-[#606265] data-[state=on]:shadow-lg  data-[state=on]:shadow-white/50  data-[state=off]:`}>
-            <img src={item.src} alt={item.alt}/>
+          className={`data-[state=on]:bg-[#606265] data-[state=on]:  data-[state=on]:  data-[state=off]:`}>
+            <img src={item.src} alt={item.alt} width="34px"/>
           </ToggleGroupItem>
         )))}
       </ToggleGroup>
@@ -61,4 +61,4 @@ const FilterToggles = ({  }) => {
   )
 }
 
-export default FilterToggles
+export default ElementFilterToggles

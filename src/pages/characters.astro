@@ -1,7 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import MySelect from "@/components/shadcn/MySelect"
-import FilterToggles from "@/components/shadcn/ElementFilterToggles"
+import ElementFilterToggles from "@/components/shadcn/ElementFilterToggles"
+import WeaponFilterToggles from "@/components/shadcn/WeaponFilterToggles";
 
 import aero from "@/assets/images/element-types-icons/element_aero.png"
 import { Image } from "astro:assets";
@@ -31,9 +32,10 @@ const sortfilters = [
 
 <Layout title="Characters" pageTitle="Characters" description="View character information here.">
     <div class="characters-content">
-        <div id="character-filters" class="character-filters items-center gap-2">
+        <div id="character-filters" class="character-filters items-center">
             <MySelect client:load placeholder="Sort By" data={sortfilters}/>
-            <FilterToggles client:load/>
+            <ElementFilterToggles client:load/>
+            <WeaponFilterToggles client:load/>
         </div>
         <div id="character-list">
 
