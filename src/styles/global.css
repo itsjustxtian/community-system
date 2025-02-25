@@ -145,3 +145,28 @@
     @apply bg-background text-foreground;
     }
 }
+
+.icon-card #character-icons {
+  -webkit-mask-image: linear-gradient(black 75%, transparent 100%);
+  mask-image: linear-gradient(black 75%, transparent 100%);
+  object-fit: cover;
+  padding-top: 10px;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+.icon-card #character-icons:hover {
+  transform: scale(110%);
+  transition: 0.3s ease;
+}
+
+.icon-card #character-icons:not(:hover) {
+  transform: scale(100%);
+  transition: 0.3s ease;
+}
+
+.icon-card #name{
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+}

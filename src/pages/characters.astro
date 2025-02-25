@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import MySelect from "@/components/shadcn/MySelect"
 import ElementFilterToggles from "@/components/shadcn/ElementFilterToggles"
 import WeaponFilterToggles from "@/components/shadcn/WeaponFilterToggles";
+import CharacterIcons from "@/components/shadcn/CharacterIcons";
 
 import aero from "@/assets/images/element-types-icons/element_aero.png"
 import { Image } from "astro:assets";
@@ -38,7 +39,7 @@ const sortfilters = [
             <WeaponFilterToggles client:load/>
         </div>
         <div id="character-list">
-
+            <CharacterIcons client:load/>
         </div>
     </div>
 </Layout>
@@ -48,6 +49,8 @@ const sortfilters = [
         height: 100vh;
         width: 100%;
         padding-top: 75px;
+        padding-left: 20vw;
+        padding-right: 20vw;
         background-color: #1E1E1E;
         color: white;
     }
@@ -58,5 +61,9 @@ const sortfilters = [
         flex-direction: row;
         justify-content: center;
         padding: 20px;
+    }
+    .character-list {
+        width: fit-content;
+        height: fit-content;
     }
 </style>
