@@ -33,7 +33,7 @@ const weaponfilters = [
         alt: "Sword",
         customshadow: "[0_0px_5px_rgba(85,255,181,1)]"
     },
-  ]
+]
   
 const WeaponFilterToggles = () => {
   return (
