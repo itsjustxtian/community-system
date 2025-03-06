@@ -41,6 +41,7 @@ import yangyang from "@/assets/images/character-icons-small/yangyang-icon.webp"
 import yinlin from "@/assets/images/character-icons-small/yinlin-icon.webp"
 import yuanwu from "@/assets/images/character-icons-small/yuanwu-icon.webp"
 import zhezhi from "@/assets/images/character-icons-small/zhezhi-icon.webp"
+import { useState } from "react"
 
 const sortfilters = [
     {
@@ -279,6 +280,14 @@ const characterlist = [
 ]
 
 const CharactersContent = () => {
+    const [selectedFilter, setSelectedFilter] = useState([]);
+
+    const filteredObjects = characterlist.filter((character) =>
+        selectedFilter.length !== 0 ? selectedFilter.includes(character.element) || selectedFilter.includes(character.weapon) : true
+    );
+
+    console.log(selectedFilter);
+
   return (
     <div>
         <div id="character-filters" className="character-filters flex items-center">
@@ -294,26 +303,36 @@ const CharactersContent = () => {
                 </SelectContent>
             </Select>
 
-            <ToggleGroup type="multiple" className="bg-transparent h-[50px] px-2 rounded-sm">
-                {elementfilters.map((item => (<ToggleGroupItem value={item.element} title={item.alt}
-                    className={`data-[state=on]:bg-[#606265] data-[state=on]:  data-[state=on]:  data-[state=off]:`}>
-                    <img src={item.src} alt={item.alt} width="34px"/>
+            <ToggleGroup 
+                type="multiple" 
+                className="bg-transparent h-[50px] px-2 rounded-sm"
+                onValueChange={(value) => setSelectedFilter(value)}
+                >
+                {elementfilters.map((item) => (
+                    <ToggleGroupItem value={item.element} title={item.alt}
+                        className={`data-[state=on]:bg-[#606265] data-[state=on]:  data-[state=on]:  data-[state=off]:`}>
+                            <img src={item.src} alt={item.alt} width="34px"/>
                     </ToggleGroupItem>
-                )))}
+                ))}
             </ToggleGroup>
 
-            <ToggleGroup type="multiple" className="bg-transparent h-[50px] px-2 rounded-sm">
-                            {weaponfilters.map((item => (<ToggleGroupItem value={item.weapon} title={item.alt}
-                            className={`data-[state=on]:bg-[#606265] data-[state=on]:  data-[state=on]:  data-[state=off]:`}>
-                                <img src={item.src} alt={item.alt} width="34px"/>
-                            </ToggleGroupItem>
-                            )))}
+            <ToggleGroup 
+                type="multiple" 
+                className="bg-transparent h-[50px] px-2 rounded-sm"
+                onValueChange={(value) => setSelectedFilter(value)}
+                >
+                {weaponfilters.map((item) => (
+                    <ToggleGroupItem value={item.weapon} title={item.alt}
+                        className={`data-[state=on]:bg-[#606265] data-[state=on]:  data-[state=on]:  data-[state=off]:`}>
+                            <img src={item.src} alt={item.alt} width="34px"/>
+                </ToggleGroupItem>
+                ))}
             </ToggleGroup>
         </div>
 
         <div id="character-list" className="grid grid-cols-9">
-            {characterlist.map((character,i) => (
-                <button className="icon-card transition max-w-[100px] h-[150px] bg-linear-to-t from-[#606265]/80 hover:from-[#606265] from-5% to-transparent to-50% rounded-lg">
+            {filteredObjects.map((character,i) => (
+                <button className="relative icon-card transition max-w-[100px] h-[150px] bg-linear-to-t from-[#606265]/80 hover:from-[#606265] from-5% to-transparent to-50% rounded-lg">
                     <div 
                     title={character.name}
                     className={`rounded-lg h-[125px]
@@ -325,7 +344,7 @@ const CharactersContent = () => {
                         character.element === 'spectro' ? "bg-linear-to-t from-[#F8E56C]/80 hover:from-[#F8E56C] transition from-10% to-transparent to-70%":
                         ""
                     }`}>
-                        <img src={character.charactericon.src} alt={character.name} id='character-icons' className={character.name.includes("Rover") ? 'translate-y-4' : 'translate-y-3'}/>
+                        <img src={character.charactericon.src} alt={character.name} id='character-icons' className={character.name.includes("Rover") ? 'translate-y-7 scale-135': 'translate-y-3'}/>
                     </div>
                     <p id="name" className="">{character.name}</p>
                 </button>
