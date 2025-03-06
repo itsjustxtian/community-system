@@ -1,31 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import CharactersContent from "@/components/shadcn/CharactersContent";
-
-import aero from "@/assets/images/element-types-icons/element_aero.png"
-import { Image } from "astro:assets";
-
-
-const sortfilters = [
-    {
-        name: "Sort By Name (A-Z)",
-        value: "name-az"
-    },
-    {
-        name: "Sort By Name (Z-A)",
-        value: "name-za"
-    },
-    {
-        name: "Sort By Release (New to Old)",
-        value: "release-new-old"
-    },
-    {
-        name: "Sort By Release (Old to New)",
-        value: "release-old-new"
-    }
-]
-
-
 ---
 
 <Layout title="Characters" pageTitle="Characters" description="View character information here.">

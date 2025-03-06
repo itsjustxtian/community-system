@@ -33,6 +33,7 @@ import jinhsi from "@/assets/images/character-icons-small/jinhsi-icon.webp"
 import jiyan from "@/assets/images/character-icons-small/jiyan-icon.webp"
 import lingyang from "@/assets/images/character-icons-small/lingyang-icon.webp"
 import mortefi from "@/assets/images/character-icons-small/mortefi-icon.webp"
+import rover from "@/assets/images/character-icons-small/rover-icon.svg"
 import sanhua from "@/assets/images/character-icons-small/sanhua-icon.webp"
 import taoqi from "@/assets/images/character-icons-small/taoqi-icon.webp"
 import verina from "@/assets/images/character-icons-small/verina-icon.webp"
@@ -133,114 +134,147 @@ const characterlist = [
         element: "aero",
         weapon: "pistols",
         charactericon: aalto,
+        version: 1.0,
     },
     {
         name: "Baizhi",
         element: "glacio",
         weapon: "rectifier",
         charactericon: baizhi,
+        version: 1.0,
     },
     {
         name: "Calcharo",
         element: "electro",
         weapon: "broadblade",
         charactericon: calcharo,
+        version: 1.0,
     },
     {
         name: "Changli",
         element: "fusion",
         weapon: "sword",
         charactericon: changli,
+        version: 1.1,
     },
     {
         name: "Chixia",
         element: "fusion",
         weapon: "pistols",
         charactericon: chixia,
+        version: 1.0,
     },
     {
         name: "Danjin",
         element: "havoc",
         weapon: "sword",
         charactericon: danjin,
+        version: 1.0,
     },
     {
         name: "Encore",
         element: "fusion",
         weapon: "rectifier",
         charactericon: encore,
+        version: 1.0,
     },
     {
         name: "Jianxin",
         element: "aero",
         weapon: "gauntlet",
         charactericon: jianxin,
+        version: 1.0,
     },
     {
         name: "Jinhsi",
         element: "spectro",
         weapon: "broadblade",
         charactericon: jinhsi,
+        version: 1.1,
     },
     {
         name: "Jiyan",
         element: "aero",
         weapon: "broadblade",
         charactericon: jiyan,
+        version: 1.0,
     },
     {
         name: "Lingyang",
         element: "glacio",
         weapon: "gauntlet",
         charactericon: lingyang,
+        version: 1.0,
     },
     {
         name: "Mortefi",
         element: "fusion",
         weapon: "pistols",
         charactericon: mortefi,
+        version: 1.0,
+    },
+    {
+        name: "Rover",
+        element: "havoc",
+        weapon: "sword",
+        charactericon: rover,
+        version: 1.0,
+    },
+    {
+        name: "Rover",
+        element: "spectro",
+        weapon: "sword",
+        charactericon: rover,
+        version: 1.0,
     },
     {
         name: "Sanhua",
         element: "glacio",
         weapon: "sword",
         charactericon: sanhua,
+        version: 1.0,
     },
     {
         name: "Taoqi",
         element: "havoc",
         weapon: "broadblade",
         charactericon: taoqi,
+        version: 1.0,
     },
     {
         name: "Verina",
         element: "spectro",
         weapon: "rectifier",
         charactericon: verina,
+        version: 1.0,
     },
     {
         name: "Yangyang",
         element: "aero",
         weapon: "sword",
         charactericon: yangyang,
+        version: 1.0,
     },
     {
         name: "Yinlin",
         element: "electro",
         weapon: "rectifier",
         charactericon: yinlin,
+        version: 1.0,
     },
     {
         name: "Yuanwu",
         element: "electro",
         weapon: "gauntlet",
         charactericon: yuanwu,
+        version: 1.0,
     },
     {
         name: "Zhezhi",
         element: "glacio",
         weapon: "rectifier",
         charactericon: zhezhi,
+        version: 1.2,
     },
 ]
 
@@ -291,9 +325,9 @@ const CharactersContent = () => {
                         character.element === 'spectro' ? "bg-linear-to-t from-[#F8E56C]/80 hover:from-[#F8E56C] transition from-10% to-transparent to-70%":
                         ""
                     }`}>
-                        <img src={character.charactericon.src} alt={character.name} id="character-icons"/>
+                        <img src={character.charactericon.src} alt={character.name} id='character-icons' className={character.name.includes("Rover") ? 'translate-y-4' : 'translate-y-3'}/>
                     </div>
-                    <p id="name">{character.name}</p>
+                    <p id="name" className="">{character.name}</p>
                 </button>
             ))}
         </div>
