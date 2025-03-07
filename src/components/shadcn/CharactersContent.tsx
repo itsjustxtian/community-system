@@ -290,7 +290,7 @@ const CharactersContent = () => {
 
   return (
     <div>
-        <div id="character-filters" className="character-filters flex items-center">
+        <div id="character-filters no-scrollbar" className="character-filters md:justify-center">
             <Select>
                 <SelectTrigger className="w-[180px]">
                     <SelectValue placeholder="Sort By" />
@@ -330,7 +330,7 @@ const CharactersContent = () => {
             </ToggleGroup>
         </div>
 
-        <div id="character-list" className="grid grid-cols-9">
+        <div id="character-list" className="grid justify-items-center grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 2xl:grid-cols-10">
             {filteredObjects.map((character,i) => (
                 <button className="relative icon-card transition max-w-[100px] h-[150px] bg-linear-to-t from-[#606265]/80 hover:from-[#606265] from-5% to-transparent to-50% rounded-lg">
                     <div 

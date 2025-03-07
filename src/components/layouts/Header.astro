@@ -1,11 +1,30 @@
 ---
-import Navigation from "./Navigation.astro";
+import navigation from './data/navigation.json';
+import HamburgerMenu from '../shadcn/HamburgerMenu';
 ---
 
-<header class="flex z-10 sticky top-0 bg-black w-full justify-between">
-    <h1>For Logo</h1>
-    <nav class="">
-        <Navigation/> 
+<header class="flex z-10 sticky top-0 bg-black w-full h-20 justify-between items-center p-5">
+    <div>
+        <h1 class="text-white">For Logo</h1>
+    </div>
+    <nav class="hidden md:flex nav-links">
+        <ul class="flex mx-auto">
+            {navigation.items.map((item) => (
+              <li class="">
+                <a 
+                  href={`${item.link}`}
+                  class={`transition nav-link py-3 px-6 ${Astro.url?.pathname === item.link ? "selected font-semibold" : ""}`}
+                >
+                  {item.text}
+                </a>
+              </li>
+            ))}
+        </ul>
     </nav>
-    <h1>For User</h1>
+    <div class="md:hidden">
+        <HamburgerMenu client:load/>
+    </div>
+    <div class="hidden md:flex">
+        <h1>For User</h1>
+    </div>
 </header>

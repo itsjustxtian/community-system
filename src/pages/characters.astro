@@ -11,13 +11,18 @@ import CharactersContent from "@/components/shadcn/CharactersContent";
 
 <style>
     .characters-content {
-        height: 100vh;
+        height: fit-content;
         width: 100%;
-        padding-top: 75px;
-        padding-left: 20vw;
-        padding-right: 20vw;
+        padding-block: 2vh;
+        padding-inline: 15vw;
         background-color: #1E1E1E;
         color: white;
+    }
+
+    @media screen and (max-width: 639px) {
+        .characters-content {
+            padding-inline: 10vw;
+        }
     }
     
 </style>
