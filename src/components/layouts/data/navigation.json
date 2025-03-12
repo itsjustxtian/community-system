@@ -19,6 +19,12 @@
             "dropdown": []
         },
         {
+            "text": "Items",
+            "link": "/items",
+            "enable-dropdown": false,
+            "dropdown": []
+        },
+        {
             "text": "Planner",
             "link": "/planner",
             "enable-dropdown": false,

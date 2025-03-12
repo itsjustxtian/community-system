@@ -1,0 +1,28 @@
+---
+import Layout from "@/layouts/Layout.astro"
+import ItemsContent from "@/components/shadcn/ItemsContent"
+---
+
+<Layout title="Characters" pageTitle="Characters" description="View character information here.">
+    <div class="characters-content">
+        <ItemsContent client:load/>
+    </div>
+</Layout>
+
+<style>
+    .characters-content {
+        min-height: 100vh;
+        width: 100%;
+        padding-block: 2vh;
+        padding-inline: 15vw;
+        background-color: #1E1E1E;
+        color: white;
+    }
+
+    @media screen and (max-width: 639px) {
+        .characters-content {
+            padding-inline: 10vw;
+        }
+    }
+    
+</style>
