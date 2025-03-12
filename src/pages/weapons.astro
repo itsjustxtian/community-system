@@ -1,29 +1,29 @@
 ---
 import Layout from "../layouts/Layout.astro";
-
+import WeaponsContent from "@/components/shadcn/WeaponsContent";
 
 ---
 
 <Layout title="Weapons" pageTitle="Weapons" description="View weapon information here.">
     <div class="weapon-content">
-        <div id="weapon-filters" class="weapon-filters">
-            <div id="sort-by-filter">
-                <button class="bg-white">Sort By</button>
-            </div>
-        </div>
         <div id="weapon-list">
-
+            <WeaponsContent client:load/>
         </div>
     </div>
 </Layout>
 
 <style>
     .weapon-content {
-        padding-top: 75px;
+        min-height: 100vh;
+        width: 100%;
+        padding-block: 2vh;
+        padding-inline: 15vw;
         background-color: #1E1E1E;
         color: white;
     }
-    .weapon-filters {
-        height: 50px;
+    @media screen and (max-width: 639px) {
+        .characters-content {
+            padding-inline: 10vw;
+        }
     }
 </style>
