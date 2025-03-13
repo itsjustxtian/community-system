@@ -1,29 +1,27 @@
 ---
 import Layout from "../layouts/Layout.astro";
-
+import PlannerContent from '../components/shadcn/PlannerContent'
 
 ---
 
 <Layout title="Planner" pageTitle="Planner" description="Track your collection progress for ascending resonator ascension level and resonator talent level, and weapon level.">
     <div class="planner-content">
-        <div id="planner-filters" class="planner-filters">
-            <div id="sort-by-filter">
-                <button class="bg-white">Sort By</button>
-            </div>
-        </div>
-        <div id="planner-list">
-
-        </div>
+        <PlannerContent client:load/>
     </div>
 </Layout>
 
 <style>
     .planner-content {
-        padding-top: 75px;
+        min-height: 100vh;
+        width: 100%;
+        padding-block: 2vh;
+        padding-inline: 15vw;
         background-color: #1E1E1E;
         color: white;
     }
-    .planner-filters {
-        height: 50px;
+    @media screen and (max-width: 639px) {
+        .planner-content {
+            padding-inline: 10vw;
+        }
     }
 </style>
