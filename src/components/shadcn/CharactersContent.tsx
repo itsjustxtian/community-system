@@ -335,7 +335,7 @@ const CharactersContent = () => {
                 <button className="relative icon-card transition max-w-[100px] h-[150px] bg-linear-to-t from-[#606265]/80 hover:from-[#606265] from-5% to-transparent to-50% rounded-lg">
                     <div 
                     title={character.name}
-                    className={`rounded-lg h-[125px]
+                    className={`rounded-lg h-[125px] overflow-hidden
                     ${  character.element === 'aero' ? "bg-linear-to-t from-[#55FFB5]/80 hover:from-[#55FFB5] transition from-10% to-transparent to-70%" :
                         character.element === 'electro' ? "bg-linear-to-t from-[#B46BFF]/80 hover:from-[#B46BFF] transition from-10% to-transparent to-70%":
                         character.element === 'fusion' ? "bg-linear-to-t from-[#F0744E]/80 hover:from-[#F0744E] transition from-10% to-transparent to-70%":
@@ -346,7 +346,7 @@ const CharactersContent = () => {
                     }`}>
                         <img src={character.charactericon.src} alt={character.name} id='character-icons' className={character.name.includes("Rover") ? 'translate-y-7 scale-135': 'translate-y-3'}/>
                     </div>
-                    <p id="name" className="">{character.name}</p>
+                    <p id="name" className="px-2 truncate">{character.name}</p>
                 </button>
             ))}
         </div>
