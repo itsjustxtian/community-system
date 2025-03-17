@@ -1,4 +1,5 @@
 import { weapons } from "../layouts/data/weapondata"
+import { sortfilters, weaponfilters } from "../layouts/data/itemdata"
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group"
 import {
   Select,
@@ -9,12 +10,6 @@ import {
 } from "@/components/ui/select"
 import { useState } from "react"
 
-import broadblade from '@/assets/images/resonator-type-icons/Skill_Broadblade.png'
-import gauntlet from '@/assets/images/resonator-type-icons/Skill_Gauntlet.png'
-import pistols from '@/assets/images/resonator-type-icons/Skill_Pistols.png'
-import rectifier from '@/assets/images/resonator-type-icons/Skill_Rectifier.png'
-import sword from '@/assets/images/resonator-type-icons/Skill_Sword.png'
-
 const WeaponsContent = () => {
   const [selectedFilter, setSelectedFilter] = useState([]);
   
@@ -22,52 +17,6 @@ const WeaponsContent = () => {
       selectedFilter.length !== 0 ? selectedFilter.includes(weapon.type) : true
   );
 
-  const sortfilters = [
-    {
-        name: "Sort By Name (A-Z)",
-        value: "name-az"
-    },
-    {
-        name: "Sort By Name (Z-A)",
-        value: "name-za"
-    },
-    {
-        name: "Sort By Release (New to Old)",
-        value: "release-new-old"
-    },
-    {
-        name: "Sort By Release (Old to New)",
-        value: "release-old-new"
-    }
-  ]
-
-  const weaponfilters = [
-    {   weapon: "Broadblade",
-        src: broadblade.src,
-        alt: "Broadblade",
-        customshadow: "[0_0px_5px_rgba(85,255,181,1)]"
-    },
-    {   weapon: "Gauntlets",
-        src: gauntlet.src,
-        alt: "Gauntlets",
-        customshadow: "[0_0px_5px_rgba(85,255,181,1)]"
-    },
-    {   weapon: "Pistols",
-        src: pistols.src,
-        alt: "Pistols",
-        customshadow: "[0_0px_5px_rgba(85,255,181,1)]"
-    },
-    {   weapon: "Rectifier",
-        src: rectifier.src,
-        alt: "Rectifier",
-        customshadow: "[0_0px_5px_rgba(85,255,181,1)]"
-    },
-    {   weapon: "Sword",
-        src: sword.src,
-        alt: "Sword",
-        customshadow: "[0_0px_5px_rgba(85,255,181,1)]"
-    },
-  ]
   return (
     <div>
       <div id="character-filters no-scrollbar" className="character-filters md:justify-center">

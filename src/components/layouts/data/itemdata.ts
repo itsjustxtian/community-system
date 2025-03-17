@@ -1,3 +1,89 @@
+export const sortfilters = [
+  {
+      name: "Sort By Name (A-Z)",
+      value: "name-az"
+  },
+  {
+      name: "Sort By Name (Z-A)",
+      value: "name-za"
+  },
+  {
+      name: "Sort By Release (New to Old)",
+      value: "release-new-old"
+  },
+  {
+      name: "Sort By Release (Old to New)",
+      value: "release-old-new"
+  }
+]
+
+export const elementfilters = [
+  {
+      element: "aero",
+      src: "/src/assets/images/element-types-icons/aero1.png",
+      alt: "Aero",
+      customshadow: "[0_0px_5px_rgba(85,255,181,1)]"
+  },
+  {
+    element: "electro",
+    src: "/src/assets/images/element-types-icons/electro1.png",
+    alt: "Electro",
+    customshadow: "[0_0px_5px_rgba(180,107,255,1)]"
+  },
+  {
+    element: "fusion",
+    src: "/src/assets/images/element-types-icons/fusion1.png",
+    alt: "Fusion",
+    customshadow: "[0_0px_5px_rgba(240, 116, 78, 1)]"
+  },
+  {
+    element: "glacio",
+    src: "/src/assets/images/element-types-icons/glacio1.png",
+    alt: "Glacio",
+    customshadow: "[0_0px_5px_rgba(65,174,251,1)]"
+  },
+  {
+    element: "havoc",
+    src: "/src/assets/images/element-types-icons/havoc1.png",
+    alt: "Havoc",
+    customshadow: "[0_0px_5px_rgba(65,174,251,1)]"
+  },
+  {
+    element: "spectro",
+    src: "/src/assets/images/element-types-icons/spectro1.png",
+    alt: "Spectro",
+    customshadow: "[0_0px_5px_rgba(65,174,251,1)]"
+  }
+]
+
+export const weaponfilters = [
+  {   weapon: "Broadblade",
+      src: "/src/assets/images/resonator-type-icons/Skill_Broadblade.png",
+      alt: "Broadblade",
+      customshadow: "[0_0px_5px_rgba(85,255,181,1)]"
+  },
+  {   weapon: "Gauntlet",
+      src: "/src/assets/images/resonator-type-icons/Skill_Gauntlet.png",
+      alt: "Gauntlet",
+      customshadow: "[0_0px_5px_rgba(85,255,181,1)]"
+  },
+  {   weapon: "Pistols",
+      src: "/src/assets/images/resonator-type-icons/Skill_Pistols.png",
+      alt: "Pistols",
+      customshadow: "[0_0px_5px_rgba(85,255,181,1)]"
+  },
+  {   weapon: "Rectifier",
+      src: "/src/assets/images/resonator-type-icons/Skill_Rectifier.png",
+      alt: "Rectifier",
+      customshadow: "[0_0px_5px_rgba(85,255,181,1)]"
+  },
+  {   weapon: "Sword",
+      src: "/src/assets/images/resonator-type-icons/Skill_Sword.png",
+      alt: "Sword",
+      customshadow: "[0_0px_5px_rgba(85,255,181,1)]"
+  },
+]
+
 export const items = [
     {
       id: 2,
@@ -1231,3 +1317,153 @@ export const items = [
         image: "/src/assets/images/development-materials/sword-acorus.png",
       },
   ];
+
+export const characterlist = [
+  {
+      name: "Aalto",
+      element: "aero",
+      weapon: "Pistols",
+      charactericon: "/src/assets/images/character-icons-small/aalto-icon.webp",
+      version: 1.0,
+  },
+  {
+      name: "Baizhi",
+      element: "glacio",
+      weapon: "Rectifier",
+      charactericon: "/src/assets/images/character-icons-small/baizhi-icon.webp",
+      version: 1.0,
+  },
+  {
+      name: "Calcharo",
+      element: "electro",
+      weapon: "Broadblade",
+      charactericon: "/src/assets/images/character-icons-small/calcharo-icon.webp",
+      version: 1.0,
+  },
+  {
+      name: "Changli",
+      element: "fusion",
+      weapon: "Sword",
+      charactericon: "/src/assets/images/character-icons-small/changli-icon.webp",
+      version: 1.1,
+  },
+  {
+      name: "Chixia",
+      element: "fusion",
+      weapon: "Pistols",
+      charactericon: "/src/assets/images/character-icons-small/chixia-icon.webp",
+      version: 1.0,
+  },
+  {
+      name: "Danjin",
+      element: "havoc",
+      weapon: "Sword",
+      charactericon: "/src/assets/images/character-icons-small/danjin-icon.webp",
+      version: 1.0,
+  },
+  {
+      name: "Encore",
+      element: "fusion",
+      weapon: "Rectifier",
+      charactericon: "/src/assets/images/character-icons-small/encore-icon.webp",
+      version: 1.0,
+  },
+  {
+      name: "Jianxin",
+      element: "aero",
+      weapon: "Gauntlet",
+      charactericon: "/src/assets/images/character-icons-small/jianxin-icon.webp",
+      version: 1.0,
+  },
+  {
+      name: "Jinhsi",
+      element: "spectro",
+      weapon: "Broadblade",
+      charactericon: "/src/assets/images/character-icons-small/jinhsi-icon.webp",
+      version: 1.1,
+  },
+  {
+      name: "Jiyan",
+      element: "aero",
+      weapon: "Broadblade",
+      charactericon: "/src/assets/images/character-icons-small/jiyan-icon.webp",
+      version: 1.0,
+  },
+  {
+      name: "Lingyang",
+      element: "glacio",
+      weapon: "Gauntlet",
+      charactericon: "/src/assets/images/character-icons-small/lingyang-icon.webp",
+      version: 1.0,
+  },
+  {
+      name: "Mortefi",
+      element: "fusion",
+      weapon: "Pistols",
+      charactericon: "/src/assets/images/character-icons-small/mortefi-icon.webp",
+      version: 1.0,
+  },
+  {
+      name: "Rover",
+      element: "havoc",
+      weapon: "Sword",
+      charactericon: "/src/assets/images/character-icons-small/rover-icon.svg",
+      version: 1.0,
+  },
+  {
+      name: "Rover",
+      element: "spectro",
+      weapon: "Sword",
+      charactericon: "/src/assets/images/character-icons-small/rover-icon.svg",
+      version: 1.0,
+  },
+  {
+      name: "Sanhua",
+      element: "glacio",
+      weapon: "Sword",
+      charactericon: "/src/assets/images/character-icons-small/sanhua-icon.webp",
+      version: 1.0,
+  },
+  {
+      name: "Taoqi",
+      element: "havoc",
+      weapon: "Broadblade",
+      charactericon: "/src/assets/images/character-icons-small/taoqi-icon.webp",
+      version: 1.0,
+  },
+  {
+      name: "Verina",
+      element: "spectro",
+      weapon: "Rectifier",
+      charactericon: "/src/assets/images/character-icons-small/verina-icon.webp",
+      version: 1.0,
+  },
+  {
+      name: "Yangyang",
+      element: "aero",
+      weapon: "Sword",
+      charactericon: "/src/assets/images/character-icons-small/yangyang-icon.webp",
+      version: 1.0,
+  },
+  {
+      name: "Yinlin",
+      element: "electro",
+      weapon: "Rectifier",
+      charactericon: "/src/assets/images/character-icons-small/yinlin-icon.webp",
+      version: 1.0,
+  },
+  {
+      name: "Yuanwu",
+      element: "electro",
+      weapon: "Gauntlet",
+      charactericon: "/src/assets/images/character-icons-small/yuanwu-icon.webp",
+      version: 1.0,
+  },
+  {
+      name: "Zhezhi",
+      element: "glacio",
+      weapon: "Rectifier",
+      charactericon: "/src/assets/images/character-icons-small/zhezhi-icon.webp",
+      version: 1.2,
+  },
+]

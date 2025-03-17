@@ -1,5 +1,7 @@
 import { UserRoundPlus, Swords, ArrowUpDown } from 'lucide-react'
 
+import { characterlist } from '../layouts/data/itemdata'
+
 const PlannerContent = () => {
   return (
     <div>
@@ -8,16 +10,20 @@ const PlannerContent = () => {
         <button className='bg-white/20 hover:bg-white/40 px-4 py-2 flex items-center gap-2 rounded-lg transition'><Swords/> New Weapon</button>
         <button className='bg-white/20 hover:bg-white/40 px-4 py-2 flex items-center gap-2 rounded-lg transition'><ArrowUpDown/> Rearrange Priority</button>
       </div>
-      <div id='task-cards' className='grid grid-cols-3'>
+      <div id='task-cards' className='grid grid-cols-3 p-4'>
 
-        <div id='task' className='border-1 border-white/10 flex w-[20vw] h-[20vh]'>
-          <div id='icon' className='w-[30%] border-1'>
-            Icon goes here...
+        {characterlist.map((character, i) =>
+          <div key={i} id='task' className='border-1 border-white/10 flex w-[20vw] h-[20vh]'>
+            <div id='icon' className='w-[30%] border-1'>
+              <div>
+                <img src={character.charactericon} alt="" />
+              </div>
+            </div>
+            <div id='details'>
+              Details go here...
+            </div>
           </div>
-          <div id='details'>
-            Details go here...
-          </div>
-        </div>
+        )}
 
       </div>
     </div>
