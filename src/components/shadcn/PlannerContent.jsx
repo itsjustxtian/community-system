@@ -15,9 +15,10 @@ const PlannerContent = () => {
         {characterlist.map((character, i) =>
           <div key={i} id='task' className='border-1 border-white/10 flex w-[20vw] h-[20vh]'>
             <div id='icon' className='w-[30%] border-1'>
-              <div>
+              <div id='image'>
                 <img src={character.charactericon} alt="" />
               </div>
+              <div></div>
             </div>
             <div id='details'>
               Details go here...
