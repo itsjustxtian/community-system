@@ -6,7 +6,7 @@ import data from './layouts/data/homedata.json'
 ---
 
 <div id="homecontent" class="home bg-[#1E1E1E]">
-    {/*<Image src={wutheringlogo} alt="Wuthering Waves Logo"/>*/}
+    <Image src={wutheringlogo} alt="Wuthering Waves Logo"/>
     <div class="flex flex-col lg:flex-row gap-x-[4vw] gap-y-[4vh] justify-center">
         {data.items.map((item) => (
             <a href={`${item.link}`} class="transition flex-col bg-[#606265] hover:bg-[#727579] hover:scale-[102%] boxes">

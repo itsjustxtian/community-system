@@ -169,3 +169,12 @@
   font-family: "Poppins", sans-serif;
   font-size: .9rem;
 }
+
+.planner-content {
+  font-family: "Poppins", sans-serif;
+  
+}
+
+.planner-content #subtext {
+  font-size: 0.7rem;
+}

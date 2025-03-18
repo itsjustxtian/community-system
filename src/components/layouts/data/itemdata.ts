@@ -1324,6 +1324,8 @@ export const characterlist = [
       element: "aero",
       weapon: "Pistols",
       charactericon: "/src/assets/images/character-icons-small/aalto-icon.webp",
+      characterportrait: "/src/assets/images/portraits/aalto.webp",
+      rarity: 4,
       version: 1.0,
   },
   {
@@ -1331,6 +1333,8 @@ export const characterlist = [
       element: "glacio",
       weapon: "Rectifier",
       charactericon: "/src/assets/images/character-icons-small/baizhi-icon.webp",
+      characterportrait: "/src/assets/images/portraits/baizhi.webp",
+      rarity: 4,
       version: 1.0,
   },
   {
@@ -1338,6 +1342,8 @@ export const characterlist = [
       element: "electro",
       weapon: "Broadblade",
       charactericon: "/src/assets/images/character-icons-small/calcharo-icon.webp",
+      characterportrait: "/src/assets/images/portraits/calcharo.webp",
+      rarity: 5,
       version: 1.0,
   },
   {
@@ -1345,6 +1351,8 @@ export const characterlist = [
       element: "fusion",
       weapon: "Sword",
       charactericon: "/src/assets/images/character-icons-small/changli-icon.webp",
+      characterportrait: "/src/assets/images/portraits/changli.webp",
+      rarity: 5,
       version: 1.1,
   },
   {
@@ -1352,6 +1360,8 @@ export const characterlist = [
       element: "fusion",
       weapon: "Pistols",
       charactericon: "/src/assets/images/character-icons-small/chixia-icon.webp",
+      characterportrait: "/src/assets/images/portraits/chixia.webp",
+      rarity: 4,
       version: 1.0,
   },
   {
@@ -1359,6 +1369,8 @@ export const characterlist = [
       element: "havoc",
       weapon: "Sword",
       charactericon: "/src/assets/images/character-icons-small/danjin-icon.webp",
+      characterportrait: "/src/assets/images/portraits/danjin.webp",
+      rarity: 4,
       version: 1.0,
   },
   {
@@ -1366,6 +1378,8 @@ export const characterlist = [
       element: "fusion",
       weapon: "Rectifier",
       charactericon: "/src/assets/images/character-icons-small/encore-icon.webp",
+      characterportrait: "/src/assets/images/portraits/encore.webp",
+      rarity: 5,
       version: 1.0,
   },
   {
@@ -1373,6 +1387,8 @@ export const characterlist = [
       element: "aero",
       weapon: "Gauntlet",
       charactericon: "/src/assets/images/character-icons-small/jianxin-icon.webp",
+      characterportrait: "/src/assets/images/portraits/jianxin.webp",
+      rarity: 5,
       version: 1.0,
   },
   {
@@ -1380,6 +1396,8 @@ export const characterlist = [
       element: "spectro",
       weapon: "Broadblade",
       charactericon: "/src/assets/images/character-icons-small/jinhsi-icon.webp",
+      characterportrait: "/src/assets/images/portraits/jinhsi.webp",
+      rarity: 5,
       version: 1.1,
   },
   {
@@ -1387,6 +1405,8 @@ export const characterlist = [
       element: "aero",
       weapon: "Broadblade",
       charactericon: "/src/assets/images/character-icons-small/jiyan-icon.webp",
+      characterportrait: "/src/assets/images/portraits/jiyan.webp",
+      rarity: 5,
       version: 1.0,
   },
   {
@@ -1394,6 +1414,8 @@ export const characterlist = [
       element: "glacio",
       weapon: "Gauntlet",
       charactericon: "/src/assets/images/character-icons-small/lingyang-icon.webp",
+      characterportrait: "/src/assets/images/portraits/lingyang.webp",
+      rarity: 5,
       version: 1.0,
   },
   {
@@ -1401,6 +1423,8 @@ export const characterlist = [
       element: "fusion",
       weapon: "Pistols",
       charactericon: "/src/assets/images/character-icons-small/mortefi-icon.webp",
+      characterportrait: "/src/assets/images/portraits/mortefi.webp",
+      rarity: 4,
       version: 1.0,
   },
   {
@@ -1408,6 +1432,8 @@ export const characterlist = [
       element: "havoc",
       weapon: "Sword",
       charactericon: "/src/assets/images/character-icons-small/rover-icon.svg",
+      characterportrait: "/src/assets/images/portraits/rover-havoc.webp",
+      rarity: 5,
       version: 1.0,
   },
   {
@@ -1415,6 +1441,8 @@ export const characterlist = [
       element: "spectro",
       weapon: "Sword",
       charactericon: "/src/assets/images/character-icons-small/rover-icon.svg",
+      characterportrait: "/src/assets/images/portraits/rover-spectro.webp",
+      rarity: 5,
       version: 1.0,
   },
   {
@@ -1422,6 +1450,8 @@ export const characterlist = [
       element: "glacio",
       weapon: "Sword",
       charactericon: "/src/assets/images/character-icons-small/sanhua-icon.webp",
+      characterportrait: "/src/assets/images/portraits/sanhua.webp",
+      rarity: 4,
       version: 1.0,
   },
   {
@@ -1429,6 +1459,8 @@ export const characterlist = [
       element: "havoc",
       weapon: "Broadblade",
       charactericon: "/src/assets/images/character-icons-small/taoqi-icon.webp",
+      characterportrait: "/src/assets/images/portraits/taoqi.webp",
+      rarity: 4,
       version: 1.0,
   },
   {
@@ -1436,6 +1468,8 @@ export const characterlist = [
       element: "spectro",
       weapon: "Rectifier",
       charactericon: "/src/assets/images/character-icons-small/verina-icon.webp",
+      characterportrait: "/src/assets/images/portraits/verina.webp",
+      rarity: 4,
       version: 1.0,
   },
   {
@@ -1443,6 +1477,8 @@ export const characterlist = [
       element: "aero",
       weapon: "Sword",
       charactericon: "/src/assets/images/character-icons-small/yangyang-icon.webp",
+      characterportrait: "/src/assets/images/portraits/yangyang.webp",
+      rarity: 4,
       version: 1.0,
   },
   {
@@ -1450,6 +1486,8 @@ export const characterlist = [
       element: "electro",
       weapon: "Rectifier",
       charactericon: "/src/assets/images/character-icons-small/yinlin-icon.webp",
+      characterportrait: "/src/assets/images/portraits/yinlin.webp",
+      rarity: 5,
       version: 1.0,
   },
   {
@@ -1457,6 +1495,8 @@ export const characterlist = [
       element: "electro",
       weapon: "Gauntlet",
       charactericon: "/src/assets/images/character-icons-small/yuanwu-icon.webp",
+      characterportrait: "/src/assets/images/portraits/yuanwu.webp",
+      rarity: 4,
       version: 1.0,
   },
   {
@@ -1464,6 +1504,8 @@ export const characterlist = [
       element: "glacio",
       weapon: "Rectifier",
       charactericon: "/src/assets/images/character-icons-small/zhezhi-icon.webp",
+      characterportrait: "/src/assets/images/portraits/zhezhi.webp",
+      rarity: 5,
       version: 1.2,
   },
 ]
