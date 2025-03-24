@@ -9,6 +9,11 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog"
 import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover"
+import {
   Command,
   CommandDialog,
   CommandEmpty,
@@ -19,8 +24,11 @@ import {
   CommandSeparator,
   CommandShortcut,
 } from "@/components/ui/command"
+import { useState } from 'react'
 
 const PlannerContent = () => {
+  const [selected, setSelected] = useState(null);
+
   return (
     <div className='planner-content'>
       <Dialog>
@@ -79,6 +87,14 @@ const PlannerContent = () => {
             <DialogDescription>
             </DialogDescription>
           </DialogHeader>
+          <Popover>
+            <PopoverTrigger>
+              <button>Open</button>
+            </PopoverTrigger>
+            <PopoverContent>
+              <Combobox data={characterlist}/>
+            </PopoverContent>
+          </Popover>
 
         </DialogContent>
       </Dialog>
@@ -86,23 +102,17 @@ const PlannerContent = () => {
   )
 }
 
-function Combobox({data}){
+function Combobox({data, selected}){
 
   return(
     <Command>
-      <CommandInput placeholder="Type a command or search..." />
+      <CommandInput placeholder="Type a resonator or search..." />
       <CommandList>
         <CommandEmpty>No results found.</CommandEmpty>
         <CommandGroup heading="Suggestions">
-          <CommandItem>Calendar</CommandItem>
-          <CommandItem>Search Emoji</CommandItem>
-          <CommandItem>Calculator</CommandItem>
-        </CommandGroup>
-        <CommandSeparator />
-        <CommandGroup heading="Settings">
-          <CommandItem>Profile</CommandItem>
-          <CommandItem>Billing</CommandItem>
-          <CommandItem>Settings</CommandItem>
+          {data.map((characters, i) => (
+            <CommandItem key={i} className=""><img src={characters.charactericon} className='h-10 rounded object-contain'/> {characters.name}</CommandItem>
+          ))}
         </CommandGroup>
       </CommandList>
     </Command>
