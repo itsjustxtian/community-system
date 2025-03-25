@@ -20,8 +20,8 @@ const HamburgerMenu = () => {
             <SheetTitle></SheetTitle>
             <SheetDescription>
                 <ul className="flex flex-col gap-4">
-                    {navigation.items.map((item) => (
-                    <li className="">
+                    {navigation.items.map((item, i) => (
+                    <li key={i} className="">
                         <a 
                         href={`${item.link}`}
                         className={`transition nav-link-hamburger py-3 px-6 `}

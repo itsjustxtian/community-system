@@ -19,10 +19,10 @@ export const sortfilters = [
 
 export const elementfilters = [
   {
-      element: "aero",
-      src: "/src/assets/images/element-types-icons/aero1.png",
-      alt: "Aero",
-      customshadow: "[0_0px_5px_rgba(85,255,181,1)]"
+    element: "aero",
+    src: "/src/assets/images/element-types-icons/aero1.png",
+    alt: "Aero",
+    customshadow: "[0_0px_5px_rgba(85,255,181,1)]"
   },
   {
     element: "electro",
@@ -1428,19 +1428,19 @@ export const characterlist = [
       version: 1.0,
   },
   {
-      name: "Rover",
+      name: "Havoc Rover",
       element: "havoc",
       weapon: "Sword",
-      charactericon: "/src/assets/images/character-icons-small/rover-icon.svg",
+      charactericon: "/src/assets/images/character-icons-small/rover-female-icon.webp",
       characterportrait: "/src/assets/images/portraits/rover-havoc.webp",
       rarity: 5,
       version: 1.0,
   },
   {
-      name: "Rover",
+      name: "Spectro Rover",
       element: "spectro",
       weapon: "Sword",
-      charactericon: "/src/assets/images/character-icons-small/rover-icon.svg",
+      charactericon: "/src/assets/images/character-icons-small/rover-havoc-male-icon.webp",
       characterportrait: "/src/assets/images/portraits/rover-spectro.webp",
       rarity: 5,
       version: 1.0,

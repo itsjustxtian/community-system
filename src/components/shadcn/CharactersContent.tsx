@@ -76,7 +76,7 @@ const CharactersContent = () => {
                         character.element === 'spectro' ? "bg-linear-to-t from-[#F8E56C]/80 hover:from-[#F8E56C] transition from-10% to-transparent to-70%":
                         ""
                     }`}>
-                        <img src={character.charactericon} alt={character.name} id='character-icons' className={character.name.includes("Rover") ? 'translate-y-7 scale-135': 'translate-y-3'}/>
+                        <img src={character.charactericon} alt={character.name} id='character-icons' className={'translate-y-3'}/>
                     </div>
                     <p id="name" className="px-2 truncate">{character.name}</p>
                 </button>

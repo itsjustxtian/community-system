@@ -1,5 +1,5 @@
-import { UserRoundPlus, Swords, ArrowUpDown, Wrench, CircleFadingArrowUp } from 'lucide-react'
-import { characterlist, items } from '../layouts/data/itemdata'
+import { UserRoundPlus, Swords, ArrowUpDown, Wrench, CircleFadingArrowUp, ArrowDownUp } from 'lucide-react'
+import { characterlist, items, elementfilters } from '../layouts/data/itemdata'
 import {
   Dialog,
   DialogContent,
@@ -28,15 +28,16 @@ import { useState } from 'react'
 
 const PlannerContent = () => {
   const [selected, setSelected] = useState(null);
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div className='planner-content'>
       <Dialog>
-      <DialogTrigger id='planner-controls' className='flex gap-2 py-4 border-b-1 border-white/10'>
-          <button className='bg-white/20 hover:bg-white/40 px-4 py-2 flex items-center gap-2 rounded-lg transition'><UserRoundPlus/> New Resonator</button>
-          <button className='bg-white/20 hover:bg-white/40 px-4 py-2 flex items-center gap-2 rounded-lg transition'><Swords/> New Weapon</button>
-          <button className='bg-white/20 hover:bg-white/40 px-4 py-2 flex items-center gap-2 rounded-lg transition'><ArrowUpDown/> Rearrange Priority</button>
-      </DialogTrigger>
+      <div id='planner-controls' className='flex gap-2 py-4 border-b-1 border-white/10'>
+          <DialogTrigger className='bg-white/20 hover:bg-white/40 px-4 py-2 flex items-center gap-2 rounded-lg transition'><UserRoundPlus/> New Resonator</DialogTrigger>
+          <DialogTrigger className='bg-white/20 hover:bg-white/40 px-4 py-2 flex items-center gap-2 rounded-lg transition'><Swords/> New Weapon</DialogTrigger>
+          <DialogTrigger className='bg-white/20 hover:bg-white/40 px-4 py-2 flex items-center gap-2 rounded-lg transition'><ArrowUpDown/> Rearrange Priority</DialogTrigger>
+      </div>
       <div id='task-cards' className='grid grid-cols-3 p-4 gap-4'>
 
         {characterlist.map((character, i) =>
@@ -49,7 +50,7 @@ const PlannerContent = () => {
                 "bg-radial-[at_100%_80%_] from-white/80 hover:from-white to-transparent to-85%"}
               `}>
               <div id='image'>
-                <img src={character.characterportrait} alt="" />
+                <img src={character.characterportrait} className='hover:scale-110 transition ease-in-out' alt={character.name} />
               </div>
             </div>
             <div id='details' className='p-2 w-[60%]'>
@@ -81,42 +82,56 @@ const PlannerContent = () => {
         )}
 
       </div>
-        <DialogContent className='bg-linear-to-tr from-[#111112] from-15% to-[#222325] to-80%  border-0'>
-          <DialogHeader>
-            <DialogTitle className='text-white'>Add a new resonator</DialogTitle>
-            <DialogDescription>
-            </DialogDescription>
-          </DialogHeader>
-          <Popover>
-            <PopoverTrigger>
-              <button>Open</button>
-            </PopoverTrigger>
-            <PopoverContent>
-              <Combobox data={characterlist}/>
-            </PopoverContent>
-          </Popover>
+      <DialogContent className='bg-linear-to-tr from-[#111112] from-15% to-[#222325] to-80% border-0'>
+        <DialogHeader>
+          <DialogTitle className='text-white'>Add a new resonator</DialogTitle>
+          <DialogDescription>
+          </DialogDescription>
+        </DialogHeader>
+        <Popover open={isOpen} onOpenChange={setIsOpen}>
+          <PopoverTrigger asChild>
+            <button className='w-full text-white bg-white/20 flex rounded-lg px-6 py-2'>
+              {selected != null ?
+                <div className='flex items-center justify-center w-full'>
+                  {characterlist[selected].name}
+                  
+                </div>
+                : <div className='flex items-center justify-center w-full'>Select a Resonator...</div>
+              } <ArrowDownUp/>
+            </button>
+          </PopoverTrigger>
+          <PopoverContent className="bg-linear-to-tr from-[#111112] from-15% to-[#222325] to-80% border-0 popover-content-same-as-trigger">
+            <Command className="bg-transparent text-white ">
+              <CommandInput placeholder="Type a resonator or search..." />
+              <CommandList className="command-list">
+                <CommandEmpty>No results found.</CommandEmpty>
+                <CommandGroup>
+                  {characterlist.map((character, i) => (
+                    <CommandItem 
+                      key={i} 
+                      className={`flex justify-between
+                                  ${character.rarity === 5 ? "text-[#FCD063]" :
+                                    character.rarity === 4 ? "text-[#AC6EFA]" :
+                                    ""
+                      }`} 
+                      value={character.name} 
+                      onSelect={()=>{setSelected(i); setIsOpen(false)}}>
+                      <img src={character.charactericon} className='max-h-10 rounded object-contain'/>
+                      <p className='truncate'>{character.name}</p>
+                      <img src={character.element ? elementfilters.find((element) => element.element === character.element).src : "hidden"} className='max-h-10 rounded object-contain' title={character.element.toUpperCase()}/>
+                    </CommandItem>
+                  ))}
+                </CommandGroup>
+              </CommandList>
+            </Command>
+          </PopoverContent>
+        </Popover>
 
-        </DialogContent>
+      </DialogContent>
       </Dialog>
     </div>
   )
 }
 
-function Combobox({data, selected}){
-
-  return(
-    <Command>
-      <CommandInput placeholder="Type a resonator or search..." />
-      <CommandList>
-        <CommandEmpty>No results found.</CommandEmpty>
-        <CommandGroup heading="Suggestions">
-          {data.map((characters, i) => (
-            <CommandItem key={i} className=""><img src={characters.charactericon} className='h-10 rounded object-contain'/> {characters.name}</CommandItem>
-          ))}
-        </CommandGroup>
-      </CommandList>
-    </Command>
-  )
-}
 export default PlannerContent
 
