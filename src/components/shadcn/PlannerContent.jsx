@@ -1,5 +1,7 @@
 import { UserRoundPlus, Swords, ArrowUpDown, Wrench, CircleFadingArrowUp, ArrowDownUp } from 'lucide-react'
 import { characterlist, items, elementfilters } from '../layouts/data/itemdata'
+import { samplecharacterlist, sampleweaponlist } from '../layouts/data/sampledata'
+import { characterascensionrecipe, talentrecipes, statbonusrecipe, inherentskillrecipe } from '../layouts/data/recipes'
 import {
   Dialog,
   DialogContent,
@@ -29,6 +31,120 @@ import { useState } from 'react'
 const PlannerContent = () => {
   const [selected, setSelected] = useState(null);
   const [isOpen, setIsOpen] = useState(false);
+  const [materials, setMaterials] = useState([]);
+
+  function ascendCharacter(initialTier, targetTier){
+    const requiredMats = {
+      experience: 0,
+      shellcredits: 0,
+      basic_am: 0,
+      medium_am: 0,
+      advanced_am: 0,
+      premium_am: 0,
+      bossmaterial: 0,
+      regionalspecialty: 0,
+    }
+
+    if (initialTier < 1 || targetTier > characterascensionrecipe.length || initialTier > targetTier){
+      return console.error("Invalid tier range.")
+    }
+
+    for (let i = initialTier - 1 ; i < targetTier ; i++){
+      const recipe = characterascensionrecipe[i]
+
+      for (const [mat, value] of Object.entries(recipe)){
+        requiredMats[mat] += value;
+      }
+    }
+    console.log(requiredMats)
+  }
+  
+  function levelTalent(initialTier, targetTier){
+    const requiredMats = {
+      shellcredits: 0,
+      basic_am: 0,
+      medium_am: 0,
+      advanced_am: 0,
+      premium_am: 0,
+      basic_tm: 0,
+      medium_tm: 0,
+      advanced_tm: 0,
+      premium_tm: 0,
+      weeklyboss: 0,
+    }
+
+    if (initialTier < 1 || targetTier > talentrecipes.length || initialTier > targetTier){
+      return console.error("Invalid tier range.")
+    }
+
+    for (let i = initialTier - 1 ; i < targetTier ; i++){
+      const recipe = talentrecipes[i]
+
+      for (const [mat, value] of Object.entries(recipe)){
+        requiredMats[mat] += value;
+      }
+    }
+    console.log(requiredMats)
+  }
+
+  function levelStatBonus(initialTier, targetTier){
+    const requiredMats = {
+      shellcredits: 0,
+      basic_am: 0,
+      medium_am: 0,
+      advanced_am: 0,
+      premium_am: 0,
+      basic_tm: 0,
+      medium_tm: 0,
+      advanced_tm: 0,
+      premium_tm: 0,
+      weeklyboss: 0,
+    }
+
+    if (initialTier < 1 || targetTier > statbonusrecipe.length || initialTier > targetTier){
+      return console.error("Invalid tier range.")
+    }
+
+    for (let i = initialTier - 1 ; i < targetTier ; i++){
+      const recipe = statbonusrecipe[i]
+
+      for (const [mat, value] of Object.entries(recipe)){
+        requiredMats[mat] += value;
+      }
+    }
+    console.log(requiredMats)
+  }
+
+  function levelInherentSkill(initialTier, targetTier){
+    const requiredMats = {
+      shellcredits: 0,
+      basic_am: 0,
+      medium_am: 0,
+      advanced_am: 0,
+      premium_am: 0,
+      basic_tm: 0,
+      medium_tm: 0,
+      advanced_tm: 0,
+      premium_tm: 0,
+      weeklyboss: 0,
+    }
+
+    if (initialTier < 1 || targetTier > inherentskillrecipe.length || initialTier > targetTier){
+      return console.error("Invalid tier range.")
+    }
+
+    for (let i = initialTier - 1 ; i < targetTier ; i++){
+      const recipe = inherentskillrecipe[i]
+
+      for (const [mat, value] of Object.entries(recipe)){
+        requiredMats[mat] += value;
+      }
+    }
+    console.log(requiredMats)
+  }
+
+
+  levelInherentSkill(1, 2)
 
   return (
     <div className='planner-content'>
@@ -40,7 +156,7 @@ const PlannerContent = () => {
       </div>
       <div id='task-cards' className='grid grid-cols-3 p-4 gap-4'>
 
-        {characterlist.map((character, i) =>
+        {samplecharacterlist.map((character, i) =>
           <div key={i} id='task' className='border-1 border-white/10 rounded-lg flex max-w-[20vw] max-h-[20vh]'>
             <div id='icon' className={`w-[40%] flex items-center overflow-hidden transition
               ${character.rarity === 5 ? "bg-radial-[at_100%_80%_] from-[#FCD063]/80 hover:from-[#FCD063] to-transparent to-85%" :
@@ -82,23 +198,23 @@ const PlannerContent = () => {
         )}
 
       </div>
-      <DialogContent className='bg-linear-to-tr from-[#111112] from-15% to-[#222325] to-80% border-0'>
+      <DialogContent className='text-white bg-linear-to-tr from-[#111112] from-15% to-[#222325] to-80% border-0'>
         <DialogHeader>
-          <DialogTitle className='text-white'>Add a new resonator</DialogTitle>
+          <DialogTitle className=''>Add a new resonator</DialogTitle>
           <DialogDescription>
           </DialogDescription>
         </DialogHeader>
         <Popover open={isOpen} onOpenChange={setIsOpen}>
           <PopoverTrigger asChild>
-            <button className='w-full text-white bg-white/20 flex rounded-lg px-6 py-2'>
-              {selected != null ?
-                <div className='flex items-center justify-center w-full'>
-                  {characterlist[selected].name}
-                  
-                </div>
-                : <div className='flex items-center justify-center w-full'>Select a Resonator...</div>
-              } <ArrowDownUp/>
-            </button>
+              <button id='selected-resonator' className='w-full bg-white/20 flex rounded-lg px-6 py-2'>
+                {selected != null ?
+                  <div className='flex items-center justify-center w-full'>
+                    {samplecharacterlist[selected].name}
+                    
+                  </div>
+                  : <div className='flex items-center justify-center w-full'>Select a Resonator...</div>
+                } <ArrowDownUp/>
+              </button>
           </PopoverTrigger>
           <PopoverContent className="bg-linear-to-tr from-[#111112] from-15% to-[#222325] to-80% border-0 popover-content-same-as-trigger">
             <Command className="bg-transparent text-white ">
@@ -106,7 +222,7 @@ const PlannerContent = () => {
               <CommandList className="command-list">
                 <CommandEmpty>No results found.</CommandEmpty>
                 <CommandGroup>
-                  {characterlist.map((character, i) => (
+                  {samplecharacterlist.map((character, i) => (
                     <CommandItem 
                       key={i} 
                       className={`flex justify-between
@@ -126,7 +242,10 @@ const PlannerContent = () => {
             </Command>
           </PopoverContent>
         </Popover>
-
+        <div className='text-white'>
+          <h1>Ascension Level</h1>
+          
+        </div>
       </DialogContent>
       </Dialog>
     </div>

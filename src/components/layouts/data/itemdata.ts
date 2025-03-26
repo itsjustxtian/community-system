@@ -695,8 +695,8 @@ export const items = [
     },
     {
       id: 43020023,
-      slug: "refined-phlohiston",
-      name: "Refined Phlohiston",
+      slug: "refined-phlogiston",
+      name: "Refined Phlogiston",
       tags: ["Weapon & Skill Material"],
       description:
         "An advanced material used to break through weapons and upgrade skills for Pistols Resonators.",
@@ -709,8 +709,8 @@ export const items = [
     },
     {
       id: 43020024,
-      slug: "flawless-phlohiston",
-      name: "Flawless Phlohiston",
+      slug: "flawless-phlogiston",
+      name: "Flawless Phlogiston",
       tags: ["Weapon & Skill Material"],
       description:
         "A premium material used to break through weapons and upgrade skills for Pistols Resonators.",
@@ -1327,6 +1327,33 @@ export const characterlist = [
       characterportrait: "/src/assets/images/portraits/aalto.webp",
       rarity: 4,
       version: 1.0,
+      talent: [
+        {
+          basic_attack: "Half Truths",
+          resonance_skill: "Shift Trick",
+          resonance_lib: "Flower in the Mist",
+          forte_circuit: "Misty Cover",
+          inherent_skill_1: "Perfect Performance",
+          inherent_skill_2: "Mid-game Break",
+          intro_skill: "Feint Shot",
+          outro_skill: "Dissolving Mist",
+        }
+      ],
+      materials: [
+        {
+          basic_am: "LF Howler Core",
+          medium_am: "MF Howler Core",
+          advanced_am: "HF Howler Core",
+          premium_am: "FF Howler Core",
+          basic_tm: "Impure Phlogiston",
+          medium_tm: "Extracted Phlogiston",
+          advanced_tm: "Refined Phlogiston",
+          premium_tm: "Flawless Phlogiston",
+          weeklyboss: "Monument Bell",
+          bossmaterial: "Roaring Rock Fist",
+          regionalspecialty: "Wintry Bell",
+        }
+      ]
   },
   {
       name: "Baizhi",
