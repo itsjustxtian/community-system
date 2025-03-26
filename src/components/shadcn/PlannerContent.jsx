@@ -32,6 +32,7 @@ const PlannerContent = () => {
   const [selected, setSelected] = useState(null);
   const [isOpen, setIsOpen] = useState(false);
   const [materials, setMaterials] = useState([]);
+  const [totalMaterials, setTotalMaterials] = useState([])
 
   function ascendCharacter(initialTier, targetTier){
     const requiredMats = {
@@ -45,6 +46,10 @@ const PlannerContent = () => {
       regionalspecialty: 0,
     }
 
+    if (initialTier === targetTier){
+      return requiredMats;
+    }
+
     if (initialTier < 1 || targetTier > characterascensionrecipe.length || initialTier > targetTier){
       return console.error("Invalid tier range.")
     }
@@ -53,10 +58,13 @@ const PlannerContent = () => {
       const recipe = characterascensionrecipe[i]
 
       for (const [mat, value] of Object.entries(recipe)){
-        requiredMats[mat] += value;
+        if (mat in requiredMats){
+          requiredMats[mat] += value;
+        }
       }
     }
-    console.log(requiredMats)
+    
+    return requiredMats;
   }
   
   function levelTalent(initialTier, targetTier){
@@ -73,6 +81,10 @@ const PlannerContent = () => {
       weeklyboss: 0,
     }
 
+    if (initialTier === targetTier){
+      return requiredMats;
+    }
+
     if (initialTier < 1 || targetTier > talentrecipes.length || initialTier > targetTier){
       return console.error("Invalid tier range.")
     }
@@ -81,10 +93,12 @@ const PlannerContent = () => {
       const recipe = talentrecipes[i]
 
       for (const [mat, value] of Object.entries(recipe)){
-        requiredMats[mat] += value;
+        if (mat in requiredMats){
+          requiredMats[mat] += value;
+        }
       }
     }
-    console.log(requiredMats)
+    return requiredMats;
   }
 
   function levelStatBonus(initialTier, targetTier){
@@ -101,6 +115,10 @@ const PlannerContent = () => {
       weeklyboss: 0,
     }
 
+    if (initialTier === targetTier){
+      return requiredMats;
+    }
+
     if (initialTier < 1 || targetTier > statbonusrecipe.length || initialTier > targetTier){
       return console.error("Invalid tier range.")
     }
@@ -109,10 +127,12 @@ const PlannerContent = () => {
       const recipe = statbonusrecipe[i]
 
       for (const [mat, value] of Object.entries(recipe)){
-        requiredMats[mat] += value;
+        if (mat in requiredMats){
+          requiredMats[mat] += value;
+        }
       }
     }
-    console.log(requiredMats)
+    return requiredMats;
   }
 
   function levelInherentSkill(initialTier, targetTier){
@@ -129,6 +149,10 @@ const PlannerContent = () => {
       weeklyboss: 0,
     }
 
+    if (initialTier === targetTier){
+      return requiredMats;
+    }
+
     if (initialTier < 1 || targetTier > inherentskillrecipe.length || initialTier > targetTier){
       return console.error("Invalid tier range.")
     }
@@ -137,14 +161,34 @@ const PlannerContent = () => {
       const recipe = inherentskillrecipe[i]
 
       for (const [mat, value] of Object.entries(recipe)){
-        requiredMats[mat] += value;
+        if (mat in requiredMats){
+          requiredMats[mat] += value;
+        }
       }
     }
-    console.log(requiredMats)
+    return requiredMats;
   }
 
+  function getTotalMaterials(){
+    const requiredMats = []
 
-  levelInherentSkill(1, 2)
+    requiredMats.push(ascendCharacter(1, 13))
+    requiredMats.push(levelTalent(1, 10))
+    requiredMats.push(levelStatBonus(1, 2))
+    requiredMats.push(levelInherentSkill(1, 2))
+
+    const totalMats = requiredMats.reduce((acc, curr) => {
+      for (const [mat, value] of Object.entries(curr)) {
+          acc[mat] = (acc[mat] || 0) + value;
+      }
+      return acc;
+    }, {});
+
+    console.log(totalMats);
+  }
+
+  getTotalMaterials()
+  
 
   return (
     <div className='planner-content'>
