@@ -286,9 +286,14 @@ const PlannerContent = () => {
             </Command>
           </PopoverContent>
         </Popover>
-        <div className='text-white'>
+        <div className='text-white flex'>
           <h1>Ascension Level</h1>
-          
+          <Popover>
+            <PopoverTrigger>
+              <button></button>
+            </PopoverTrigger>
+            <PopoverContent>Place content for the popover here.</PopoverContent>
+          </Popover>
         </div>
       </DialogContent>
       </Dialog>
