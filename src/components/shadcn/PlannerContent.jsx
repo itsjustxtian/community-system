@@ -31,6 +31,31 @@ import { useState } from 'react'
 const PlannerContent = () => {
   const [selected, setSelected] = useState(null);
   const [isOpen, setIsOpen] = useState(false);
+
+  const [curr_AL, setCurr_AL] = useState(0); //Ascension Level
+  const [target_AL, setTarget_AL] = useState();
+
+  const [curr_BA, setCurr_BA] = useState(); //Basic Attack Talent
+  const [target_BA, setTarget_BA] = useState();
+
+  const [curr_RS, setCurr_RS] = useState(); //Resonance Skill
+  const [target_RS, setTarget_RS] = useState();
+
+  const [curr_RL, setCurr_RL] = useState(); //Resonance Liberation
+  const [target_RL, setTarget_RL] = useState();
+
+  const [curr_FC, setCurr_FC] = useState(); //Forte Circuit
+  const [target_FC, setTarget_FC] = useState();
+
+  const [curr_IS1, setCurr_IS1] = useState(); //Inherent Skill 1
+  const [target_IS1, setTarget_IS1] = useState();
+
+  const [curr_IS2, setCurr_IS2] = useState(); //Inherent Skill 2
+  const [target_IS2, setTarget_IS2] = useState();
+
+  const [curr_IntS, setCurr_IntS] = useState(); //Intro Skill
+  const [target_IntS, setTarget_IntS] = useState();
+  
   const [materials, setMaterials] = useState([]);
   const [totalMaterials, setTotalMaterials] = useState([])
 
@@ -183,8 +208,6 @@ const PlannerContent = () => {
       }
       return acc;
     }, {});
-
-    console.log(totalMats);
   }
 
   getTotalMaterials()
@@ -286,14 +309,21 @@ const PlannerContent = () => {
             </Command>
           </PopoverContent>
         </Popover>
-        <div className='text-white flex'>
-          <h1>Ascension Level</h1>
-          <Popover>
-            <PopoverTrigger>
-              <button></button>
-            </PopoverTrigger>
-            <PopoverContent>Place content for the popover here.</PopoverContent>
-          </Popover>
+        <div className='text-white flex flex-row'>
+          <h1 className='grow w-1/3'>Ascension Level:</h1>
+          <div className='grow w-1/3'>
+            <Popover>
+              <PopoverTrigger>
+                <button className='bg-white/20 rounded-lg py-1'>{characterascensionrecipe[curr_AL].level}</button>
+              </PopoverTrigger>
+              <PopoverContent>
+                {characterascensionrecipe.map((tier, i) => (
+                  <button key={i} onClick={() => setCurr_AL(i)}>{tier.level}</button>
+                ))}
+              </PopoverContent>
+            </Popover>
+          </div>
+          
         </div>
       </DialogContent>
       </Dialog>
