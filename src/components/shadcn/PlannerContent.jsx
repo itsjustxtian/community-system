@@ -1,4 +1,4 @@
-import { UserRoundPlus, Swords, ArrowUpDown, Wrench, CircleFadingArrowUp, ArrowDownUp } from 'lucide-react'
+import { UserRoundPlus, Swords, ArrowUpDown, Wrench, CircleFadingArrowUp, ArrowDownUp, ChevronDown } from 'lucide-react'
 import { characterlist, items, elementfilters } from '../layouts/data/itemdata'
 import { samplecharacterlist, sampleweaponlist } from '../layouts/data/sampledata'
 import { characterascensionrecipe, talentrecipes, statbonusrecipe, inherentskillrecipe } from '../layouts/data/recipes'
@@ -309,20 +309,24 @@ const PlannerContent = () => {
             </Command>
           </PopoverContent>
         </Popover>
-        <div className='text-white flex flex-row'>
-          <h1 className='grow w-1/3'>Ascension Level:</h1>
-          <div className='grow w-1/3'>
-            <Popover>
-              <PopoverTrigger>
-                <button className='bg-white/20 rounded-lg py-1'>{characterascensionrecipe[curr_AL].level}</button>
-              </PopoverTrigger>
-              <PopoverContent>
-                {characterascensionrecipe.map((tier, i) => (
+        <div className='text-white flex flex-row items-center gap-2'>
+          <Popover>
+            <h1 className='flex'>Ascension Level:</h1>
+            <PopoverTrigger className='bg-white/20 rounded-lg py-1 flex grow px-2'>
+                <div className='w-full'>{characterascensionrecipe[curr_AL].level}</div><ChevronDown/>
+            </PopoverTrigger>
+            to
+            <PopoverTrigger className='bg-white/20 rounded-lg py-1 flex grow px-2'>
+                <div className='w-full'>{characterascensionrecipe[curr_AL].level}</div><ChevronDown/>
+            </PopoverTrigger>
+            <PopoverContent>
+              {characterascensionrecipe.map((tier, i) => (
+                <div className='flex flex-col justify-center'>
                   <button key={i} onClick={() => setCurr_AL(i)}>{tier.level}</button>
-                ))}
-              </PopoverContent>
-            </Popover>
-          </div>
+                </div>
+              ))}
+            </PopoverContent>
+          </Popover>
           
         </div>
       </DialogContent>
