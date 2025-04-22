@@ -200,47 +200,54 @@ export const expperlevelrecipe = [
     {
       "level": 12,
       "exp_required": 1700,
-      
+      "shellcredits": 595,
     },
     {
       "level": 13,
       "exp_required": 2000,
-      
+      "shellcredits": 700,
     },
     {
       "level": 14,
       "exp_required": 2200,
-      
+      "shellcredits": 770,
+
     },
     {
       "level": 15,
       "exp_required": 2400,
-      
+      "shellcredits": 840,
+
     },
     {
       "level": 16,
       "exp_required": 2700,
-      
+      "shellcredits": 945,
+
     },
     {
       "level": 17,
       "exp_required": 3000,
-      
+      "shellcredits": 1100,
+
     },
     {
       "level": 18,
       "exp_required": 3300,
-      
+      "shellcredits": 1200,
+
     },
     {
       "level": 19,
       "exp_required": 3600,
-      
+      "shellcredits": 1300,
+
     },
     {
       "level": 20,
       "exp_required": 3900,
-      
+      "shellcredits": 1400,
+
     },
     {
       "level": 21,

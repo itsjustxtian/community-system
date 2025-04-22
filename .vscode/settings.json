@@ -1,0 +1,16 @@
+{
+    "tailwindCSS.includeLanguages": {
+      "astro": "html",
+      "javascript": "javascript",
+      "typescript": "typescript",
+      "typescriptreact": "typescriptreact",
+      "javascriptreact": "javascriptreact"
+    },
+    "tailwindCSS.emmetCompletions": true,
+    "editor.quickSuggestions": {
+      "strings": true
+    },
+    "css.validate": false,
+    "editor.inlineSuggest.enabled": true
+  }
+  

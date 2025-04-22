@@ -303,38 +303,39 @@ const ResonatorPopup = () => {
         <div id='talent-section' className='flex flex-col gap-4'>
           <h1 className='border-b-1 border-b-white/20 py-2'>Talents</h1>
           {talentKeys.map((talent) => (
-            <div key={talent.key} id={talent.key} className='flex gap-2 mb-2'>
+            <div key={talent.key} id={talent.key} className='grid grid-cols-2 gap-2 mb-2'>
               <p className='text-nowrap'>{talent.label}:</p>
-              <input
-                className='w-1/4 text-center border-b-1 border-b-white/20'
-                type='number'
-                min={talent.key.startsWith('inh_skill') ? 0 : 1}
-                max={10}
-                value={curr_talents[talent.key]}
-                onChange={(e) =>
-                  setCurr_Talents((prev) => ({
-                    ...prev,
-                    [talent.key]: parseInt(e.target.value, 10),
-                  }))
-                }
-              />
-              to
-              <input
-                className='w-1/4 text-center border-b-1 border-b-white/20'
-                type='number'
-                min={talent.key.startsWith('inh_skill') ? 1 : 1}
-                max={10}
-                value={tar_talents[talent.key]}
-                onChange={(e) =>
-                  setTar_Talents((prev) => ({
-                    ...prev,
-                    [talent.key]: parseInt(e.target.value, 10),
-                  }))
-                }
-              />
+              <div className='flex justify-between'>
+                <input
+                  className='w-1/4 text-center border-b-1 border-b-white/20'
+                  type='number'
+                  min={talent.key.startsWith('inh_skill') ? 0 : 1}
+                  max={10}
+                  value={curr_talents[talent.key]}
+                  onChange={(e) =>
+                    setCurr_Talents((prev) => ({
+                      ...prev,
+                      [talent.key]: parseInt(e.target.value, 10),
+                    }))
+                  }
+                />
+                to
+                <input
+                  className='w-1/4 text-center border-b-1 border-b-white/20'
+                  type='number'
+                  min={talent.key.startsWith('inh_skill') ? 1 : 1}
+                  max={10}
+                  value={tar_talents[talent.key]}
+                  onChange={(e) =>
+                    setTar_Talents((prev) => ({
+                      ...prev,
+                      [talent.key]: parseInt(e.target.value, 10),
+                    }))
+                  }
+                />
+              </div>
             </div>
           ))}
-
         </div>
     </div>
   )
