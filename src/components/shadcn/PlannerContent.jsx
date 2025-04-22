@@ -30,67 +30,6 @@ import { useState } from 'react'
 import ResonatorPopup from './PlannerContent/ResonatorPopup'
 
 const PlannerContent = () => {
-  const [selected, setSelected] = useState(null);
-  const [isOpen, setIsOpen] = useState(false);
-
-  const [curr_AL, setCurr_AL] = useState(0); //Ascension Level
-  const [target_AL, setTarget_AL] = useState(0);
-
-  const [curr_talents, setCurr_Talents] = useState(
-    {
-      normal_atk: 1,
-      res_skill: 1,
-      res_lib: 1,
-      forte_cir: 1,
-      intro_skill: 1,
-      inh_skill_1: 0,
-      inh_skill_2: 0,
-      stat_bonus1_1: 0,
-      stat_bonus1_1: 0,
-      stat_bonus2_1: 0,
-      stat_bonus2_2: 0,
-    }
-  )
-
-  const [tar_talents, setTar_Talents] = useState(
-    {
-      normal_atk: 1,
-      res_skill: 1,
-      res_lib: 1,
-      forte_cir: 1,
-      intro_skill: 1,
-      inh_skill_1: 0,
-      inh_skill_2: 0,
-      stat_bonus1_1: 0,
-      stat_bonus1_1: 0,
-      stat_bonus2_1: 0,
-      stat_bonus2_2: 0,
-    }
-  )
-
-  const [curr_BA, setCurr_BA] = useState(); //Basic Attack Talent
-  const [target_BA, setTarget_BA] = useState();
-
-  const [curr_RS, setCurr_RS] = useState(); //Resonance Skill
-  const [target_RS, setTarget_RS] = useState();
-
-  const [curr_RL, setCurr_RL] = useState(); //Resonance Liberation
-  const [target_RL, setTarget_RL] = useState();
-
-  const [curr_FC, setCurr_FC] = useState(); //Forte Circuit
-  const [target_FC, setTarget_FC] = useState();
-
-  const [curr_IS1, setCurr_IS1] = useState(); //Inherent Skill 1
-  const [target_IS1, setTarget_IS1] = useState();
-
-  const [curr_IS2, setCurr_IS2] = useState(); //Inherent Skill 2
-  const [target_IS2, setTarget_IS2] = useState();
-
-  const [curr_IntS, setCurr_IntS] = useState(); //Intro Skill
-  const [target_IntS, setTarget_IntS] = useState();
-  
-  const [materials, setMaterials] = useState([]);
-  const [totalMaterials, setTotalMaterials] = useState([])  
 
   return (
     <div className='planner-content'>
