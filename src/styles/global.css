@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@tailwind base;
+@tailwind components;
 @tailwind utilities;
 @plugin "tailwindcss-animate";
 
@@ -207,4 +209,12 @@
 .popover-content-same-as-trigger {
 	width: var(--radix-popover-trigger-width);
 	max-height: var(--radix-popover-content-available-height);
+}
+
+#resonator-popup h1{
+  font-size: 1.2rem;
+}
+
+#resonator-popup {
+  font-size: 0.9rem;
 }

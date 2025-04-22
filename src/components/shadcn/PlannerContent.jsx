@@ -27,13 +27,46 @@ import {
   CommandShortcut,
 } from "@/components/ui/command"
 import { useState } from 'react'
+import ResonatorPopup from './PlannerContent/ResonatorPopup'
 
 const PlannerContent = () => {
   const [selected, setSelected] = useState(null);
   const [isOpen, setIsOpen] = useState(false);
 
   const [curr_AL, setCurr_AL] = useState(0); //Ascension Level
-  const [target_AL, setTarget_AL] = useState();
+  const [target_AL, setTarget_AL] = useState(0);
+
+  const [curr_talents, setCurr_Talents] = useState(
+    {
+      normal_atk: 1,
+      res_skill: 1,
+      res_lib: 1,
+      forte_cir: 1,
+      intro_skill: 1,
+      inh_skill_1: 0,
+      inh_skill_2: 0,
+      stat_bonus1_1: 0,
+      stat_bonus1_1: 0,
+      stat_bonus2_1: 0,
+      stat_bonus2_2: 0,
+    }
+  )
+
+  const [tar_talents, setTar_Talents] = useState(
+    {
+      normal_atk: 1,
+      res_skill: 1,
+      res_lib: 1,
+      forte_cir: 1,
+      intro_skill: 1,
+      inh_skill_1: 0,
+      inh_skill_2: 0,
+      stat_bonus1_1: 0,
+      stat_bonus1_1: 0,
+      stat_bonus2_1: 0,
+      stat_bonus2_2: 0,
+    }
+  )
 
   const [curr_BA, setCurr_BA] = useState(); //Basic Attack Talent
   const [target_BA, setTarget_BA] = useState();
@@ -57,161 +90,7 @@ const PlannerContent = () => {
   const [target_IntS, setTarget_IntS] = useState();
   
   const [materials, setMaterials] = useState([]);
-  const [totalMaterials, setTotalMaterials] = useState([])
-
-  function ascendCharacter(initialTier, targetTier){
-    const requiredMats = {
-      experience: 0,
-      shellcredits: 0,
-      basic_am: 0,
-      medium_am: 0,
-      advanced_am: 0,
-      premium_am: 0,
-      bossmaterial: 0,
-      regionalspecialty: 0,
-    }
-
-    if (initialTier === targetTier){
-      return requiredMats;
-    }
-
-    if (initialTier < 1 || targetTier > characterascensionrecipe.length || initialTier > targetTier){
-      return console.error("Invalid tier range.")
-    }
-
-    for (let i = initialTier - 1 ; i < targetTier ; i++){
-      const recipe = characterascensionrecipe[i]
-
-      for (const [mat, value] of Object.entries(recipe)){
-        if (mat in requiredMats){
-          requiredMats[mat] += value;
-        }
-      }
-    }
-    
-    return requiredMats;
-  }
-  
-  function levelTalent(initialTier, targetTier){
-    const requiredMats = {
-      shellcredits: 0,
-      basic_am: 0,
-      medium_am: 0,
-      advanced_am: 0,
-      premium_am: 0,
-      basic_tm: 0,
-      medium_tm: 0,
-      advanced_tm: 0,
-      premium_tm: 0,
-      weeklyboss: 0,
-    }
-
-    if (initialTier === targetTier){
-      return requiredMats;
-    }
-
-    if (initialTier < 1 || targetTier > talentrecipes.length || initialTier > targetTier){
-      return console.error("Invalid tier range.")
-    }
-
-    for (let i = initialTier - 1 ; i < targetTier ; i++){
-      const recipe = talentrecipes[i]
-
-      for (const [mat, value] of Object.entries(recipe)){
-        if (mat in requiredMats){
-          requiredMats[mat] += value;
-        }
-      }
-    }
-    return requiredMats;
-  }
-
-  function levelStatBonus(initialTier, targetTier){
-    const requiredMats = {
-      shellcredits: 0,
-      basic_am: 0,
-      medium_am: 0,
-      advanced_am: 0,
-      premium_am: 0,
-      basic_tm: 0,
-      medium_tm: 0,
-      advanced_tm: 0,
-      premium_tm: 0,
-      weeklyboss: 0,
-    }
-
-    if (initialTier === targetTier){
-      return requiredMats;
-    }
-
-    if (initialTier < 1 || targetTier > statbonusrecipe.length || initialTier > targetTier){
-      return console.error("Invalid tier range.")
-    }
-
-    for (let i = initialTier - 1 ; i < targetTier ; i++){
-      const recipe = statbonusrecipe[i]
-
-      for (const [mat, value] of Object.entries(recipe)){
-        if (mat in requiredMats){
-          requiredMats[mat] += value;
-        }
-      }
-    }
-    return requiredMats;
-  }
-
-  function levelInherentSkill(initialTier, targetTier){
-    const requiredMats = {
-      shellcredits: 0,
-      basic_am: 0,
-      medium_am: 0,
-      advanced_am: 0,
-      premium_am: 0,
-      basic_tm: 0,
-      medium_tm: 0,
-      advanced_tm: 0,
-      premium_tm: 0,
-      weeklyboss: 0,
-    }
-
-    if (initialTier === targetTier){
-      return requiredMats;
-    }
-
-    if (initialTier < 1 || targetTier > inherentskillrecipe.length || initialTier > targetTier){
-      return console.error("Invalid tier range.")
-    }
-
-    for (let i = initialTier - 1 ; i < targetTier ; i++){
-      const recipe = inherentskillrecipe[i]
-
-      for (const [mat, value] of Object.entries(recipe)){
-        if (mat in requiredMats){
-          requiredMats[mat] += value;
-        }
-      }
-    }
-    return requiredMats;
-  }
-
-  function getTotalMaterials(){
-    const requiredMats = []
-
-    requiredMats.push(ascendCharacter(1, 13))
-    requiredMats.push(levelTalent(1, 10))
-    requiredMats.push(levelStatBonus(1, 2))
-    requiredMats.push(levelInherentSkill(1, 2))
-
-    const totalMats = requiredMats.reduce((acc, curr) => {
-      for (const [mat, value] of Object.entries(curr)) {
-          acc[mat] = (acc[mat] || 0) + value;
-      }
-      return acc;
-    }, {});
-  }
-
-  getTotalMaterials()
-  
+  const [totalMaterials, setTotalMaterials] = useState([])  
 
   return (
     <div className='planner-content'>
@@ -267,68 +146,11 @@ const PlannerContent = () => {
       </div>
       <DialogContent className='text-white bg-linear-to-tr from-[#111112] from-15% to-[#222325] to-80% border-0'>
         <DialogHeader>
-          <DialogTitle className=''>Add a new resonator</DialogTitle>
+          <DialogTitle className='hidden'></DialogTitle>
           <DialogDescription>
           </DialogDescription>
         </DialogHeader>
-        <Popover open={isOpen} onOpenChange={setIsOpen}>
-          <PopoverTrigger asChild>
-              <button id='selected-resonator' className='w-full bg-white/20 flex rounded-lg px-6 py-2'>
-                {selected != null ?
-                  <div className='flex items-center justify-center w-full'>
-                    {samplecharacterlist[selected].name}
-                    
-                  </div>
-                  : <div className='flex items-center justify-center w-full'>Select a Resonator...</div>
-                } <ArrowDownUp/>
-              </button>
-          </PopoverTrigger>
-          <PopoverContent className="bg-linear-to-tr from-[#111112] from-15% to-[#222325] to-80% border-0 popover-content-same-as-trigger">
-            <Command className="bg-transparent text-white ">
-              <CommandInput placeholder="Type a resonator or search..." />
-              <CommandList className="command-list">
-                <CommandEmpty>No results found.</CommandEmpty>
-                <CommandGroup>
-                  {samplecharacterlist.map((character, i) => (
-                    <CommandItem 
-                      key={i} 
-                      className={`flex justify-between
-                                  ${character.rarity === 5 ? "text-[#FCD063]" :
-                                    character.rarity === 4 ? "text-[#AC6EFA]" :
-                                    ""
-                      }`} 
-                      value={character.name} 
-                      onSelect={()=>{setSelected(i); setIsOpen(false)}}>
-                      <img src={character.charactericon} className='max-h-10 rounded object-contain'/>
-                      <p className='truncate'>{character.name}</p>
-                      <img src={character.element ? elementfilters.find((element) => element.element === character.element).src : "hidden"} className='max-h-10 rounded object-contain' title={character.element.toUpperCase()}/>
-                    </CommandItem>
-                  ))}
-                </CommandGroup>
-              </CommandList>
-            </Command>
-          </PopoverContent>
-        </Popover>
-        <div className='text-white flex flex-row items-center gap-2'>
-          <Popover>
-            <h1 className='flex'>Ascension Level:</h1>
-            <PopoverTrigger className='bg-white/20 rounded-lg py-1 flex grow px-2'>
-                <div className='w-full'>{characterascensionrecipe[curr_AL].level}</div><ChevronDown/>
-            </PopoverTrigger>
-            to
-            <PopoverTrigger className='bg-white/20 rounded-lg py-1 flex grow px-2'>
-                <div className='w-full'>{characterascensionrecipe[curr_AL].level}</div><ChevronDown/>
-            </PopoverTrigger>
-            <PopoverContent>
-              {characterascensionrecipe.map((tier, i) => (
-                <div className='flex flex-col justify-center'>
-                  <button key={i} onClick={() => setCurr_AL(i)}>{tier.level}</button>
-                </div>
-              ))}
-            </PopoverContent>
-          </Popover>
-          
-        </div>
+          <ResonatorPopup/>
       </DialogContent>
       </Dialog>
     </div>
