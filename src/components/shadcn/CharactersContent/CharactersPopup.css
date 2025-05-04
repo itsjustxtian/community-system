@@ -1,0 +1,11 @@
+.characters-popup {
+    color: white;
+}
+
+.characters-popup::-webkit-scrollbar {
+    display: none;
+}
+
+.characters-popup h2{
+    color: gold;
+}

@@ -5,6 +5,7 @@ import '../styles/global.css'
 import '@fontsource-variable/inter';
 import '@fontsource/poppins';
 import { ClientRouter } from "astro:transitions";
+import { SonnerToaster } from "@/components/shadcn/SonnerToaser";
 
 const {title, pageTitle, description} = Astro.props;
 ---
@@ -27,6 +28,7 @@ const {title, pageTitle, description} = Astro.props;
 		<main class="">
 			<slot class="bodycontent" />
 		</main>
+		<SonnerToaster client:load />
 		<Footer/>
 	</body>
 </html>

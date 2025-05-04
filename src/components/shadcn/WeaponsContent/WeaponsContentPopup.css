@@ -1,0 +1,11 @@
+.weapons-popup {
+    color: white;
+}
+
+.weapons-popup::-webkit-scrollbar {
+    display: none;
+}
+
+.weapons-popup h2{
+    color: gold;
+}

@@ -1,18 +1,23 @@
 import {
-    Select,
-    SelectContent,
-    SelectItem,
-    SelectTrigger,
-    SelectValue,
-  } from "@/components/ui/select"
+    Dialog,
+    DialogContent,
+    DialogDescription,
+    DialogHeader,
+    DialogTitle,
+    DialogTrigger,
+  } from "@/components/ui/dialog"
+  
 
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group"
 
 import { useState } from "react"
 import { characterlist, sortfilters, elementfilters, weaponfilters } from "../layouts/data/itemdata"
+import { samplecharacterlist } from "../layouts/data/sampledata"
+import CharactersPopup from "./CharactersContent/CharactersPopup"
 
 const CharactersContent = () => {
     const [selectedFilter, setSelectedFilter] = useState([]);
+    const [character, setCharacter] = useState(null)
 
     const filteredObjects = characterlist.filter((character) =>
         selectedFilter.length !== 0 ? selectedFilter.includes(character.element) || selectedFilter.includes(character.weapon) : true
@@ -21,19 +26,8 @@ const CharactersContent = () => {
     console.log(selectedFilter);
 
   return (
-    <div>
+    <Dialog>
         <div id="character-filters no-scrollbar" className="character-filters md:justify-center">
-            <Select>
-                <SelectTrigger className="w-[180px]">
-                    <SelectValue placeholder="Sort By" />
-                </SelectTrigger>
-                <SelectContent>
-                    {sortfilters.map((item) => (
-                    <SelectItem value={item.value}>{item.name}</SelectItem>
-                    ))
-                    }
-                </SelectContent>
-            </Select>
 
             <ToggleGroup 
                 type="multiple" 
@@ -64,10 +58,11 @@ const CharactersContent = () => {
 
         <div id="character-list" className="grid justify-items-center grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 2xl:grid-cols-10">
             {filteredObjects.map((character,i) => (
-                <button className="relative icon-card transition max-w-[100px] h-[150px] bg-linear-to-t from-[#606265]/80 hover:from-[#606265] from-5% to-transparent to-50% rounded-lg">
+                <DialogTrigger key={i} className="relative icon-card transition max-w-[100px] h-[150px] bg-linear-to-t from-[#606265]/80 hover:from-[#606265] from-5% to-transparent to-50% rounded-lg cursor-pointer">
                     <div 
                     title={character.name}
-                    className={`rounded-lg h-[125px] overflow-hidden
+                    onClick={() => setCharacter(character)}
+                    className={`rounded-lg h-[125px] overflow-hidden 
                     ${  character.element === 'aero' ? "bg-linear-to-t from-[#55FFB5]/80 hover:from-[#55FFB5] transition from-10% to-transparent to-70%" :
                         character.element === 'electro' ? "bg-linear-to-t from-[#B46BFF]/80 hover:from-[#B46BFF] transition from-10% to-transparent to-70%":
                         character.element === 'fusion' ? "bg-linear-to-t from-[#F0744E]/80 hover:from-[#F0744E] transition from-10% to-transparent to-70%":
@@ -79,11 +74,20 @@ const CharactersContent = () => {
                         <img src={character.charactericon} alt={character.name} id='character-icons' className={'translate-y-3'}/>
                     </div>
                     <p id="name" className="px-2 truncate">{character.name}</p>
-                </button>
+                </DialogTrigger>
             ))}
         </div>
+
+        <DialogContent className="popup-background">
+            <DialogHeader hidden>
+            <DialogTitle >Are you absolutely sure?</DialogTitle>
+            <DialogDescription >
+            </DialogDescription>
+            </DialogHeader>
+            <CharactersPopup character={character}/>
+        </DialogContent>
       
-    </div>
+    </Dialog>
   )
 }
 

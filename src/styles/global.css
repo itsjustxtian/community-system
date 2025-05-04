@@ -142,6 +142,19 @@
   display: none;
 }
 
+#talent-section::-webkit-scrollbar {
+  display: none;
+}
+
+#details::-webkit-scrollbar {
+  display: none;
+}
+
+#materials-to-farm::-webkit-scrollbar {
+  display: none;
+}
+
+
 .command-list::-webkit-scrollbar-track
 {
 	/*-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);*/
@@ -208,7 +221,7 @@
 
 .popover-content-same-as-trigger {
 	width: var(--radix-popover-trigger-width);
-	max-height: var(--radix-popover-content-available-height);
+	/*max-height: var(--radix-popover-content-available-height);*/
 }
 
 #resonator-popup h1{
@@ -217,6 +230,11 @@
 
 #resonator-popup {
   font-size: 0.9rem;
+}
+
+.popup-background {
+  background: linear-gradient(to top right, #111112 15%, #222325 80%);
+  border: 0;
 }
 
 /* Chrome, Safari, Edge, Opera */

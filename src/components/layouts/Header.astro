@@ -1,11 +1,13 @@
 ---
 import navigation from './data/navigation.json';
 import HamburgerMenu from '../shadcn/HamburgerMenu';
+import logo from '../../assets/images/T_ChatEmo_H_02.png'
+import AvatarComponent from '../shadcn/AvatarComponent'
 ---
 
 <header class="flex z-10 sticky top-0 bg-black w-full h-20 justify-between items-center p-5">
-    <div>
-        <h1 class="text-white">For Logo</h1>
+    <div class="w-[50px] flex justify-center items-center">
+        <img src={logo.src} alt="Wuthering Tools Logo" class="object-contain">
     </div>
     <nav class="hidden md:flex nav-links">
         <ul class="flex mx-auto">
@@ -25,6 +27,6 @@ import HamburgerMenu from '../shadcn/HamburgerMenu';
         <HamburgerMenu client:load/>
     </div>
     <div class="hidden md:flex">
-        <h1>For User</h1>
+        <AvatarComponent client:load/>
     </div>
 </header>

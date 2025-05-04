@@ -62,7 +62,7 @@ export const weaponfilters = [
       alt: "Broadblade",
       customshadow: "[0_0px_5px_rgba(85,255,181,1)]"
   },
-  {   weapon: "Gauntlet",
+  {   weapon: "Gauntlets",
       src: "/src/assets/images/resonator-type-icons/Skill_Gauntlet.png",
       alt: "Gauntlet",
       customshadow: "[0_0px_5px_rgba(85,255,181,1)]"
@@ -977,32 +977,6 @@ export const items = [
       image: "/src/assets/images/development-materials/hidden-thunder-tacet-core-41400134.webp",
     },
     {
-      id: 44010027,
-      slug: "test-universal-echo",
-      name: "test/Universal Echo",
-      tags: ["Echo Development Material"],
-      description:
-        "test/Universal Echoes can substitute any Echo consumed during Tuning.",
-      flavor: "Echo Details",
-      qualityLevel: 4,
-      dropLocations: ["Huanglong Exploration", "Medium Tacet Field: Echo"],
-      sortIndex: 0,
-      image: "/src/assets/images/development-materials/test-universal-echo-44010027.webp",
-    },
-    {
-      id: 44010028,
-      slug: "test-golden-universal-echo",
-      name: "test/Golden Universal Echo",
-      tags: ["Echo Development Material"],
-      description:
-        "test/Golden Universal Echoes can substitute any Echo consumed during Tuning.",
-      flavor: "Echo Details",
-      qualityLevel: 5,
-      dropLocations: ["Huanglong Exploration", "Medium Tacet Field: Echo"],
-      sortIndex: 0,
-      image: "/src/assets/images/development-materials/test-golden-universal-echo-44010028.webp",
-    },
-    {
       id: 36000011,
       slug: "basic-tuner",
       name: "Basic Tuner",
@@ -1318,221 +1292,1785 @@ export const items = [
       },
   ];
 
+const howlermaterials = {
+  basic_am: "LF Howler Core",
+  medium_am: "MF Howler Core",
+  advanced_am: "HF Howler Core",
+  premium_am: "FF Howler Core",
+}
+
+const ringmaterials = {
+  basic_am: "Crude Ring",
+  medium_am: "Basic Ring",
+  advanced_am: "Improved Ring",
+  premium_am: "Tailored Ring",
+}
+
+const whisperinmaterials = {
+  basic_am: "LF Whisperin Core",
+  medium_am: "MF Whisperin Core",
+  advanced_am: "HF Whisperin Core",
+  premium_am: "FF Whisperin Core",
+}
+
+const sworduser = {
+  basic_tm: "Inert Metallic Drip",
+  medium_tm: "Reactive Metallic Drip",
+  advanced_tm: "Polarized Metallic Drip",
+  premium_tm: "Heterized Metallic Drip",
+}
+
+const pistoluser = {
+  basic_tm: "Impure Phlogiston",
+  medium_tm: "Extracted Phlogiston",
+  advanced_tm: "Refined Phlogiston",
+  premium_tm: "Flawless Phlogiston",
+}
+
+const rectifieruser = {
+  basic_tm: "Lento Helix",
+  medium_tm: "Adagio Helix",
+  advanced_tm: "Andante Helix",
+  premium_tm: "Presto Helix",
+}
+
+const broadbladeuser = {
+  basic_tm: "Waveworn Residue 210",
+  medium_tm: "Waveworn Residue 226",
+  advanced_tm: "Waveworn Residue 235",
+  premium_tm: "Waveworn Residue 239",
+}
+
+const gauntletuser = {
+  basic_tm: "Cadence Seed",
+  medium_tm: "Cadence Bud",
+  advanced_tm: "Cadence Leaf",
+  premium_tm: "Cadence Blossom",
+}
+
 export const characterlist = [
-  {
-      name: "Aalto",
-      element: "aero",
-      weapon: "Pistols",
-      charactericon: "/src/assets/images/character-icons-small/aalto-icon.webp",
-      characterportrait: "/src/assets/images/portraits/aalto.webp",
-      rarity: 4,
-      version: 1.0,
-      talent: [
-        {
-          basic_attack: "Half Truths",
-          resonance_skill: "Shift Trick",
-          resonance_lib: "Flower in the Mist",
-          forte_circuit: "Misty Cover",
-          inherent_skill_1: "Perfect Performance",
-          inherent_skill_2: "Mid-game Break",
-          intro_skill: "Feint Shot",
-          outro_skill: "Dissolving Mist",
-        }
-      ],
-      materials: [
-        {
-          basic_am: "LF Howler Core",
-          medium_am: "MF Howler Core",
-          advanced_am: "HF Howler Core",
-          premium_am: "FF Howler Core",
-          basic_tm: "Impure Phlogiston",
-          medium_tm: "Extracted Phlogiston",
-          advanced_tm: "Refined Phlogiston",
-          premium_tm: "Flawless Phlogiston",
-          weeklyboss: "Monument Bell",
+  { name: "Aalto",
+    element: "aero",
+    weapon: "Pistols",
+    charactericon: "/src/assets/images/character-icons-small/aalto-icon.webp",
+    characterportrait: "/src/assets/images/portraits/aalto.webp",
+    rarity: 4,
+    version: 1.0,
+    talent: [
+      {
+        basic_attack: {
+          name: "Normal Attack: Half Truths",
+          description: {
+            "Basic Attack": "Aalto fires up to 5 consecutive shots, dealing Aero DMG. Basic Attack 4 will spread the \"Mist\" forward, which lasts for 1.5s.",
+            "Heavy Attack": "Aalto enters the aiming state for a more powerful shot. The aimed shot fired after charging finishes deals Aero DMG.",
+            "Mid-air Attack": "Aalto consumes Stamina to perform consecutive shots at the target in mid-air, dealing Aero DMG.",
+            "Dodge Counter": "Use Basic Attack after a successful Dodge to attack the target, dealing Aero DMG."
+          }
+        },
+        resonance_skill: {
+          name: "Resonance Skill: Shift Trick",
+          description: {
+            "Mist Avatar": "Casts \"Mist\" and 1 \"Mist Avatar(s)\" to taunt the surrounding targets. The avatars inherit a portion of Aalto's HP and generate 6 Mist Bullets around them, dealing Aero DMG.",
+            "Mist Missiles": "Deals Aero DMG, considered as Resonance Skill damage.",
+          }
+        },
+        resonance_lib: {
+          name: "Resonance Liberation: Flower in the Mist",
+          description: {
+            "": "Generate a \"Gate of Quandary\" in front of you dealing Aero DMG. When bullets pass through the \"Gate of Quandary\", ATK is increased. \"Gate of Quandary\" lasts for 10s."
+          }
+        },
+        forte_circuit: {
+          name: "Forte Circuit: Misty Cover",
+          description: {
+            "": "When Aalto passes through \"Mist\" or \"Gate of Quandary\", he enters \"Mistcloak Dash\".",
+            "Mistcloak Dash":"Movement speed increased; During this period, \"Mist Drops\" are continuously consumed, and for each 1 \"Mist Drop\" consumed, 1 Resonance Skill Mist Missile is generated.",
+            "Mist Drops":"Aalto can hold up to 6 Mist Drops. When Basic Attack or Mid-air Attack passes through \"Mist\" and hits the target, 1 \"Mist Drop\" is recovered.",
+          }
+        },
+        inherent_skill_1: {
+          name: "Inherent Skill: Perfect Performance",
+          description: {
+            "": "Aalto's Heavy Attack will always critically hit, triggered once every 30 seconds."
+          }
+        },
+        inherent_skill_2: {
+          name: "Inherent Skill: Mid-game Break",
+          description: {
+            "": "Aalto will continuously recover Stamina when he is in the Forte Circuit Miscloak Dash state."
+          }
+        },
+        intro_skill: {
+          name: "Intro Skill: Feint Shot",
+          description: {
+            "": "Aalto suddenly appears and performs rapid continuous shooting, dealing Aero DMG."
+          }
+        },
+        outro_skill: {
+          name: "Outro Skill: Dissolving Mist",
+          description: {
+            "": "The next character (or other characters on a nearby team that activates an Outro Skill) gains 23% Aero DMG Deepen for 14 seconds or until the Character is switched."
+          }
+        },
+      }
+    ],
+    materials: [
+      {
+        shellcredits: "Shell Credit",
+        ascension_materials: {
+          experience: "Premium Resonance Potion",
           bossmaterial: "Roaring Rock Fist",
           regionalspecialty: "Wintry Bell",
+          ...howlermaterials,
+        },
+        talent_materials: {
+          ...pistoluser,
+          weeklyboss: "Monument Bell",
+        },
+      }
+    ]
+  },
+  { name: "Baizhi",
+    element: "glacio",
+    weapon: "Rectifier",
+    charactericon: "/src/assets/images/character-icons-small/baizhi-icon.webp",
+    characterportrait: "/src/assets/images/portraits/baizhi.webp",
+    rarity: 4,
+    version: 1.0,
+    talent: [
+        {
+          basic_attack: {
+            name:"Normal Attack: Destined Promise",
+            description: {
+              "Basic Attack": "Baizhi instructs You'tan to perform up to 4 consecutive attacks, dealing Glacio damage.",
+              "Heavy Attack": "Baizhi continuously consumes Stamina to command You'tan to attack enemies, dealing Glacio damage. During Heavy Attack, Baizhi can command You'tan to move.",
+              "Mid-air Attack": "Baizhi consumes Stamina and summons You’tan in mid-air to perform a Plunging Attack, dealing Glacio damage.",
+              "Dodge Counter": "Use Basic Attack after a successful Dodge to attack the target, dealing Glacio damage.",
+            }
+          },
+          resonance_skill: {
+            name: "Resonance Skill: Emergency Plan",
+            description: {
+              "": "Baizhi calls You'tan to attack the target, dealing Glacio damage while restoring HP for the entire team."
+            }
+          },
+          resonance_lib: {
+            name: "Resonance Liberation: Momentary Union",
+            description: {
+              "": "Baizhi summons You'tan to restore HP for the entire team, generating 4 stacks of Remnant Entities.",
+              "Remnant Entities": "Remnant Entities follow the active team members and automatically consume 1 stacks of Remnant Entities to attack the targets every 2.5s, dealing Glacio damage on hit while restoring HP to all team members nearby."
+            }
+          },
+          forte_circuit: {
+            name: "Forte Circuit: Cycle of Life",
+            description: {
+              "You'tan": "A Remnant Creature that answers to Baizhi’s mind and desires while sharing all her attributes. You’tan goes back to Baizhi when Baizhi dodges.",
+              "Concentration": "Baizhi consumes all \"Concentrations\" when casting Heavy Attack or Resonance Skill Emergency Plan to continuously restore HP for Characters nearby. Each 1 \"Concentration\" consumed restores HP for 1 time every 2s.\n When Baizhi consumes \"Concentration\" to cast Heavy Attack, Baizhi additionally restores Concerto Energy and Resonance Energy; When Baizhi consumes \"Concentration\" to cast Resonance Skill Emergency Plan, Baizhi additionally restores Concerto Energy.\nBaizhi can hold up to 4 \"Concentrations\". Baizhi obtains 1 \"Concentration\" for every Basic Attack on hit.",
+            }
+          },
+          inherent_skill_1: {
+            name: "Inherent Skill: Harmonic Range",
+            description: {
+              "": "When Baizhi casts Resonance Skill Emergency Plan, You'tan generates a field of Euphonia that lasts for 15s.",
+              "Euphonia": "ATK of the Resonators who picks up Euphonia is increased by 15% for 20s",
+            }
+          },
+          inherent_skill_2: {
+            name: "Inherent Skill: Stimulus Feedback",
+            description: {
+              "": "For every Heavy Attack on hit, Baizhi restores HP to the nearby team member with the least HP equal to 0.25% of Baizhi's max HP."
+            }
+          },
+          intro_skill: {
+            name: "Intro Skill: Overflowing Frost",
+            description: {
+              "": "Baizhi calls You'tan to perform 1 plunging attack, dealing Glacio damage while restoring HP to all team members nearby."
+            }
+          },
+          outro_skill: {
+            name: "Outro Skill: Rejuvinating Flow",
+            description: {
+              "": "Baizhi restores HP equal to 1.54% of her max HP to The next character (or other characters on a nearby team that activates an Outro Skill) every 3s for 30s. Resonators gaining this healing also gain 15% all-Type DMG Deepen for 6s."
+            }
+          },
+        }
+      ],
+    materials: [
+        {
+          shellcredits: "Shell Credit",
+          ascension_materials: {
+            experience: "Premium Resonance Potion",
+            bossmaterial: "Sound-Keeping Tacet Core",
+            regionalspecialty: "Lanternberry",
+            ...howlermaterials
+          },
+          talent_materials: {
+            ...rectifieruser,
+            weeklyboss: "Monument Bell",
+          },
         }
       ]
   },
-  {
-      name: "Baizhi",
-      element: "glacio",
-      weapon: "Rectifier",
-      charactericon: "/src/assets/images/character-icons-small/baizhi-icon.webp",
-      characterportrait: "/src/assets/images/portraits/baizhi.webp",
-      rarity: 4,
-      version: 1.0,
-  },
-  {
-      name: "Calcharo",
+  {   name: "Calcharo",
       element: "electro",
       weapon: "Broadblade",
       charactericon: "/src/assets/images/character-icons-small/calcharo-icon.webp",
       characterportrait: "/src/assets/images/portraits/calcharo.webp",
       rarity: 5,
       version: 1.0,
+      talent: [
+        {
+          basic_attack: {
+            name:"Normal Attack: Gnawing Fangs",
+            description: {
+              "Basic Attack": "Perform up to 4 attacks, dealing Electro DMG.",
+              "Heavy Attack": "Consume Stamina to attack the target, dealing Electro DMG.",
+              "Mid-air Attack": "Consume Stamina to perform a Mid-Air Plunging Attack, dealing Electro DMG.",
+              "Dodge Counter": "Using Basic Attack after a successful Dodge to attack the target, dealing Electro DMG.",
+            }
+          },
+          resonance_skill: {
+            name: "Resonance Skill: Extermination Order",
+            description: {
+              "": "Cast up to 3 attacks. Deal Electro DMG.\nIf this Character is switched or Resonance Skill Extermination Order is not repeated in a while, it will be put on a Cooldown. Resonance Skill Extermination Order does not reset your Basic Attack stage."
+            }
+          },
+          resonance_lib: {
+            name: "Resonance Liberation: Phantom Etching",
+            description: {
+              "": "Calcharo attacks the target, dealing Electro DMG and enters Deathblade Gear state. After Resonance Liberation Deathblade Gear state ends, Calcharo's next Intro Skill is replaced with Intro Skill \"Necessary Means\", which deals Electro DMG, considered as Intro Skill damage.",
+              "Deathblade Gear": "Basic Attack is replaced with Basic Attack Hounds Roar. Dodge Counter deals increased damage, considered as Resonance Liberation damage.",
+              "Hounds Roar": "Perform up to 5 consecutive attacks, dealing Electro DMG, considered as Basic Attack Damage."
+            }
+          },
+          forte_circuit: {
+            name: "Forte Circuit: Hunting Mission",
+            description: {
+              "Heavy Attack: \"Mercy\"": "When Calcharo has 3 \"Cruelty\", his Heavy Attack is replaced with Heavy Attack \"Mercy\". When casting Heavy Attack \"Mercy\", Calcharo consumes 3 \"Cruelty\" to deal Electro DMG, considered as Heavy Attack damage, and recovers Resonance Energy and Concerto Energy.",
+              "\"Cruelty\"": "Calcharo can hold up to 3 \"Cruelty\". Under Resonance Liberation Deathblade Gear state, \"Cruelty\" cannot be acquired. When Resonance Skill Extermination Order hits the target, gain 1 \"Cruelty\".",
+              "Heavy Attack: \"Death Messenger\"": "When Calcharo has 5 \"Killing Intent\", his Basic Attack is replaced with Heavy Attack \"Death Messenger\". When casting Heavy Attack \"Death Messenger\", Calcharo consumes 5 \"Killing Intent\" to deal Electro DMG, considered as Resonance Liberation damage, and recovers Resonance Energy and Concerto Energy.",
+              "\"Killing Intent\"": "Under Resonance Liberation Deathblade Gear state, Calcharo's Forte Gauge is replaced with \"Killing Intent\", stacking up to 5. When Basic Attack Hounds Roar hits the target, Calcharo gains 1 \"Killing Intent\".",
+            }
+          },
+          inherent_skill_1: {
+            name: "Inherent Skill: Bloodshed Awaken",
+            description: {
+              "": "When casting Heavy Attack \"Mercy\", Calcharo's Resonance Liberation DMG Bonus is increased by 10% for 15s.",
+            }
+          },
+          inherent_skill_2: {
+            name: "Inherent Skill: Revenant Rush",
+            description: {
+              "": "When Heavy Attack \"Death Messenger\" hits the target, the damage taken by Calcharo is reduced by 15% for 5s."
+            }
+          },
+          intro_skill: {
+            name: "Intro Skill: Wanted Outlaw",
+            description: {
+              "": "Attack the target, dealing Electro DMG."
+            }
+          },
+          outro_skill: {
+            name: "Outro Skill: Shadowy Raid",
+            description: {
+              "": "Calcharo summons Phantom to support the Resonator, clearing the targets in front with a slash. The Phantom's attack deals Electro DMG equal to 195.98%+391.96% of Calcharo's ATK."
+            }
+          },
+        }
+      ],
+    materials: [
+        {
+          shellcredits: "Shell Credit",
+          ascension_materials: {
+            experience: "Premium Resonance Potion",
+            bossmaterial: "Thundering Tacet Core",
+            regionalspecialty: "Iris",
+            ...ringmaterials,
+          },
+          talent_materials: {
+            ...broadbladeuser,
+            weeklyboss: "Monument Bell",
+          },
+        }
+      ]
   },
-  {
-      name: "Changli",
+  {   name: "Changli",
       element: "fusion",
       weapon: "Sword",
       charactericon: "/src/assets/images/character-icons-small/changli-icon.webp",
       characterportrait: "/src/assets/images/portraits/changli.webp",
       rarity: 5,
       version: 1.1,
+      talent: [
+        {
+          basic_attack: {
+            name:"Normal Attack: ",
+            description: {
+              "Basic Attack": "Perform up to 4 consecutive attacks, dealing Fusion DMG. After releasing Basic Attack 4, enter True Sight, lasting for 12s.",
+              "Heavy Attack": "Hold Basic Attack on the ground to perform an upward strike at the cost of Stamina, dealing Fusion DMG. Use Basic Attack within a certain time to release Mid-Air Attack 3.",
+              "Mid-air Attack": "Consume Stamina to perform up to 4 consecutive attacks in mid-air, dealing Fusion DMG. After releasing Mid-air Attack 4, enter True Sight, lasting for 12s.",
+              "Mid-air Heavy Attack": "Shortly after holding Basic Attack in mid-air or using Basic Attack True Sight: Charge, use Basic Attack to perform a plunging attack at the cost of Stamina, dealing Fusion DMG. Use Basic Attack within a certain time to release Basic Attack 3.",
+              "Dodge Counter": "Use Basic Attack after a successful Dodge to attack the target, dealing Fusion DMG.",
+            }
+          },
+          resonance_skill: {
+            name: "Resonance Skill: Tripartite Flames",
+            description: {
+              "True Sight: Capture": "After releasing Resonance Skill, Changli dashes towards the enemy and enters True Sight, lasting for 12s. In the end, she releases a plunging attack, dealing Fusion DMG. True Sight: Capture has 2 initial attempts and can be used up to 2 times. The number of attempts is increased by 1 every 12s. Can be cast in mid-air.",
+              "Basic Attack: True Sight - Conquest": "When in True Sight, if Changli uses Ground Basic Attack, she releases True Sight: Conquest, dashing towards the enemy and dealing Fusion DMG, considered as Resonance Skill DMG. After releasing True Sight: Conquest, True Sight ends.",
+              "Basic Attack: True Sight - Charge": "When in True Sight, if Changli jumps or uses Basic Attack in mid-air, she releases True Sight: Charge, dashing towards the enemy and dealing Fusion DMG, considered as Resonance Skill DMG. After releasing True Sight: Charge, True Sight ends.",
+            }
+          },
+          resonance_lib: {
+            name: "Resonance Liberation: Radiance of Fealty",
+            description: {
+              "": "Deal Fusion DMG to nearby targets, obtaining 4 stacks of Enflamement, and entering Fiery Feather. Can be cast in mid-air.",
+              "Fiery Feather": "When Changli releases Heavy Attack Flaming Sacrifice within 10s, her ATK is increased by 25%, after which Fiery Feather ends."
+            }
+          },
+          forte_circuit: {
+            name: "Forte Circuit: Flaming Sacrifice",
+            description: {
+              "Heavy Attack: Flaming Sacrifice": "When releasing Heavy Attack, if Changli carries 4 stacks of Enflamement, she consumes all stacks of Enflamement to cast Flaming Sacrifice, dealing Fusion DMG, considered as Resonance Skill DMG. While casting Flaming Sacrifice, Changli takes 40% less DMG.",
+              "Enflamement": "Changli can hold up to 4 stacks of Enflamement.\nChangli obtains 1 stack of Enflamement for every Basic Attack: True Sight - Conquest on hit.\nChangli obtains 1 stack of Enflamement for every Basic Attack: True Sight - Charge on hit.\nChangli obtains 4 stacks of Enflamement for every Resonance Liberation Radiance of Fealty",
+            }
+          },
+          inherent_skill_1: {
+            name: "Inherent Skill: Secret Strategist",
+            description: {
+              "": "When Changli releases Basic Attack: True Sight - Conquest or Basic Attack: True Sight - Charge, for each stack of Enflamement, Changli's Fusion DMG Bonus is increased by 5%.",
+              "": "",
+            }
+          },
+          inherent_skill_2: {
+            name: "Inherent Skill: Sweeping Force",
+            description: {
+              "": "When Changli releases Heavy Attack Flaming Sacrifice or Resonance Liberation Radiance of Fealty, Changli's Fusion DMG Bonus is increased by 20%, and Changli ignores 15% of the target's DEF when dealing damage."
+            }
+          },
+          intro_skill: {
+            name: "Intro Skill: Obedience of Rules",
+            description: {
+              "": "Changli appears in mid-air, attacks the target, and enters True Sight, lasting for 12s."
+            }
+          },
+          outro_skill: {
+            name: "Outro Skill: Strategy of Duality",
+            description: {
+              "": "The incoming Resonator has their Fusion DMG Amplified by 20% and Resonance Liberation DMG Amplified by 25% for 10s or until the Resonator is switched out."
+            }
+          },
+        }
+      ],
+      materials: [
+        {
+          shellcredits: "Shell Credit",
+          ascension_materials: {
+            experience: "Premium Resonance Potion",
+            bossmaterial: "Rage Tacet Core",
+            regionalspecialty: "Pavo Plum",
+            ...ringmaterials
+          },
+          talent_materials: {
+            ...sworduser,
+            weeklyboss: "Sentinel's Dagger",
+          },
+        }
+      ]
   },
-  {
-      name: "Chixia",
+  {   name: "Chixia",
       element: "fusion",
       weapon: "Pistols",
       charactericon: "/src/assets/images/character-icons-small/chixia-icon.webp",
       characterportrait: "/src/assets/images/portraits/chixia.webp",
       rarity: 4,
       version: 1.0,
+      talent: [
+        {
+          basic_attack: {
+            name:"Normal Attack: POW POW",
+            description: {
+              "Basic Attack": "Chixia fires up to 4 consecutive shots at a single target, dealing Fusion DMG.",
+              "Heavy Attack": "Chixia enters the aiming state for a more powerful shot. The shot fired deals Fusion DMG.",
+              "Mid-air Attack": "Chixia consumes Stamina to continuously shoot the target in the air, dealing Fusion DMG.",
+              "Dodge Counter": "Use a Basic Attack after a successful Dodge to attack the target, dealing Fusion DMG.",
+            }
+          },
+          resonance_skill: {
+            name: "Resonance Skill: Whizzing Fight Spirit",
+            description: {
+              "": "Chixia unleashes a flurry of shots, dealing Fusion DMG. Whizzing Fight Spirit has 2 initial charges."
+            }
+          },
+          resonance_lib: {
+            name: "Resonance Liberation: Blazing Flames",
+            description: {
+              "": "Chixia fires up fast shots at nearby enemies, dealing Fusion DMG.",
+            }
+          },
+          forte_circuit: {
+            name: "Forte Circuit: Heroic Bullets",
+            description: {
+              "Resonance Skill: DAKA DAKA!": "Hold Resonance Skill Whizzing Fight Spirit to enter DAKA DAKA!. In this state:\n- Chixia continuously consumes \"Thermobaric Bullets\" to attack the target, dealing Fusion DMG, considered as Resonance Skill damage.\n- Tap Basic Attack to cast Basic Attack IV, dealing Fusion DMG, considered as Basic Attack damage. Then she terminates \"DAKA DAKA!\".\n- If 30 \"Thermobaric Bullets\" have been fired when Basic Attackis activated, Chixia will cast Resonance Skill Boom Boom and terminate \"DAKA DAKA!\" Chixia terminates \"DAKA DAKA!\" when all \"Thermobaric Bullets\" are consumed.",
+              "Resonance Skill: Boom Boom": "Chixia deals Fusion DMG, considered as Resonance Skill damage.",
+              "Thermobaric Bullets": "Chixia can hold up to 60 \"Thermobaric Bullets\". Innate Skill Scorching Magazine increases Max \"Thermobaric Bullets\" by 10. Chixia obtains \"Thermobaric Bullets\" for every Normal Attack POW POW on hit. Chixia obtains \"Thermobaric Bullets\" upon casting Intro Skill Grand Entrance and Resonance Skill Whizzing Fight Spirit.",
+            }
+          },
+          inherent_skill_1: {
+            name: "Inherent Skill: Scorching Magazine",
+            description: {
+              "": "Max \"Thermobaric Bullets\" is increased by 10 rounds. The damage for Resonance Skill Boom Boom is increased by 50%.",
+            }
+          },
+          inherent_skill_2: {
+            name: "Inherent Skill: Numbingly Spicy!",
+            description: {
+              "": "Each \"Thermobaric Bullets\" that hits a target during Resonance Skill DAKA DAKA! increases ATK by 1% for 10s, stacking up to 30 times."
+            }
+          },
+          intro_skill: {
+            name: "Intro Skill: Grand Entrance",
+            description: {
+              "": "Chixia makes a heroic entrance and fires rapidly with her dual pistols at the target, dealing Fusion DMG."
+            }
+          },
+          outro_skill: {
+            name: "Outro Skill: Leaping Flames",
+            description: {
+              "": "Chixia releases a shock wave surrounding the target, dealing Fusion DMG equal to 530.00% of Chixia's ATK to enemies within the range."
+            }
+          },
+        }
+      ],
+      materials: [
+        {
+          shellcredits: "Shell Credit",
+          ascension_materials: {
+            experience: "Premium Resonance Potion",
+            bossmaterial: "Rage Tacet Core",
+            regionalspecialty: "Belle Poppy",
+            ...whisperinmaterials
+          },
+          talent_materials: {
+            ...pistoluser,
+            weeklyboss: "Monument Bell",
+          },
+        }
+      ]
   },
-  {
-      name: "Danjin",
+  {   name: "Danjin",
       element: "havoc",
       weapon: "Sword",
       charactericon: "/src/assets/images/character-icons-small/danjin-icon.webp",
       characterportrait: "/src/assets/images/portraits/danjin.webp",
       rarity: 4,
       version: 1.0,
+      talent: [
+        {
+          basic_attack: {
+            name:"Normal Attack: Execution",
+            description: {
+              "Basic Attack": "Danjin performs up to 3 consecutive attacks, dealing Havoc DMG.",
+              "Heavy Attack": "Danjin combines her Forte with the blade in her hand and consumes Stamina to launch consecutive attacks, dealing Havoc DMG.",
+              "Mid-air Attack": "Consumes Stamina to perform a mid-air Plunging Attack, dealing Havoc DMG.",
+              "Dodge Counter": " Basic Attack after a successful Dodge to launch an attack, dealing Havoc DMG.",
+              "Dodge Counter: Ruby Shades": "After a successful Dodge Counter, Danjin can use the Resonance Skill Crimson Fragment to cast the Resonance Skill Crimson Erosion"
+            }
+          },
+          resonance_skill: {
+            name: "Resonance Skill: Crimson Fragment",
+            description: {
+              "": "When casting Incinerating Will, each attack consumes 3% of Danjin's max HP. When Danjin's HP is less than 1%, this no longer consumes HP.",
+              "Carmine Gleam": "Danjin attacks the target, dealing Havoc DMG.",
+              "Crimson Erosion": "After Basic Attack II, Dodge Counter or Intro Skill Vindication, use Resonance Skill to perform up to 2 consecutive strikes, dealing Havoc DMG. When Crimson Erosion II hits a target, apply Incinerating Will to it.",
+              "Incinerating Will": "Danjin's damage dealt to targets marked with Incinerating Will is increased by 20%.",
+              "Sanguine Pulse": "Use Resonance Skill after Basic Attack III to perform up to 3 consecutive attacks, dealing Havoc DMG.",
+            }
+          },
+          resonance_lib: {
+            name: "Resonance Liberation: Crimson Bloom",
+            description: {
+              "": "Danjin's anger intensifies as she frantically swings her dual blades, performing multiple rapid consecutive attacks, and 1 Scarlet Burst attack(s), dealing Havoc DMG.",
+            }
+          },
+          forte_circuit: {
+            name: "Forte Circuit: Serene Vigil",
+            description: {
+              "Heavy Attack: Chaoscleave": "After accumulating 60 \"Ruby Blossom\", long press Basic Attack to consume all \"Ruby Blossom\" to cast Chaoscleave, dealing Havoc DMG, considered as Heavy Attack damage, and restoring HP to Danjin.\nIf current \"Ruby Blossom\" exceeds 120, this consumes 120 \"Ruby Blossom\" to increase the damage multiplier of Chaoscleave and Scatterbloom performed this time.",
+              "Heavy Attack: Scatterbloom": "Use Basic Attack after Heavy Attack Chaoscleave to launch Shatter to attack the target, dealing Havoc DMG, considered as Heavy Attack damage.",
+              "Ruby Blossom": "Danjin obtains \"Ruby Blossom\" when using Resonance Skill Crimson Fragment.",
+            }
+          },
+          inherent_skill_1: {
+            name: "Inherent Skill: Crimson Light",
+            description: {
+              "": "The damage of the Resonance Skill Crimson Erosion triggered by Dodge Counter: Ruby Shades is increased by 20%. The HP cost and stacks of \"Ruby Blossom\" recovered are doubled.",
+            }
+          },
+          inherent_skill_2: {
+            name: "Inherent Skill: Overflow",
+            description: {
+              "": "After casting the Resonance Skill Sanguine Pulse, Danjin's Heavy Attack damage is increased by 30% for 5s."
+            }
+          },
+          intro_skill: {
+            name: "Intro Skill: Vindiction",
+            description: {
+              "": "With unwavering determination, Danjin unleashes a strike, dealing Havoc DMG."
+            }
+          },
+          outro_skill: {
+            name: "Outro Skill: Duality",
+            description: {
+              "": "The next character (or other characters on a nearby team that activates an Outro Skill) gains 23% Havoc DMG Deepen for 14 seconds or until the Character is switched."
+            }
+          },
+        }
+      ],
+      materials: [
+        {
+          shellcredits: "Shell Credit",
+          ascension_materials: {
+            experience: "Premium Resonance Potion",
+            bossmaterial: "Strife Tacet Core",
+            regionalspecialty: "Belle Poppy",
+            ...ringmaterials
+          },
+          talent_materials: {
+            ...sworduser,
+            weeklyboss: "Unwarranted Feather",
+          },
+        }
+      ]
   },
-  {
-      name: "Encore",
+  {   name: "Encore",
       element: "fusion",
       weapon: "Rectifier",
       charactericon: "/src/assets/images/character-icons-small/encore-icon.webp",
       characterportrait: "/src/assets/images/portraits/encore.webp",
       rarity: 5,
       version: 1.0,
+      talent: [
+        {
+          basic_attack: {
+            name:"Normal Attack: Wooly Attack",
+            description: {
+              "Basic Attack": "Perform up to 4 consecutive attacks, dealing Fusion DMG.",
+              "Basic Attack: Wooly Strike": "After the Basic Attack IV, press Basic Attack to attack the target, dealing Fusion DMG",
+              "Heavy Attack": "Encore consumes Stamina to attack the target, dealing Fusion DMG.",
+              "Mid-air Attack": "Encore consumes Stamina to perform a Plunging Attack, dealing Fusion DMG.",
+              "Dodge Counter": "Use Basic Attack after a successful Dodge to attack the target, dealing Fusion DMG.",
+            }
+          },
+          resonance_skill: {
+            name: "Resonance Skill: Flaming Woolies",
+            description: {
+              "Flaming Woolies": "Summon Cloudy and Cosmos to attack the target with high-temperature rays, dealing Fusion DMG.",
+              "Energetic Welcome": "After casting Flaming Woolies, use Resonance Skill to launch Energetic Welcome to attack the target, dealing Fusion DMG."
+            }
+          },
+          resonance_lib: {
+            name: "Resonance Liberation: Cosmos Rave",
+            description: {
+              "": "As Encore loses control, Cosmos breaks free and wreaks havoc on its surroundings.",
+              "Basic Attack: Cosmos: Frolicking": "During Cosmos Rampage, the Basic Attack is replaced with Cosmos: Frolicking, which performs up to 4 consecutive attacks, dealing Fusion DMG, considered as Basic Attack damage.",
+              "Cosmos: Heavy Attack": "During Cosmos Rampage, the Heavy Attack is replaced with Cosmos: Heavy Attack, consuming Stamina to attack the target, dealing Fusion DMG, considered as Heavy Attack damage.",
+              "Resonance Skill: Cosmos: Rampage": "During Cosmos Rampage, Flaming Woolies is replaced with Cosmos:Rampage, attacking the target with uncontrollable flames, dealing Fusion DMG, considered as Resonance Skill damage.",
+              "Cosmos: Dodge Counter": "During Cosmos Rampage, use Basic Attack after a successful Dodge to attack the target, dealing Fusion DMG, considered as Basic Attack damage.",
+            }
+          },
+          forte_circuit: {
+            name: "Forte Circuit: Black & White Woolies",
+            description: {
+              "Resonance Liberation: Cloudy Frenzy": "When Encore's \"Dissonance\" is full, after casting a Heavy Attack, Encore will consume all \"Dissonance\" to enter the Dissonance state, reducing damage taken by 70%. Switching Characters does not interrupt \"Dissonance\".\nAfter the Dissonance state ends, Encore will cast Cloudy Frenzy, dealing Fusion DMG, considered as Resonance Liberation damage.",
+              "Resonance Liberation: Cosmos Rupture": "During Cosmos Rampage, when casting Heavy Attack, if \"Dissonance\" is full, Encore will consume all \"Dissonance\" to enter Cosmos' Dissonance state, reducing damage taken by 70%. Switching Characters does not interrupt \"Dissonance\".\nAfter Cosmos' Dissonance state ends, Encore will cast Cosmos Rupture, dealing Fusion DMG, considered as Resonance Liberation damage.",
+              "Dissonance": "Encore can hold up to 100 \"Dissonance\".\nWhen Normal Attack Wooly Attack hits the target, Encore restores \"Dissonance\". When Resonance Skill Flaming Woolies hits the target, Encore restores \"Dissonance\". When Resonance Skill Energetic Welcome hits the target, Encore restores \"Dissonance\". When Intro Skill Woolies Helpers hits the target, Encore restores \"Dissonance\".\nDuring the duration of Resonance Liberation Cosmos Rampage, hitting targets will restore \"Dissonance\" to Encore.",
+            }
+          },
+          inherent_skill_1: {
+            name: "Inherent Skill: Angry Cosmos",
+            description: {
+              "": "During the Resonance Liberation Cosmos Rave, when Encore's HP is above 70%, DMG dealt is increased by 10%.",
+            }
+          },
+          inherent_skill_2: {
+            name: "Inherent Skill: Woolies Cheer Dance",
+            description: {
+              "": "When Resonance Skill Flaming Woolies or Resonance Skill Cosmos: Rave is cast, Encore's Fusion DMG Bonus is increased by 10% for 10 seconds."
+            }
+          },
+          intro_skill: {
+            name: "Intro Skill: Woolies Can Help!",
+            description: {
+              "": "Encore pounces at the enemies with Cosmos, dealing Fusion DMG."
+            }
+          },
+          outro_skill: {
+            name: "Outro Skill: Thermal Field",
+            description: {
+              "": "Encore generates a Flame Zone centered around skill target, with a radius of 3m. Targets inside the Flame Zone are continuously burned, suffering Fusion DMG equal to 176.76% of Encore's ATK every 1.5s for 6s."
+            }
+          },
+        }
+      ],
+      materials: [
+        {
+          shellcredits: "Shell Credit",
+          ascension_materials: {
+            experience: "Premium Resonance Potion",
+            bossmaterial: "Rage Tacet Core",
+            regionalspecialty: "Pecok Flower",
+            ...whisperinmaterials
+          },
+          talent_materials: {
+            ...rectifieruser,
+            weeklyboss: "Unending Destruction",
+          },
+        }
+      ]
   },
-  {
-      name: "Jianxin",
+  {   name: "Jianxin",
       element: "aero",
-      weapon: "Gauntlet",
+      weapon: "Gauntlets",
       charactericon: "/src/assets/images/character-icons-small/jianxin-icon.webp",
       characterportrait: "/src/assets/images/portraits/jianxin.webp",
       rarity: 5,
       version: 1.0,
+      talent: [
+        {
+          basic_attack: {
+            name:"Normal Attack: Fengyiquan",
+            description: {
+              "Basic Attack": "Perform up to 4 attacks, dealing Aero DMG.",
+              "Heavy Attack": "Consume Stamina to attack the target, dealing Aero DMG.",
+              "Mid-air Attack": "Jianxin consumes Stamina to plunge and unleash a powerful kick, dealing Aero DMG.",
+              "Dodge Counter": "Use Basic Attack after a successful Dodge to attack the target, dealing Aero DMG.",
+            }
+          },
+          resonance_skill: {
+            name: "Resonance Skill: Calming Air",
+            description: {
+              "": "Hold Resonance Skill to enter Parry Stance.",
+              "Chi Counter": "When Jianxin is attacked in the Parry Stance, she does not take damage and immediately performs Chi Counter, dealing Aero DMG.",
+              "Chi Parry": "Release the Resonance Skill during Parry Stance to interrupt Parry Stance and cast Chi Parry, dealing Aero DMG."
+            }
+          },
+          resonance_lib: {
+            name: "Resonance Liberation: Purification Force Field",
+            description: {
+              "": "Creates a strong wind field, continuously pulling targets within the wind field to the center and causing Aero DMG. When the wind field disappears, it will cause Aero DMG to all targets within the range again.",
+            }
+          },
+          forte_circuit: {
+            name: "Forte Circuit: Primordial Chi Spiral",
+            description: {
+              "Heavy Attack: Primordial Chi Spiral": "When \"Chi\" is stacked to its max, hold Heavy Attack to cast Primordial Chi Spiral and start Zhoutian Progress.",
+              "Zhoutian Progress": "Jianxin's anti-interruption is increased, and her the damage taken is reduced by 50%.\nJianxin continuously consumes \"Chi\" and casts Chi Strike to attack targets nearby, dealing Aero DMG. As Zhoutian Progress accumulates, Jianxin reaches different Zhoutian and gain effects accordingly.\n- Before Minor Zhoutian: Gain Zhoutian Progress 1 shield. When Zhoutian Progress is interrupted, cast Pushing Punch to attack the target, dealing Aero DMG.\n- Minor Zhoutian: Gain Zhoutian Progress 2 shield and cast Shock to attack the target, dealing Aero DMG. When Zhoutian Progress is interrupted, cast Yielding Pull to attack the target, dealing Aero DMG.\n -Major Zhoutian: Inner: Gain Zhoutian Progress 3 shield and cast Shock to attack the target, dealing Aero DMG. When Zhoutian Progress is interrupted, cast Yielding Pull to attack the target, dealing Aero DMG.\n- Major Zhoutian: Outer: Gain Zhoutian Progress 3 shield and cast Shock to attack the target, dealing Aero DMG.\n- When you release Basic Attack button, interrupt Zhoutian Progress and lose all \"Chi\". When all \"Chi\" is consumed, end Zhoutian Progress.\nWhen Zhoutian Progress ends, regain a shield according to the Zhoutian Progress you reached; As the shield provided by Heavy Attack: Primordial Chi Spiral persists, restore HP for the on-field character once every 6s.",
+              "Chi": "Jianxin can hold up to 120 Chi. Chi is obtained when a Normal Attack Fengyiquan hits the target. Chi is obtained when the Resonance Skill Calming Air is cast. Chi is obtained when the Resonance Skill Chi Counter or Resonance Skill Chi Parry hits the target. Chi is obtained when the Intro Skill Essence of Tao hits the target."
+            }
+          },
+          inherent_skill_1: {
+            name: "Inherent Skill: Formless Release",
+            description: {
+              "": "Damage of Resonance Liberation Purification Force Field is increased by 20%.",
+            }
+          },
+          inherent_skill_2: {
+            name: "Inherent Skill: Reflection",
+            description: {
+              "": "The shield obtained with Heavy Attack Primordial Chi Spiral is increased by 20%."
+            }
+          },
+          intro_skill: {
+            name: "Intro Skill: Essence of Tao",
+            description: {
+              "": "Pull targets within the range, dealing Aero DMG."
+            }
+          },
+          outro_skill: {
+            name: "Outro Skill: Transcendence",
+            description: {
+              "": "The next character (or other characters on a nearby team that activates an Outro Skill) gains 38% Resonance Liberation DMG Deepen for 14s or until the Character is switched."
+            }
+          },
+        }
+      ],
+      materials: [
+        {
+          shellcredits: "Shell Credit",
+          ascension_materials: {
+            experience: "Premium Resonance Potion",
+            bossmaterial: "Roaring Rock Fist",
+            regionalspecialty: "Lanternberry",
+            ...howlermaterials
+          },
+          talent_materials: {
+            ...gauntletuser,
+            weeklyboss: "Unending Destruction",
+          },
+        }
+      ]
   },
-  {
-      name: "Jinhsi",
+  {   name: "Jinhsi",
       element: "spectro",
       weapon: "Broadblade",
       charactericon: "/src/assets/images/character-icons-small/jinhsi-icon.webp",
       characterportrait: "/src/assets/images/portraits/jinhsi.webp",
       rarity: 5,
       version: 1.1,
+      talent: [
+        {
+          basic_attack: {
+            name:"Normal Attack: Slash of Breaking Dawn",
+            description: {
+              "Basic Attack": "Perform up to 4 consecutive strikes, dealing Spectro DMG.",
+              "Heavy Attack": "Perform a charged attack at the cost of Stamina, dealing Spectro DMG.",
+              "Mid-air Attack": "Perform a plunging attack while in mid-air at the cost of Stamina, dealing Spectro DMG.",
+              "Dodge Counter": "Use Basic Attack after a successful Dodge to counterattack, dealing Spectro DMG.",
+            }
+          },
+          resonance_skill: {
+            name: "Resonance Skill: Trailing Lights of Eons",
+            description: {
+              "": "Dash forward and perform consecutive strikes that inflict Spectro DMG.",
+              "Overflowing Radiance": "After Jinhsi uses Basic Attack 4 or, while not in Incarnation, Intro Skill Loong's Halo, an alternative Resonance Skill Overflowing Radiance is available within 5s.\nResonance Skill Overflowing Radiance inflicts Spectro DMG and sends Jinhsi into Incarnation. Can be cast in mid-air.",
+            }
+          },
+          resonance_lib: {
+            name: "Resonance Liberation: Purge of Light",
+            description: {
+              "": "Unleash the power of invocation to deal Spectro DMG. Can be cast in mid-air.",
+            }
+          },
+          forte_circuit: {
+            name: "Forte Circuit: Luminal Synthesis",
+            description: {
+              "Incarnation": "While in Incarnation:\n- Alternative Basic Attack \"Incarnation - Basic Attack\" becomes available. Perform up to 4 consecutive strikes, dealing Spectro DMG considered as Resonance Skill DMG. The basic attack cycle of this will not be reset. Can be cast in mid-air.\n- Alternative Resonance Skill \"Crescent Divinity\" becomes available. Deal Spectro DMG. Can be cast in mid-air.\n- Alternative Heavy Attack \"Incarnation - Heavy Attack\" becomes available. Attack the target in mid-air at the cost of Stamina, dealing Spectro DMG.\n- Alternative Dodge \"Incarnation - Dodge\" is available while in mid-air. Can be cast multiple times at the cost of Stamina.\n- Alternative Dodge Counter \"Incarnation - Dodge Counter\" becomes available. Deal Spectro DMG. Can be cast in mid-air",
+              "Resonance Skill - Illuminous Epiphany": "After Stage 4 of Incarnation - Basic Attack, Incarnation terminates and Jinhsi gains Ordination Glow. Can be cast in mid-air.\n While Ordination Glow lasts:\n- Basic Attack is replaced with Heavy Attack \"Incarnation - Heavy Attack\". Attack the target in mid-air at the cost of Stamina, dealing Spectro DMG.\n- Resonance Skill is replaced with Resonance Skill \"Illuminous Epiphany\". Send out Solar Flare that detonates as Stella Glamor, dealing Spectro DMG after a short delay. Consume up to 50 Incandescence, with each point of Incandescence granting bonus DMG Multiplier percentage to Stella Glamor. Can be cast in mid-air.\n- After casting Resonance Skill Illuminous Epiphany, Jinhsi gains Unison. This can be triggered once every 25s.",
+              "Unison": "While Jinhsi has Unison, switching to other Resonators will remove Jinhsi's Unison to trigger Jinhsi's Outro Skill and the incoming Resonator's Intro Skill. Unison will be consumed in priority in place of Concerto Energy when Concerto Energy is full.",
+              "Incandescence": "Jinhsi can hold up to 50 Incandescence.\nWhen Jinhsi is in the party, all nearby Resonators in the party gain Eras in Unity. Eras in Unity provides 2 independent effects:\nJinhsi gains 1 Incandescence anytime Resonators in the party inflict Attribute DMG. This effect may be triggered by damage of the same Attribute for up to 1 time(s) every 3s. Additionally, Jinhsi gains 2 Incandescence when Resonators in the party damage the enemy with Coordinated Attacks. This effect may be triggered by Coordinated Attacks of the same Attribute for up to 1 time(s) every 3s.",
+            }
+          },
+          inherent_skill_1: {
+            name: "Inherent Skill: Radiant Surge",
+            description: {
+              "": "Jinhsi's Spectro DMG Bonus is increased by 20%.",
+            }
+          },
+          inherent_skill_2: {
+            name: "Inherent Skill: Converged Flash",
+            description: {
+              "": "DMG Multiplier of Intro Skill Loong's Halo is increased by 50%."
+            }
+          },
+          intro_skill: {
+            name: "Intro Skill: Loong's Halo",
+            description: {
+              "": "Attack the target, dealing Spectro DMG."
+            }
+          },
+          outro_skill: {
+            name: "Outro Skill: Temporal Bender",
+            description: {
+              "": "Summoning the power homologous with the Sentinel, Jinhsi may now gain Incandescence via Eras in Unity from damage of the same Attribute more effectively, at 1 time(s) every 1s for 20s."
+            }
+          },
+        }
+      ],
+      materials: [
+        {
+          shellcredits: "Shell Credit",
+          ascension_materials: {
+            experience: "Premium Resonance Potion",
+            bossmaterial: "Elegy Tacet Core",
+            regionalspecialty: "Loong's Pearl",
+            ...howlermaterials,
+          },
+          talent_materials: {
+            ...broadbladeuser,
+            weeklyboss: "Sentinel's Dagger",
+          },
+        }
+      ]
   },
-  {
-      name: "Jiyan",
+  {   name: "Jiyan",
       element: "aero",
       weapon: "Broadblade",
       charactericon: "/src/assets/images/character-icons-small/jiyan-icon.webp",
       characterportrait: "/src/assets/images/portraits/jiyan.webp",
       rarity: 5,
       version: 1.0,
+      talent: [
+        {
+          basic_attack: {
+            name:"Normal Attack: Lone Lance",
+            description: {
+              "Basic Attack": "Perform up to 5 consecutive attacks, dealing Aero DMG.",
+              "Heavy Attack": "Consume Stamina to perform a thrust attack, dealing Aero DMG.",
+              "Heavy Attack: Windborne Strike": "Hold the Basic Attack during Heavy Attack to cast Windborne Strike after the Heavy Attack ends, dealing Aero DMG.",
+              "Heavy Attack: Abyssal Slash": "Release the Basic Attack during the Heavy Attack to cast Abyssal Slash after the Heavy Attack ends, dealing Aero DMG.",
+              "Mid-air Attack": "Consume Stamina to perform a Mid-Air Plunging Attack, dealing Aero DMG. After the Plunging Attack, use Basic Attack to perform a following attack, dealing Aero DMG.",
+              "Mid-air Attack: Banner of Triumph": "After casting the Heavy Attack Windborne Strike or the Resonance Skill Windqueller in the air, Jiyan can perform an aerial attack, dealing Aero DMG.",
+              "Dodge Counter": "Use a Basic Attack after a successful Dodge to attack the target with, dealing Aero DMG.",
+            }
+          },
+          resonance_skill: {
+            name: "Resonance Skill: Windqueller",
+            description: {
+              "": "Dash forward a certain distance, dealing Aero DMG. Can be cast in the air."
+            }
+          },
+          resonance_lib: {
+            name: "Resonance Liberation: Emerald Storm: Prelude",
+            description: {
+              "": "After releasing Emerald Storm: Prelude, Jiyan enters Qingloong Mode.",
+              "Qingloong Mode": "Jiyan has increased Anti-interruption; Basic Attack, Heavy Attack and Dodge Counter are replaced with Heavy Attack Lance of Qingloong.",
+              "Heavy Attack: Lance of Qingloong": "Perform up to 3 continuous attacks, dealing Aero DMG, considered as Heavy Attack damage.",
+            }
+          },
+          forte_circuit: {
+            name: "Forte Circuit: Qingloong at War",
+            description: {
+              "": "When casting Resonance Skill Windqueller, if Jiyan has 30 or more \"Resolve\", he consumes 30 \"Resolve\" to increase the damage of this Resonance Skill Windqueller by 20%. When Jiyan is in Qingloong Mode, DMG of Resonance Skill Windqueller is increased by 20% and no longer consumes \"Resolve\".",
+              "Resonance Liberation: Emerald Storm: Finale": "When casting Resonance Liberation Emerald Storm: Prelude, if Jiyan has 30 \"Resolve\" or more, he will consume 30 \"Resolve\" to cast Emerald Storm: Finale, dealing Aero DMG, considered as Heavy Attack damage. Emerald Storm: Finale can be cast in mid-air at low altitude.",
+              "Resolve": "Jiyan can hold up to 60 Resolve. Jiyan gains \"Resolve\" when his Normal Attack Lone Lance hits the target. Jiyan gains \"Resolve\" when the Intro Skill Tactical Strike hits the target. If Jiyan does not hit a target within 15 seconds, his \"Resolve\" will gradually decrease",
+            }
+          },
+          inherent_skill_1: {
+            name: "Inherent Skill: Heavenly Balance",
+            description: {
+              "": "After casting the Intro Skill Tactical Strike, Jiyan's ATK is increased by 10% for 15s.",
+            }
+          },
+          inherent_skill_2: {
+            name: "Inherent Skill: Tempest Taming",
+            description: {
+              "": "When attacks hit a target, Jiyan's Crit. DMG is increased by 12% for 8s."
+            }
+          },
+          intro_skill: {
+            name: "Intro Skill: Tactical Strike",
+            description: {
+              "": "Jiyan stabs the target from the air, dealing Aero DMG."
+            }
+          },
+          outro_skill: {
+            name: "Outro Skill: Discipline",
+            description: {
+              "": "When the next Character's (or other Characters on a nearby team that activates an Outro Skill) Heavy Attack hits the target, Jiyan will summon Qingloong to launch a Coordinated Attack, dealing Aero DMG equal to 313.40% of Jiyan's ATK. This attack lasts for 8s, and can be triggered once every 1s, up to 2 times."
+            }
+          },
+        }
+      ],
+      materials: [
+        {
+          shellcredits: "Shell Credit",
+          ascension_materials: {
+            experience: "Premium Resonance Potion",
+            bossmaterial: "Roaring Rock Fist",
+            regionalspecialty: "Pecok Flower",
+            ...howlermaterials
+          },
+          talent_materials: {
+            ...broadbladeuser,
+            weeklyboss: "Monument Bell",
+          },
+        }
+      ]
   },
-  {
-      name: "Lingyang",
+  {   name: "Lingyang",
       element: "glacio",
-      weapon: "Gauntlet",
+      weapon: "Gauntlets",
       charactericon: "/src/assets/images/character-icons-small/lingyang-icon.webp",
       characterportrait: "/src/assets/images/portraits/lingyang.webp",
       rarity: 5,
       version: 1.0,
+      talent: [
+        {
+          basic_attack: {
+            name:"Normal Attack: Majestic Fists",
+            description: {
+              "Basic Attack": "Perform up to 5 attacks, dealing Glacio damage.",
+              "Basic Attack: Feral Roars": "After Resonance Skill Furious Punches is cast, Basic Attack V is replaced with Feral Roars, dealing Glacio damage.",
+              "Heavy Attack": "Consume Stamina to attack the target, dealing Glacio damage.",
+              "Mid-air Attack": "Consume Stamina to perform a Mid-air Plunging Attack, dealing Glacio damage.",
+              "Dodge Counter": "Use a Basic Attack after a successful Dodge to attack the target, dealing Glacio damage.",
+            }
+          },
+          resonance_skill: {
+            name: "Resonance Skill: Ancient Arts",
+            description: {
+              "Ancient Arts": "Attack the target, dealing Glacio damage.",
+              "Furious Punches": "When Basic Attacks III, IV, or V or Basic Attack Feral Roars hits the target, Resonance Skill Ancient Arts is replaced with Resonance Skill Swift Punches. If Lingyang uses Basic Attack after casting Basic Attack Feral Roars and Resonance Skill Swift Punches, he will start from Basic Attack III.\nLingyang's Resonance Skill will not reset his Basic Attack stage.",
+            }
+          },
+          resonance_lib: {
+            name: "Resonance Liberation: Strive: Lion's Vigor",
+            description: {
+              "": "Attack the target, dealing Glacio damage, and receive the blessing of Lion's Vigor, which lasts for 14 seconds.",
+              "Lion's Vigor": "Lingyang's Glacio DMG Bonus is increased by 50%."
+            }
+          },
+          forte_circuit: {
+            name: "Forte Circuit: Unification of Spirits",
+            description: {
+              "Heavy Attack: Glorious Plunge": "When Lion's Spirit is full, use Heavy Attack to perform Glorious Plunge, dealing Glacio damage.",
+              "Mid-air Attack: Tail Strike": "When Lion's Spirit is not full, use Basic Attack after Heavy Attack to perform Tail Strike, dealing Glacio damage.",
+              "Striding Lion": "After casting Heavy Attack Glorious Plunge, enter Striding Lion state; After casting Intro Skill Lion Awakens or Resonance Liberation Strive: Lion's Vigor, if Lion's Spirit is full, use Basic Attack to enter Striding Lion state. In the Striding Lion state: Attacks can be launched in mid-air. If you are back on the ground, use Heavy Attack Glorious Plunge to get back in the air.\nLion's Spirit is continuously consumed, and the Striding Lion state ends in 5s after Lion's Spirit runs out; If Lingyang is in the Resonance Liberation Lion's Vigor state, the consumption speed of Lion's Spirit is reduced by 50%, extending Striding Lion state by up to 10s.\nLingyang's Basic Attack is replaced with Basic Attack Feral Gyrate, which performs up to 2 consecutive attacks, dealing Glacio damage. Lingyang's Resonance Skill is replaced with Mountain Roamer, dealing Glacio damage. When Lion's Spirit is less than 10, use Basic Attack to perform Stormy Kicks, dealing Glacio damage; after performing Basic Attack Stormy Kicks, the Mid-air Attack Radiant Plunge becomes available. Concerto Energy is restored when Lion's Spirit is consumed.",
+              "Lion's Spirit": "Lingyang can hold up to 100 Lion's Spirit. When casting Resonance Skill Furious Punches, Lion's Spirit is restored. When casting Intro Skill Lion Awakens, Lion's Spirit is restored. When casting Resonance Liberation Strive: Lion's Vigor, Lion's Spirit is restored.",
+            }
+          },
+          inherent_skill_1: {
+            name: "Inherent Skill: Lion's Pride",
+            description: {
+              "": "The damage of the Intro Skill Lion Awakens is increased by 50%.",
+            }
+          },
+          inherent_skill_2: {
+            name: "Inherent Skill: Diligent Practice",
+            description: {
+              "": "Under the Striding Lion state, within 3s after each Basic Attack, the next Mountain Roamer will deal an additional Glacio damage, equal to 150% of Mountain Roamer damage, considered as Resonance Skill damage."
+            }
+          },
+          intro_skill: {
+            name: "Intro Skill: Lion Awakens",
+            description: {
+              "": "Lingyang appears and deals Glacio damage."
+            }
+          },
+          outro_skill: {
+            name: "Outro Skill: Frosty Marks",
+            description: {
+              "": "Lingyang releases a shock wave centered on the skill target, dealing Glacio DMG equal to 587.94% of Lingyang's ATK to targets within the range."
+            }
+          },
+        }
+      ],
+      materials: [
+        {
+          shellcredits: "Shell Credit",
+          ascension_materials: {
+            experience: "Premium Resonance Potion",
+            bossmaterial: "Sound-Keeping Tacet Core",
+            regionalspecialty: "Coriolus",
+            ...whisperinmaterials
+          },
+          talent_materials: {
+            ...gauntletuser,
+            weeklyboss: "Unending Destruction",
+          },
+        }
+      ]
   },
-  {
-      name: "Mortefi",
+  {   name: "Mortefi",
       element: "fusion",
       weapon: "Pistols",
       charactericon: "/src/assets/images/character-icons-small/mortefi-icon.webp",
       characterportrait: "/src/assets/images/portraits/mortefi.webp",
       rarity: 4,
       version: 1.0,
+      talent: [
+        {
+          basic_attack: {
+            name:"Normal Attack: Impromptu Show",
+            description: {
+              "Basic Attack": "Mortefi uses his dual guns and fire to perform up to 4 continuous attacks dealing Fusion DMG.",
+              "Heavy Attack": "Mortefi enters the aiming state for a more powerful shot. The aimed shot fired after charging finishes deals Fusion DMG.",
+              "Mid-air Attack": "Mortefi consumes Stamina to perform consecutive shots at the target in mid-air, dealing Fusion DMG.",
+              "Dodge Counter": "Use Basic Attack after successful Dodge to attack the target, dealing Fusion DMG.",
+            }
+          },
+          resonance_skill: {
+            name: "Resonance Skill: Passionate Variation",
+            description: {
+              "": "Launch high-speed flame lightning forward, dealing Fusion DMG.",
+            }
+          },
+          resonance_lib: {
+            name: "Resonance Liberation: Violent Finale",
+            description: {
+              "": "Deal Fusion DMG, and apply Burning Rhapsody to all characters in the team.",
+              "Burning Rhapsody": "When the on-field character's Basic Attack hits the target, Mortefi launches a Coordinated Attack, firing 1 Marcato. When the on-field character's Heavy Attack hits the target, Mortefi launches a Coordinated Attack, firing 2 Marcato. Mortefi can launch one Coordinated Attack every 0.35s.",
+              "Marcato": "Deals Fusion DMG.",
+            }
+          },
+          forte_circuit: {
+            name: "Forte Circuit: Fury Fugue",
+            description: {
+              "Resonance Skill: Fury Fugue": "When Mortefi's \"Annoyance\" reaches 100, his Resonance Skill is replaced with Fury Fudge. When casting Fury Fudge, Mortefi consumes all \"Annoyance\" to unleash high-speed flame lightning, dealing Fusion DMG, considered as Resonance Skill damage.",
+              "Annoyance": "Mortefi can hold up to 100 Annoyance. When Normal Attack Impromptu Show hits the target, “Annoyance” is restored. When Intro Skill Dissonance hits the target, “Annoyance” is restored. When Resonance Skill Passionate Variation hits the target, “Annoyance” is restored. Within 5 seconds after casting Passionate Variation, Basic Attack Impromptu that hits the target additionally restores \"Annoyance\".",
+            }
+          },
+          inherent_skill_1: {
+            name: "Inherent Skill: Harmonic Control",
+            description: {
+              "": "After casting Resonance Skill Passionate Variation, the damage of Resonance Skill Draconic Hellfire is increased by 25% for 8s.",
+            }
+          },
+          inherent_skill_2: {
+            name: "Inherent Skill: Rhythmic Vibrato",
+            description: {
+              "": "During Resonance Liberation Burning Rhapsody, each hit of Resonance Liberation Marcato will increase the damage of the next Resonance Liberation Marcato by 1.5%, which can be triggered once every 0.35s, stacking up to 50 times. The effect will be reset after Resonance Liberation Burning Rhapsody ends."
+            }
+          },
+          intro_skill: {
+            name: "Intro Skill: Dissonance",
+            description: {
+              "": "Attack the target, dealing Fusion DMG."
+            }
+          },
+          outro_skill: {
+            name: "Outro Skill: Rage Transposition",
+            description: {
+              "": "The next character (or other characters on a nearby team that activates an Outro Skill) gains 38% Heavy Attack DMG Deepen for 14 seconds or until the Character is switched."
+            }
+          },
+        }
+      ],
+      materials: [
+        {
+          shellcredits: "Shell Credit",
+          ascension_materials: {
+            experience: "Premium Resonance Potion",
+            bossmaterial: "Rage Tacet Core",
+            regionalspecialty: "Coriolus",
+            ...whisperinmaterials
+          },
+          talent_materials: {
+            ...pistoluser,
+            weeklyboss: "Monument Bell",
+          },
+        }
+      ]
   },
-  {
-      name: "Havoc Rover",
+  {   name: "Havoc Rover",
       element: "havoc",
       weapon: "Sword",
       charactericon: "/src/assets/images/character-icons-small/rover-female-icon.webp",
       characterportrait: "/src/assets/images/portraits/rover-havoc.webp",
       rarity: 5,
       version: 1.0,
+      talent: [
+        {
+          basic_attack: {
+            name:"Normal Attack: Tuneslayer",
+            description: {
+              "Basic Attack": "Rover-Havoc performs up to 5 consecutive attacks, dealing Havoc DMG.",
+              "Heavy Attack": "Rover-Havoc consumes Stamina to attack, dealing Havoc DMG. Use Basic Attack after casting Heavy Attack to cast Basic Attack IV.",
+              "Mid-air Attack": "Rover-Havoc consumes Stamina to cast a Mid-Air Plunging Attack, dealing Havoc DMG.",
+              "Dodge Counter": "Use Basic Attack after a successful Dodge to attack the target, dealing Havoc DMG.",
+            }
+          },
+          resonance_skill: {
+            name: "Resonance Skill: Wingblade",
+            description: {
+              "": "Transforms sound into feathers, dealing Havoc DMG."
+            }
+          },
+          resonance_lib: {
+            name: "Resonance Liberation: Deadening Abyss",
+            description: {
+              "": "Gather the echoes between Rover's palms to attack a target, dealing Havoc DMG.",
+            }
+          },
+          forte_circuit: {
+            name: "Forte Circuit: Umbra Eclipse",
+            description: {
+              "Devastation": "When \"Umbra\" is full, hold Basic Attack to cast Devastation to attack the target, dealing Havoc DMG, considered as Heavy Attack damage.",
+              "Dark Surge": "After casting Devastation, Rover enters the Dark Surge state. In this state: Basic Attack is replaced with Enhanced Basic Attack, which performs up to 5 consecutive attacks, dealing Havoc DMG.\n- Heavy Attack is replaced with Enhanced Heavy Attack.\n- Use Basic Attack after casting Enhanced Heavy Attack to cast Heavy Attack Thwackblade to attack the target, dealing Havoc DMG, considered as Heavy Attack damage.\n- Use Basic Attack after casting Heavy Attack Thwackblade to cast Enhanced Basic Attack 3 to attack the target, dealing Havoc DMG.\n- Resonance Skill Wingblade is replaced with Resonance Skill Lifetaker, transforming sounds into blades to attack the target, dealing Havoc DMG.",
+              "Umbra": "Rover can hold up to 100 points of Umbra.\nNormal Attack Tuneslayer recovers Umbra on hit. Resonance Skill Wingblade recovers Umbra when cast. Resonance Skill Lifetaker recovers Umbra when cast. Intro Skill Instant of Annihilation recovers Umbra when cast."
+            }
+          },
+          inherent_skill_1: {
+            name: "Inherent Skill: Metamorph",
+            description: {
+              "": "In the Dark Surge state, Havoc DMG Bonus is increased by 20%.",
+            }
+          },
+          inherent_skill_2: {
+            name: "Inherent Skill: Bleak Crescendo",
+            description: {
+              "": "While in the Dark Surge state, Basic Attack recovers 1 Resonance Energy when it hits a target, and this effect can be triggered once per second."
+            }
+          },
+          intro_skill: {
+            name: "Intro Skill: Instant of Annihilation",
+            description: {
+              "": "Attack the target, dealing Havoc DMG."
+            }
+          },
+          outro_skill: {
+            name: "Outro Skill: Soundweaver",
+            description: {
+              "": "Summons a Havoc Field to attack a target, dealing 143.3% Havoc DMG to targets within range every 2s for 6s."
+            }
+          },
+        }
+      ],
+      materials: [
+        {
+          shellcredits: "Shell Credit",
+          ascension_materials: {
+            experience: "Premium Resonance Potion",
+            bossmaterial: "Mysterious Code",
+            regionalspecialty: "Pecok Flower",
+            ...whisperinmaterials
+          },
+          talent_materials: {
+            ...sworduser,
+            weeklyboss: "Unwarranted Feather",
+          },
+        }
+      ]
   },
-  {
-      name: "Spectro Rover",
+  {   name: "Spectro Rover",
       element: "spectro",
       weapon: "Sword",
       charactericon: "/src/assets/images/character-icons-small/rover-havoc-male-icon.webp",
       characterportrait: "/src/assets/images/portraits/rover-spectro.webp",
       rarity: 5,
       version: 1.0,
+      talent: [
+        {
+          basic_attack: {
+            name:"Normal Attack: Vibration Manifestation",
+            description: {
+              "Basic Attack": "Rover casts up to 4 consecutive attacks, dealing Spectro DMG.",
+              "Heavy Attack": "Rover consumes Stamina, dealing Spectro DMG.",
+              "Heavy Attack: Resonance": "After Basic Attack III or Heavy Attack, press the Basic Attack button at the right time to perform Heavy Attack Resonance, dealing Spectro DMG.",
+              "Heavy Attack: Aftertune": "After Heavy Attack Resonance or Dodge Counter hits a target, press the Basic Attack button to perform Heavy Attack Aftertune, dealing Spectro DMG.",
+              "Mid-air Attack": "Rover consumes Stamina to perform a Mid-Air Plunging Attack, dealing Spectro DMG.",
+              "Dodge Counter": "Use Basic Attack after a successful Dodge to attack the target, dealing Spectro DMG.",
+            }
+          },
+          resonance_skill: {
+            name: "Resonance Skill: Resonating Slashes",
+            description: {
+              "": "Rover launches an attack forward, dealing Spectro DMG."
+            }
+          },
+          resonance_lib: {
+            name: "Resonance Liberation: Echoing Orchestra",
+            description: {
+              "": "Channel Spectro energy to attack the target area, causing a blast after a short delay, dealing Spectro DMG and applying 6 stack(s) of Spectro Frazzle.",
+            }
+          },
+          forte_circuit: {
+            name: "Forte Circuit: World in a Grain of Sand",
+            description: {
+              "Resonance Skill: Resonating Spin": "If \"Diminutive Sound\" exceeds 50 when Resonance Skill is used, Rover consumes 50 \"Diminutive Sound\" to cast Resonating Spin, dealing Spectro DMG. This damage is considered as Resonance Skill DMG and applies 2 stack(s) of Spectro Frazzle along with Shimmer.",
+              "Shimmer": "Shimmer prevents Spectro Frazzle stacks from reducing over time.",
+              "Resonance Skill: Resonating Echoes": "After Resonance Skill Resonating Spin ends, Rover performs Resonance Skill Resonating Echoes upon pressing the Basic Attack button. Rover performs attacks forward, dealing Spectro DMG considered as Resonance Skill DMG.",
+              "Diminutive Sound": "Rover can hold up to 100 \"Diminutive Sounds\". Rover obtains \"Diminutive Sound\" for every Normal Attack Vibration Manifestation on hit. Rover obtains \"Diminutive Sound\" for every Heavy Attack aftertune on hit. Rover obtains \"Diminutive Sound\" upon casting Intro Skill Waveshock."
+            }
+          },
+          inherent_skill_1: {
+            name: "Inherent Skill: Reticence",
+            description: {
+              "": "Damage dealt by Rover's Resonance Skill Resonating Echoes is increased by 60%.",
+            }
+          },
+          inherent_skill_2: {
+            name: "Inherent Skill: Silent Listener",
+            description: {
+              "": "Rover's ATK is increased by 15% for 5s upon casting Heavy Attack Resonance."
+            }
+          },
+          intro_skill: {
+            name: "Intro Skill: Waveshock",
+            description: {
+              "": "Rover attacks the target, dealing Spectro DMG."
+            }
+          },
+          outro_skill: {
+            name: "Outro Skill: Instant",
+            description: {
+              "": "Rover generates an area of stasis surrounding the next character (or other characters on a nearby team that activates an Outro Skill) over 3s."
+            }
+          },
+        }
+      ],
+      materials: [
+        {
+          shellcredits: "Shell Credit",
+          ascension_materials: {
+            experience: "Premium Resonance Potion",
+            bossmaterial: "Mysterious Code",
+            regionalspecialty: "Pecok Flower",
+            ...whisperinmaterials
+          },
+          talent_materials: {
+            ...sworduser,
+            weeklyboss: "Unending Destruction",
+          },
+        }
+      ]
   },
-  {
-      name: "Sanhua",
+  {   name: "Sanhua", //Gikapoy nako ari na part
       element: "glacio",
       weapon: "Sword",
       charactericon: "/src/assets/images/character-icons-small/sanhua-icon.webp",
       characterportrait: "/src/assets/images/portraits/sanhua.webp",
       rarity: 4,
       version: 1.0,
+      talent: [
+        {
+          basic_attack: {
+            name:"Normal Attack: Impromptu Show",
+            description: {
+              "Basic Attack": "Mortefi uses his dual guns and fire to perform up to 4 continuous attacks dealing Fusion DMG.",
+              "Heavy Attack": "Mortefi enters the aiming state for a more powerful shot. The aimed shot fired after charging finishes deals Fusion DMG.",
+              "Mid-air Attack": "Mortefi consumes Stamina to perform consecutive shots at the target in mid-air, dealing Fusion DMG.",
+              "Dodge Counter": "Use Basic Attack after successful Dodge to attack the target, dealing Fusion DMG.",
+            }
+          },
+          resonance_skill: {
+            name: "Resonance Skill: Passionate Variation",
+            description: {
+              "": "Launch high-speed flame lightning forward, dealing Fusion DMG.",
+            }
+          },
+          resonance_lib: {
+            name: "Resonance Liberation: Violent Finale",
+            description: {
+              "": "Deal Fusion DMG, and apply Burning Rhapsody to all characters in the team.",
+              "Burning Rhapsody": "When the on-field character's Basic Attack hits the target, Mortefi launches a Coordinated Attack, firing 1 Marcato. When the on-field character's Heavy Attack hits the target, Mortefi launches a Coordinated Attack, firing 2 Marcato. Mortefi can launch one Coordinated Attack every 0.35s.",
+              "Marcato": "Deals Fusion DMG.",
+            }
+          },
+          forte_circuit: {
+            name: "Forte Circuit: Fury Fugue",
+            description: {
+              "Resonance Skill: Fury Fugue": "When Mortefi's \"Annoyance\" reaches 100, his Resonance Skill is replaced with Fury Fudge. When casting Fury Fudge, Mortefi consumes all \"Annoyance\" to unleash high-speed flame lightning, dealing Fusion DMG, considered as Resonance Skill damage.",
+              "Annoyance": "Mortefi can hold up to 100 Annoyance. When Normal Attack Impromptu Show hits the target, “Annoyance” is restored. When Intro Skill Dissonance hits the target, “Annoyance” is restored. When Resonance Skill Passionate Variation hits the target, “Annoyance” is restored. Within 5 seconds after casting Passionate Variation, Basic Attack Impromptu that hits the target additionally restores \"Annoyance\".",
+            }
+          },
+          inherent_skill_1: {
+            name: "Inherent Skill: Harmonic Control",
+            description: {
+              "": "After casting Resonance Skill Passionate Variation, the damage of Resonance Skill Draconic Hellfire is increased by 25% for 8s.",
+            }
+          },
+          inherent_skill_2: {
+            name: "Inherent Skill: Rhythmic Vibrato",
+            description: {
+              "": "During Resonance Liberation Burning Rhapsody, each hit of Resonance Liberation Marcato will increase the damage of the next Resonance Liberation Marcato by 1.5%, which can be triggered once every 0.35s, stacking up to 50 times. The effect will be reset after Resonance Liberation Burning Rhapsody ends."
+            }
+          },
+          intro_skill: {
+            name: "Intro Skill: Dissonance",
+            description: {
+              "": "Attack the target, dealing Fusion DMG."
+            }
+          },
+          outro_skill: {
+            name: "Outro Skill: Rage Transposition",
+            description: {
+              "": "The next character (or other characters on a nearby team that activates an Outro Skill) gains 38% Heavy Attack DMG Deepen for 14 seconds or until the Character is switched."
+            }
+          },
+        }
+      ],
+      materials: [
+        {
+          shellcredits: "Shell Credit",
+          ascension_materials: {
+            experience: "Premium Resonance Potion",
+            bossmaterial: "Rage Tacet Core",
+            regionalspecialty: "Coriolus",
+            ...whisperinmaterials
+          },
+          talent_materials: {
+            ...pistoluser,
+            weeklyboss: "Monument Bell",
+          },
+        }
+      ]
   },
-  {
-      name: "Taoqi",
+  {   name: "Taoqi",
       element: "havoc",
       weapon: "Broadblade",
       charactericon: "/src/assets/images/character-icons-small/taoqi-icon.webp",
       characterportrait: "/src/assets/images/portraits/taoqi.webp",
       rarity: 4,
       version: 1.0,
+      talent: [
+        {
+          basic_attack: {
+            name:"Normal Attack: Impromptu Show",
+            description: {
+              "Basic Attack": "Mortefi uses his dual guns and fire to perform up to 4 continuous attacks dealing Fusion DMG.",
+              "Heavy Attack": "Mortefi enters the aiming state for a more powerful shot. The aimed shot fired after charging finishes deals Fusion DMG.",
+              "Mid-air Attack": "Mortefi consumes Stamina to perform consecutive shots at the target in mid-air, dealing Fusion DMG.",
+              "Dodge Counter": "Use Basic Attack after successful Dodge to attack the target, dealing Fusion DMG.",
+            }
+          },
+          resonance_skill: {
+            name: "Resonance Skill: Passionate Variation",
+            description: {
+              "": "Launch high-speed flame lightning forward, dealing Fusion DMG.",
+            }
+          },
+          resonance_lib: {
+            name: "Resonance Liberation: Violent Finale",
+            description: {
+              "": "Deal Fusion DMG, and apply Burning Rhapsody to all characters in the team.",
+              "Burning Rhapsody": "When the on-field character's Basic Attack hits the target, Mortefi launches a Coordinated Attack, firing 1 Marcato. When the on-field character's Heavy Attack hits the target, Mortefi launches a Coordinated Attack, firing 2 Marcato. Mortefi can launch one Coordinated Attack every 0.35s.",
+              "Marcato": "Deals Fusion DMG.",
+            }
+          },
+          forte_circuit: {
+            name: "Forte Circuit: Fury Fugue",
+            description: {
+              "Resonance Skill: Fury Fugue": "When Mortefi's \"Annoyance\" reaches 100, his Resonance Skill is replaced with Fury Fudge. When casting Fury Fudge, Mortefi consumes all \"Annoyance\" to unleash high-speed flame lightning, dealing Fusion DMG, considered as Resonance Skill damage.",
+              "Annoyance": "Mortefi can hold up to 100 Annoyance. When Normal Attack Impromptu Show hits the target, “Annoyance” is restored. When Intro Skill Dissonance hits the target, “Annoyance” is restored. When Resonance Skill Passionate Variation hits the target, “Annoyance” is restored. Within 5 seconds after casting Passionate Variation, Basic Attack Impromptu that hits the target additionally restores \"Annoyance\".",
+            }
+          },
+          inherent_skill_1: {
+            name: "Inherent Skill: Harmonic Control",
+            description: {
+              "": "After casting Resonance Skill Passionate Variation, the damage of Resonance Skill Draconic Hellfire is increased by 25% for 8s.",
+            }
+          },
+          inherent_skill_2: {
+            name: "Inherent Skill: Rhythmic Vibrato",
+            description: {
+              "": "During Resonance Liberation Burning Rhapsody, each hit of Resonance Liberation Marcato will increase the damage of the next Resonance Liberation Marcato by 1.5%, which can be triggered once every 0.35s, stacking up to 50 times. The effect will be reset after Resonance Liberation Burning Rhapsody ends."
+            }
+          },
+          intro_skill: {
+            name: "Intro Skill: Dissonance",
+            description: {
+              "": "Attack the target, dealing Fusion DMG."
+            }
+          },
+          outro_skill: {
+            name: "Outro Skill: Rage Transposition",
+            description: {
+              "": "The next character (or other characters on a nearby team that activates an Outro Skill) gains 38% Heavy Attack DMG Deepen for 14 seconds or until the Character is switched."
+            }
+          },
+        }
+      ],
+      materials: [
+        {
+          shellcredits: "Shell Credit",
+          ascension_materials: {
+            experience: "Premium Resonance Potion",
+            bossmaterial: "Rage Tacet Core",
+            regionalspecialty: "Coriolus",
+            ...whisperinmaterials
+          },
+          talent_materials: {
+            ...pistoluser,
+            weeklyboss: "Monument Bell",
+          },
+        }
+      ]
   },
-  {
-      name: "Verina",
+  {   name: "Verina",
       element: "spectro",
       weapon: "Rectifier",
       charactericon: "/src/assets/images/character-icons-small/verina-icon.webp",
       characterportrait: "/src/assets/images/portraits/verina.webp",
       rarity: 4,
       version: 1.0,
+      talent: [
+        {
+          basic_attack: {
+            name:"Normal Attack: Impromptu Show",
+            description: {
+              "Basic Attack": "Mortefi uses his dual guns and fire to perform up to 4 continuous attacks dealing Fusion DMG.",
+              "Heavy Attack": "Mortefi enters the aiming state for a more powerful shot. The aimed shot fired after charging finishes deals Fusion DMG.",
+              "Mid-air Attack": "Mortefi consumes Stamina to perform consecutive shots at the target in mid-air, dealing Fusion DMG.",
+              "Dodge Counter": "Use Basic Attack after successful Dodge to attack the target, dealing Fusion DMG.",
+            }
+          },
+          resonance_skill: {
+            name: "Resonance Skill: Passionate Variation",
+            description: {
+              "": "Launch high-speed flame lightning forward, dealing Fusion DMG.",
+            }
+          },
+          resonance_lib: {
+            name: "Resonance Liberation: Violent Finale",
+            description: {
+              "": "Deal Fusion DMG, and apply Burning Rhapsody to all characters in the team.",
+              "Burning Rhapsody": "When the on-field character's Basic Attack hits the target, Mortefi launches a Coordinated Attack, firing 1 Marcato. When the on-field character's Heavy Attack hits the target, Mortefi launches a Coordinated Attack, firing 2 Marcato. Mortefi can launch one Coordinated Attack every 0.35s.",
+              "Marcato": "Deals Fusion DMG.",
+            }
+          },
+          forte_circuit: {
+            name: "Forte Circuit: Fury Fugue",
+            description: {
+              "Resonance Skill: Fury Fugue": "When Mortefi's \"Annoyance\" reaches 100, his Resonance Skill is replaced with Fury Fudge. When casting Fury Fudge, Mortefi consumes all \"Annoyance\" to unleash high-speed flame lightning, dealing Fusion DMG, considered as Resonance Skill damage.",
+              "Annoyance": "Mortefi can hold up to 100 Annoyance. When Normal Attack Impromptu Show hits the target, “Annoyance” is restored. When Intro Skill Dissonance hits the target, “Annoyance” is restored. When Resonance Skill Passionate Variation hits the target, “Annoyance” is restored. Within 5 seconds after casting Passionate Variation, Basic Attack Impromptu that hits the target additionally restores \"Annoyance\".",
+            }
+          },
+          inherent_skill_1: {
+            name: "Inherent Skill: Harmonic Control",
+            description: {
+              "": "After casting Resonance Skill Passionate Variation, the damage of Resonance Skill Draconic Hellfire is increased by 25% for 8s.",
+            }
+          },
+          inherent_skill_2: {
+            name: "Inherent Skill: Rhythmic Vibrato",
+            description: {
+              "": "During Resonance Liberation Burning Rhapsody, each hit of Resonance Liberation Marcato will increase the damage of the next Resonance Liberation Marcato by 1.5%, which can be triggered once every 0.35s, stacking up to 50 times. The effect will be reset after Resonance Liberation Burning Rhapsody ends."
+            }
+          },
+          intro_skill: {
+            name: "Intro Skill: Dissonance",
+            description: {
+              "": "Attack the target, dealing Fusion DMG."
+            }
+          },
+          outro_skill: {
+            name: "Outro Skill: Rage Transposition",
+            description: {
+              "": "The next character (or other characters on a nearby team that activates an Outro Skill) gains 38% Heavy Attack DMG Deepen for 14 seconds or until the Character is switched."
+            }
+          },
+        }
+      ],
+      materials: [
+        {
+          shellcredits: "Shell Credit",
+          ascension_materials: {
+            experience: "Premium Resonance Potion",
+            bossmaterial: "Rage Tacet Core",
+            regionalspecialty: "Coriolus",
+            ...whisperinmaterials
+          },
+          talent_materials: {
+            ...pistoluser,
+            weeklyboss: "Monument Bell",
+          },
+        }
+      ]
   },
-  {
-      name: "Yangyang",
+  {   name: "Yangyang",
       element: "aero",
       weapon: "Sword",
       charactericon: "/src/assets/images/character-icons-small/yangyang-icon.webp",
       characterportrait: "/src/assets/images/portraits/yangyang.webp",
       rarity: 4,
       version: 1.0,
+      talent: [
+        {
+          basic_attack: {
+            name:"Normal Attack: Impromptu Show",
+            description: {
+              "Basic Attack": "Mortefi uses his dual guns and fire to perform up to 4 continuous attacks dealing Fusion DMG.",
+              "Heavy Attack": "Mortefi enters the aiming state for a more powerful shot. The aimed shot fired after charging finishes deals Fusion DMG.",
+              "Mid-air Attack": "Mortefi consumes Stamina to perform consecutive shots at the target in mid-air, dealing Fusion DMG.",
+              "Dodge Counter": "Use Basic Attack after successful Dodge to attack the target, dealing Fusion DMG.",
+            }
+          },
+          resonance_skill: {
+            name: "Resonance Skill: Passionate Variation",
+            description: {
+              "": "Launch high-speed flame lightning forward, dealing Fusion DMG.",
+            }
+          },
+          resonance_lib: {
+            name: "Resonance Liberation: Violent Finale",
+            description: {
+              "": "Deal Fusion DMG, and apply Burning Rhapsody to all characters in the team.",
+              "Burning Rhapsody": "When the on-field character's Basic Attack hits the target, Mortefi launches a Coordinated Attack, firing 1 Marcato. When the on-field character's Heavy Attack hits the target, Mortefi launches a Coordinated Attack, firing 2 Marcato. Mortefi can launch one Coordinated Attack every 0.35s.",
+              "Marcato": "Deals Fusion DMG.",
+            }
+          },
+          forte_circuit: {
+            name: "Forte Circuit: Fury Fugue",
+            description: {
+              "Resonance Skill: Fury Fugue": "When Mortefi's \"Annoyance\" reaches 100, his Resonance Skill is replaced with Fury Fudge. When casting Fury Fudge, Mortefi consumes all \"Annoyance\" to unleash high-speed flame lightning, dealing Fusion DMG, considered as Resonance Skill damage.",
+              "Annoyance": "Mortefi can hold up to 100 Annoyance. When Normal Attack Impromptu Show hits the target, “Annoyance” is restored. When Intro Skill Dissonance hits the target, “Annoyance” is restored. When Resonance Skill Passionate Variation hits the target, “Annoyance” is restored. Within 5 seconds after casting Passionate Variation, Basic Attack Impromptu that hits the target additionally restores \"Annoyance\".",
+            }
+          },
+          inherent_skill_1: {
+            name: "Inherent Skill: Harmonic Control",
+            description: {
+              "": "After casting Resonance Skill Passionate Variation, the damage of Resonance Skill Draconic Hellfire is increased by 25% for 8s.",
+            }
+          },
+          inherent_skill_2: {
+            name: "Inherent Skill: Rhythmic Vibrato",
+            description: {
+              "": "During Resonance Liberation Burning Rhapsody, each hit of Resonance Liberation Marcato will increase the damage of the next Resonance Liberation Marcato by 1.5%, which can be triggered once every 0.35s, stacking up to 50 times. The effect will be reset after Resonance Liberation Burning Rhapsody ends."
+            }
+          },
+          intro_skill: {
+            name: "Intro Skill: Dissonance",
+            description: {
+              "": "Attack the target, dealing Fusion DMG."
+            }
+          },
+          outro_skill: {
+            name: "Outro Skill: Rage Transposition",
+            description: {
+              "": "The next character (or other characters on a nearby team that activates an Outro Skill) gains 38% Heavy Attack DMG Deepen for 14 seconds or until the Character is switched."
+            }
+          },
+        }
+      ],
+      materials: [
+        {
+          shellcredits: "Shell Credit",
+          ascension_materials: {
+            experience: "Premium Resonance Potion",
+            bossmaterial: "Rage Tacet Core",
+            regionalspecialty: "Coriolus",
+            ...whisperinmaterials
+          },
+          talent_materials: {
+            ...pistoluser,
+            weeklyboss: "Monument Bell",
+          },
+        }
+      ]
   },
-  {
-      name: "Yinlin",
+  {   name: "Yinlin",
       element: "electro",
       weapon: "Rectifier",
       charactericon: "/src/assets/images/character-icons-small/yinlin-icon.webp",
       characterportrait: "/src/assets/images/portraits/yinlin.webp",
       rarity: 5,
       version: 1.0,
+      talent: [
+        {
+          basic_attack: {
+            name:"Normal Attack: Impromptu Show",
+            description: {
+              "Basic Attack": "Mortefi uses his dual guns and fire to perform up to 4 continuous attacks dealing Fusion DMG.",
+              "Heavy Attack": "Mortefi enters the aiming state for a more powerful shot. The aimed shot fired after charging finishes deals Fusion DMG.",
+              "Mid-air Attack": "Mortefi consumes Stamina to perform consecutive shots at the target in mid-air, dealing Fusion DMG.",
+              "Dodge Counter": "Use Basic Attack after successful Dodge to attack the target, dealing Fusion DMG.",
+            }
+          },
+          resonance_skill: {
+            name: "Resonance Skill: Passionate Variation",
+            description: {
+              "": "Launch high-speed flame lightning forward, dealing Fusion DMG.",
+            }
+          },
+          resonance_lib: {
+            name: "Resonance Liberation: Violent Finale",
+            description: {
+              "": "Deal Fusion DMG, and apply Burning Rhapsody to all characters in the team.",
+              "Burning Rhapsody": "When the on-field character's Basic Attack hits the target, Mortefi launches a Coordinated Attack, firing 1 Marcato. When the on-field character's Heavy Attack hits the target, Mortefi launches a Coordinated Attack, firing 2 Marcato. Mortefi can launch one Coordinated Attack every 0.35s.",
+              "Marcato": "Deals Fusion DMG.",
+            }
+          },
+          forte_circuit: {
+            name: "Forte Circuit: Fury Fugue",
+            description: {
+              "Resonance Skill: Fury Fugue": "When Mortefi's \"Annoyance\" reaches 100, his Resonance Skill is replaced with Fury Fudge. When casting Fury Fudge, Mortefi consumes all \"Annoyance\" to unleash high-speed flame lightning, dealing Fusion DMG, considered as Resonance Skill damage.",
+              "Annoyance": "Mortefi can hold up to 100 Annoyance. When Normal Attack Impromptu Show hits the target, “Annoyance” is restored. When Intro Skill Dissonance hits the target, “Annoyance” is restored. When Resonance Skill Passionate Variation hits the target, “Annoyance” is restored. Within 5 seconds after casting Passionate Variation, Basic Attack Impromptu that hits the target additionally restores \"Annoyance\".",
+            }
+          },
+          inherent_skill_1: {
+            name: "Inherent Skill: Harmonic Control",
+            description: {
+              "": "After casting Resonance Skill Passionate Variation, the damage of Resonance Skill Draconic Hellfire is increased by 25% for 8s.",
+            }
+          },
+          inherent_skill_2: {
+            name: "Inherent Skill: Rhythmic Vibrato",
+            description: {
+              "": "During Resonance Liberation Burning Rhapsody, each hit of Resonance Liberation Marcato will increase the damage of the next Resonance Liberation Marcato by 1.5%, which can be triggered once every 0.35s, stacking up to 50 times. The effect will be reset after Resonance Liberation Burning Rhapsody ends."
+            }
+          },
+          intro_skill: {
+            name: "Intro Skill: Dissonance",
+            description: {
+              "": "Attack the target, dealing Fusion DMG."
+            }
+          },
+          outro_skill: {
+            name: "Outro Skill: Rage Transposition",
+            description: {
+              "": "The next character (or other characters on a nearby team that activates an Outro Skill) gains 38% Heavy Attack DMG Deepen for 14 seconds or until the Character is switched."
+            }
+          },
+        }
+      ],
+      materials: [
+        {
+          shellcredits: "Shell Credit",
+          ascension_materials: {
+            experience: "Premium Resonance Potion",
+            bossmaterial: "Rage Tacet Core",
+            regionalspecialty: "Coriolus",
+            ...whisperinmaterials
+          },
+          talent_materials: {
+            ...pistoluser,
+            weeklyboss: "Monument Bell",
+          },
+        }
+      ]
   },
-  {
-      name: "Yuanwu",
+  {   name: "Yuanwu",
       element: "electro",
-      weapon: "Gauntlet",
+      weapon: "Gauntlets",
       charactericon: "/src/assets/images/character-icons-small/yuanwu-icon.webp",
       characterportrait: "/src/assets/images/portraits/yuanwu.webp",
       rarity: 4,
       version: 1.0,
+      talent: [
+        {
+          basic_attack: {
+            name:"Normal Attack: Impromptu Show",
+            description: {
+              "Basic Attack": "Mortefi uses his dual guns and fire to perform up to 4 continuous attacks dealing Fusion DMG.",
+              "Heavy Attack": "Mortefi enters the aiming state for a more powerful shot. The aimed shot fired after charging finishes deals Fusion DMG.",
+              "Mid-air Attack": "Mortefi consumes Stamina to perform consecutive shots at the target in mid-air, dealing Fusion DMG.",
+              "Dodge Counter": "Use Basic Attack after successful Dodge to attack the target, dealing Fusion DMG.",
+            }
+          },
+          resonance_skill: {
+            name: "Resonance Skill: Passionate Variation",
+            description: {
+              "": "Launch high-speed flame lightning forward, dealing Fusion DMG.",
+            }
+          },
+          resonance_lib: {
+            name: "Resonance Liberation: Violent Finale",
+            description: {
+              "": "Deal Fusion DMG, and apply Burning Rhapsody to all characters in the team.",
+              "Burning Rhapsody": "When the on-field character's Basic Attack hits the target, Mortefi launches a Coordinated Attack, firing 1 Marcato. When the on-field character's Heavy Attack hits the target, Mortefi launches a Coordinated Attack, firing 2 Marcato. Mortefi can launch one Coordinated Attack every 0.35s.",
+              "Marcato": "Deals Fusion DMG.",
+            }
+          },
+          forte_circuit: {
+            name: "Forte Circuit: Fury Fugue",
+            description: {
+              "Resonance Skill: Fury Fugue": "When Mortefi's \"Annoyance\" reaches 100, his Resonance Skill is replaced with Fury Fudge. When casting Fury Fudge, Mortefi consumes all \"Annoyance\" to unleash high-speed flame lightning, dealing Fusion DMG, considered as Resonance Skill damage.",
+              "Annoyance": "Mortefi can hold up to 100 Annoyance. When Normal Attack Impromptu Show hits the target, “Annoyance” is restored. When Intro Skill Dissonance hits the target, “Annoyance” is restored. When Resonance Skill Passionate Variation hits the target, “Annoyance” is restored. Within 5 seconds after casting Passionate Variation, Basic Attack Impromptu that hits the target additionally restores \"Annoyance\".",
+            }
+          },
+          inherent_skill_1: {
+            name: "Inherent Skill: Harmonic Control",
+            description: {
+              "": "After casting Resonance Skill Passionate Variation, the damage of Resonance Skill Draconic Hellfire is increased by 25% for 8s.",
+            }
+          },
+          inherent_skill_2: {
+            name: "Inherent Skill: Rhythmic Vibrato",
+            description: {
+              "": "During Resonance Liberation Burning Rhapsody, each hit of Resonance Liberation Marcato will increase the damage of the next Resonance Liberation Marcato by 1.5%, which can be triggered once every 0.35s, stacking up to 50 times. The effect will be reset after Resonance Liberation Burning Rhapsody ends."
+            }
+          },
+          intro_skill: {
+            name: "Intro Skill: Dissonance",
+            description: {
+              "": "Attack the target, dealing Fusion DMG."
+            }
+          },
+          outro_skill: {
+            name: "Outro Skill: Rage Transposition",
+            description: {
+              "": "The next character (or other characters on a nearby team that activates an Outro Skill) gains 38% Heavy Attack DMG Deepen for 14 seconds or until the Character is switched."
+            }
+          },
+        }
+      ],
+      materials: [
+        {
+          shellcredits: "Shell Credit",
+          ascension_materials: {
+            experience: "Premium Resonance Potion",
+            bossmaterial: "Rage Tacet Core",
+            regionalspecialty: "Coriolus",
+            ...whisperinmaterials
+          },
+          talent_materials: {
+            ...pistoluser,
+            weeklyboss: "Monument Bell",
+          },
+        }
+      ]
   },
-  {
-      name: "Zhezhi",
+  {   name: "Zhezhi",
       element: "glacio",
       weapon: "Rectifier",
       charactericon: "/src/assets/images/character-icons-small/zhezhi-icon.webp",
       characterportrait: "/src/assets/images/portraits/zhezhi.webp",
       rarity: 5,
       version: 1.2,
+      talent: [
+        {
+          basic_attack: {
+            name:"Normal Attack: Impromptu Show",
+            description: {
+              "Basic Attack": "Mortefi uses his dual guns and fire to perform up to 4 continuous attacks dealing Fusion DMG.",
+              "Heavy Attack": "Mortefi enters the aiming state for a more powerful shot. The aimed shot fired after charging finishes deals Fusion DMG.",
+              "Mid-air Attack": "Mortefi consumes Stamina to perform consecutive shots at the target in mid-air, dealing Fusion DMG.",
+              "Dodge Counter": "Use Basic Attack after successful Dodge to attack the target, dealing Fusion DMG.",
+            }
+          },
+          resonance_skill: {
+            name: "Resonance Skill: Passionate Variation",
+            description: {
+              "": "Launch high-speed flame lightning forward, dealing Fusion DMG.",
+            }
+          },
+          resonance_lib: {
+            name: "Resonance Liberation: Violent Finale",
+            description: {
+              "": "Deal Fusion DMG, and apply Burning Rhapsody to all characters in the team.",
+              "Burning Rhapsody": "When the on-field character's Basic Attack hits the target, Mortefi launches a Coordinated Attack, firing 1 Marcato. When the on-field character's Heavy Attack hits the target, Mortefi launches a Coordinated Attack, firing 2 Marcato. Mortefi can launch one Coordinated Attack every 0.35s.",
+              "Marcato": "Deals Fusion DMG.",
+            }
+          },
+          forte_circuit: {
+            name: "Forte Circuit: Fury Fugue",
+            description: {
+              "Resonance Skill: Fury Fugue": "When Mortefi's \"Annoyance\" reaches 100, his Resonance Skill is replaced with Fury Fudge. When casting Fury Fudge, Mortefi consumes all \"Annoyance\" to unleash high-speed flame lightning, dealing Fusion DMG, considered as Resonance Skill damage.",
+              "Annoyance": "Mortefi can hold up to 100 Annoyance. When Normal Attack Impromptu Show hits the target, “Annoyance” is restored. When Intro Skill Dissonance hits the target, “Annoyance” is restored. When Resonance Skill Passionate Variation hits the target, “Annoyance” is restored. Within 5 seconds after casting Passionate Variation, Basic Attack Impromptu that hits the target additionally restores \"Annoyance\".",
+            }
+          },
+          inherent_skill_1: {
+            name: "Inherent Skill: Harmonic Control",
+            description: {
+              "": "After casting Resonance Skill Passionate Variation, the damage of Resonance Skill Draconic Hellfire is increased by 25% for 8s.",
+            }
+          },
+          inherent_skill_2: {
+            name: "Inherent Skill: Rhythmic Vibrato",
+            description: {
+              "": "During Resonance Liberation Burning Rhapsody, each hit of Resonance Liberation Marcato will increase the damage of the next Resonance Liberation Marcato by 1.5%, which can be triggered once every 0.35s, stacking up to 50 times. The effect will be reset after Resonance Liberation Burning Rhapsody ends."
+            }
+          },
+          intro_skill: {
+            name: "Intro Skill: Dissonance",
+            description: {
+              "": "Attack the target, dealing Fusion DMG."
+            }
+          },
+          outro_skill: {
+            name: "Outro Skill: Rage Transposition",
+            description: {
+              "": "The next character (or other characters on a nearby team that activates an Outro Skill) gains 38% Heavy Attack DMG Deepen for 14 seconds or until the Character is switched."
+            }
+          },
+        }
+      ],
+      materials: [
+        {
+          shellcredits: "Shell Credit",
+          ascension_materials: {
+            experience: "Premium Resonance Potion",
+            bossmaterial: "Rage Tacet Core",
+            regionalspecialty: "Coriolus",
+            ...whisperinmaterials
+          },
+          talent_materials: {
+            ...pistoluser,
+            weeklyboss: "Monument Bell",
+          },
+        }
+      ]
   },
 ]
