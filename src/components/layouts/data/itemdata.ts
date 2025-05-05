@@ -20,37 +20,37 @@ export const sortfilters = [
 export const elementfilters = [
   {
     element: "aero",
-    src: "/src/assets/images/element-types-icons/aero1.png",
+    src: "/assets/images/element-types-icons/aero1.png",
     alt: "Aero",
     customshadow: "[0_0px_5px_rgba(85,255,181,1)]"
   },
   {
     element: "electro",
-    src: "/src/assets/images/element-types-icons/electro1.png",
+    src: "/assets/images/element-types-icons/electro1.png",
     alt: "Electro",
     customshadow: "[0_0px_5px_rgba(180,107,255,1)]"
   },
   {
     element: "fusion",
-    src: "/src/assets/images/element-types-icons/fusion1.png",
+    src: "/assets/images/element-types-icons/fusion1.png",
     alt: "Fusion",
     customshadow: "[0_0px_5px_rgba(240, 116, 78, 1)]"
   },
   {
     element: "glacio",
-    src: "/src/assets/images/element-types-icons/glacio1.png",
+    src: "/assets/images/element-types-icons/glacio1.png",
     alt: "Glacio",
     customshadow: "[0_0px_5px_rgba(65,174,251,1)]"
   },
   {
     element: "havoc",
-    src: "/src/assets/images/element-types-icons/havoc1.png",
+    src: "/assets/images/element-types-icons/havoc1.png",
     alt: "Havoc",
     customshadow: "[0_0px_5px_rgba(65,174,251,1)]"
   },
   {
     element: "spectro",
-    src: "/src/assets/images/element-types-icons/spectro1.png",
+    src: "/assets/images/element-types-icons/spectro1.png",
     alt: "Spectro",
     customshadow: "[0_0px_5px_rgba(65,174,251,1)]"
   }
@@ -58,27 +58,27 @@ export const elementfilters = [
 
 export const weaponfilters = [
   {   weapon: "Broadblade",
-      src: "/src/assets/images/resonator-type-icons/Skill_Broadblade.png",
+      src: "/assets/images/resonator-type-icons/Skill_Broadblade.png",
       alt: "Broadblade",
       customshadow: "[0_0px_5px_rgba(85,255,181,1)]"
   },
   {   weapon: "Gauntlets",
-      src: "/src/assets/images/resonator-type-icons/Skill_Gauntlet.png",
+      src: "/assets/images/resonator-type-icons/Skill_Gauntlet.png",
       alt: "Gauntlet",
       customshadow: "[0_0px_5px_rgba(85,255,181,1)]"
   },
   {   weapon: "Pistols",
-      src: "/src/assets/images/resonator-type-icons/Skill_Pistols.png",
+      src: "/assets/images/resonator-type-icons/Skill_Pistols.png",
       alt: "Pistols",
       customshadow: "[0_0px_5px_rgba(85,255,181,1)]"
   },
   {   weapon: "Rectifier",
-      src: "/src/assets/images/resonator-type-icons/Skill_Rectifier.png",
+      src: "/assets/images/resonator-type-icons/Skill_Rectifier.png",
       alt: "Rectifier",
       customshadow: "[0_0px_5px_rgba(85,255,181,1)]"
   },
   {   weapon: "Sword",
-      src: "/src/assets/images/resonator-type-icons/Skill_Sword.png",
+      src: "/assets/images/resonator-type-icons/Skill_Sword.png",
       alt: "Sword",
       customshadow: "[0_0px_5px_rgba(85,255,181,1)]"
   },
@@ -97,7 +97,7 @@ export const items = [
       qualityLevel: 3,
       dropLocations: ["Simulation Training", "Quests", "Huanglong Exploration"],
       sortIndex: 0,
-      image: "/src/assets/images/currency/shell-credit-2.webp",
+      image: "/assets/images/currency/shell-credit-2.webp",
     },
     {
       id: 41300005,
@@ -110,7 +110,7 @@ export const items = [
       qualityLevel: 5,
       dropLocations: ["Casket Delivery", "Quests"],
       sortIndex: 5,
-      image: "/src/assets/images/development-materials/mysterious-code-41300005.webp"
+      image: "/assets/images/development-materials/mysterious-code-41300005.webp"
     },
     {
       id: 41400014,
@@ -123,7 +123,7 @@ export const items = [
       qualityLevel: 4,
       dropLocations: ["Crownless"],
       sortIndex: 5,
-      image: "/src/assets/images/development-materials/strife-tacet-core-41400014.webp",
+      image: "/assets/images/development-materials/strife-tacet-core-41400014.webp",
     },
     {
       id: 41400024,
@@ -136,7 +136,7 @@ export const items = [
       qualityLevel: 4,
       dropLocations: ["Thundering Mephis"],
       sortIndex: 5,
-      image: "/src/assets/images/development-materials/thundering-tacet-core-41400024.webp"
+      image: "/assets/images/development-materials/thundering-tacet-core-41400024.webp"
     },
     {
       id: 41400034,
@@ -149,7 +149,7 @@ export const items = [
       qualityLevel: 4,
       dropLocations: ["Mourning Aix"],
       sortIndex: 5,
-      image: "/src/assets/images/development-materials/elegy-tacet-core-41400034.webp"
+      image: "/assets/images/development-materials/elegy-tacet-core-41400034.webp"
     },
     {
       id: 41400044,
@@ -162,7 +162,7 @@ export const items = [
       qualityLevel: 4,
       dropLocations: ["Inferno Rider"],
       sortIndex: 5,
-      image: "/src/assets/images/development-materials/rage-tacet-core-41400044.webp"
+      image: "/assets/images/development-materials/rage-tacet-core-41400044.webp"
     },
     {
       id: 41400054,
@@ -175,7 +175,7 @@ export const items = [
       qualityLevel: 4,
       dropLocations: ["Feilian Beringal"],
       sortIndex: 5,
-      image: "/src/assets/images/development-materials/roaring-rock-fist-41400054.webp"
+      image: "/assets/images/development-materials/roaring-rock-fist-41400054.webp"
     },
     {
       id: 41400064,
@@ -188,7 +188,7 @@ export const items = [
       qualityLevel: 4,
       dropLocations: ["Impermanence Heron"],
       sortIndex: 5,
-      image: "/src/assets/images/development-materials/gold-dissolving-feather-41400064.webp"
+      image: "/assets/images/development-materials/gold-dissolving-feather-41400064.webp"
     },
     {
       id: 41400074,
@@ -201,7 +201,7 @@ export const items = [
       qualityLevel: 4,
       dropLocations: ["Lampylumen Myriad"],
       sortIndex: 5,
-      image: "/src/assets/images/development-materials/sound-keeping-tacet-core-41400074.webp"
+      image: "/assets/images/development-materials/sound-keeping-tacet-core-41400074.webp"
     },
     {
       id: 41400084,
@@ -214,7 +214,7 @@ export const items = [
       qualityLevel: 4,
       dropLocations: ["Mech Abomination"],
       sortIndex: 5,
-      image: "/src/assets/images/development-materials/group-abomination-tacet-core-41400084.webp"
+      image: "/assets/images/development-materials/group-abomination-tacet-core-41400084.webp"
     },
     {
       id: 41100011,
@@ -228,7 +228,7 @@ export const items = [
       qualityLevel: 2,
       dropLocations: ["Whisperins", "Store", "Forgery Challenge", "Weapon Shop"],
       sortIndex: 5,
-      image: "/src/assets/images/development-materials/lf-whisperin-core-41100011.webp"
+      image: "/assets/images/development-materials/lf-whisperin-core-41100011.webp"
     },
     {
       id: 41100012,
@@ -247,7 +247,7 @@ export const items = [
         "Weapon Shop",
       ],
       sortIndex: 5,
-      image: "/src/assets/images/development-materials/mf-whisperin-core-41100012.webp"
+      image: "/assets/images/development-materials/mf-whisperin-core-41100012.webp"
     },
     {
       id: 41100013,
@@ -261,7 +261,7 @@ export const items = [
       qualityLevel: 4,
       dropLocations: ["Synthesis", "Whisperins"],
       sortIndex: 5,
-      image: "/src/assets/images/development-materials/hf-whisperin-core-41100013.webp"
+      image: "/assets/images/development-materials/hf-whisperin-core-41100013.webp"
     },
     {
       id: 41100014,
@@ -275,7 +275,7 @@ export const items = [
       qualityLevel: 5,
       dropLocations: ["Synthesis", "Whisperins"],
       sortIndex: 5,
-      image: "/src/assets/images/development-materials/ff-whisperin-core-41100014.webp"
+      image: "/assets/images/development-materials/ff-whisperin-core-41100014.webp"
     },
     {
       id: 41100021,
@@ -289,7 +289,7 @@ export const items = [
       qualityLevel: 2,
       dropLocations: ["Howlers", "Store", "Forgery Challenge", "Weapon Shop"],
       sortIndex: 5,
-      image: "/src/assets/images/development-materials/lf-howler-core-41100021.webp"
+      image: "/assets/images/development-materials/lf-howler-core-41100021.webp"
     },
     {
       id: 41100022,
@@ -303,7 +303,7 @@ export const items = [
       qualityLevel: 3,
       dropLocations: ["Synthesis", "Howlers", "Forgery Challenge", "Weapon Shop"],
       sortIndex: 5,
-      image: "/src/assets/images/development-materials/mf-howler-core-41100022.webp"
+      image: "/assets/images/development-materials/mf-howler-core-41100022.webp"
     },
     {
       id: 41100023,
@@ -317,7 +317,7 @@ export const items = [
       qualityLevel: 4,
       dropLocations: ["Synthesis", "Howlers"],
       sortIndex: 5,
-      image: "/src/assets/images/development-materials/hf-howler-core-41100023.webp"
+      image: "/assets/images/development-materials/hf-howler-core-41100023.webp"
     },
     {
       id: 41100024,
@@ -331,7 +331,7 @@ export const items = [
       qualityLevel: 5,
       dropLocations: ["Synthesis", "Howlers"],
       sortIndex: 5,
-      image: "/src/assets/images/development-materials/ff-howler-core-41100024.webp"
+      image: "/assets/images/development-materials/ff-howler-core-41100024.webp"
     },
     {
       id: 41100031,
@@ -345,7 +345,7 @@ export const items = [
       qualityLevel: 2,
       dropLocations: ["Exiles", "Store", "Forgery Challenge", "Weapon Shop"],
       sortIndex: 5,
-      image: "/src/assets/images/development-materials/crude-ring-41100031.webp"
+      image: "/assets/images/development-materials/crude-ring-41100031.webp"
     },
     {
       id: 41100032,
@@ -359,7 +359,7 @@ export const items = [
       qualityLevel: 3,
       dropLocations: ["Synthesis", "Exiles", "Forgery Challenge", "Weapon Shop"],
       sortIndex: 5,
-      image: "/src/assets/images/development-materials/basic-ring-41100032.webp"
+      image: "/assets/images/development-materials/basic-ring-41100032.webp"
     },
     {
       id: 41100033,
@@ -373,7 +373,7 @@ export const items = [
       qualityLevel: 4,
       dropLocations: ["Synthesis", "Exiles"],
       sortIndex: 5,
-      image: "/src/assets/images/development-materials/improved-ring-41100033.webp"
+      image: "/assets/images/development-materials/improved-ring-41100033.webp"
     },
     {
       id: 41100034,
@@ -387,7 +387,7 @@ export const items = [
       qualityLevel: 5,
       dropLocations: ["Synthesis", "Exiles"],
       sortIndex: 5,
-      image: "/src/assets/images/development-materials/tailored-ring-41100034.webp"
+      image: "/assets/images/development-materials/tailored-ring-41100034.webp"
     },
     {
       id: 41200031,
@@ -401,7 +401,7 @@ export const items = [
       qualityLevel: 2,
       dropLocations: ["Fractsidus"],
       sortIndex: 5,
-      image: "/src/assets/images/development-materials/mask-of-constraint-41200031.webp"
+      image: "/assets/images/development-materials/mask-of-constraint-41200031.webp"
     },
     {
       id: 41200032,
@@ -415,7 +415,7 @@ export const items = [
       qualityLevel: 3,
       dropLocations: ["Synthesis", "Fractsidus"],
       sortIndex: 5,
-      image: "/src/assets/images/development-materials/mask-of-erosion-41200032.webp"
+      image: "/assets/images/development-materials/mask-of-erosion-41200032.webp"
     },
     {
       id: 41200033,
@@ -429,7 +429,7 @@ export const items = [
       qualityLevel: 4,
       dropLocations: ["Synthesis", "Fractsidus"],
       sortIndex: 5,
-      image: "/src/assets/images/development-materials/mask-of-distortion-41200033.webp"
+      image: "/assets/images/development-materials/mask-of-distortion-41200033.webp"
     },
     {
       id: 41200034,
@@ -443,7 +443,7 @@ export const items = [
       qualityLevel: 5,
       dropLocations: ["Synthesis", "Fractsidus"],
       sortIndex: 5,
-      image: "/src/assets/images/development-materials/mask-of-insanity-41200034.webp"
+      image: "/assets/images/development-materials/mask-of-insanity-41200034.webp"
     },
     {
       id: 41400094,
@@ -456,7 +456,7 @@ export const items = [
       qualityLevel: 4,
       dropLocations: ["Bell-Borne Geochelone"],
       sortIndex: 5,
-      image: "/src/assets/images/development-materials/monument-bell-41400094.webp"
+      image: "/assets/images/development-materials/monument-bell-41400094.webp"
     },
     {
       id: 41400104,
@@ -469,7 +469,7 @@ export const items = [
       qualityLevel: 4,
       dropLocations: ["Seatrail Narwhal"],
       sortIndex: 5,
-      image: "/src/assets/images/development-materials/wave-cutting-tooth-41400104.webp"
+      image: "/assets/images/development-materials/wave-cutting-tooth-41400104.webp"
     },
     {
       id: 41400114,
@@ -482,7 +482,7 @@ export const items = [
       qualityLevel: 4,
       dropLocations: ["Scar"],
       sortIndex: 5,
-      image: "/src/assets/images/development-materials/unending-destruction-41400114.webp"
+      image: "/assets/images/development-materials/unending-destruction-41400114.webp"
     },
     {
       id: 41400124,
@@ -495,7 +495,7 @@ export const items = [
       qualityLevel: 4,
       dropLocations: ["Dreamless"],
       sortIndex: 5,
-      image: "/src/assets/images/development-materials/dreamless-feather-41400124.webp"
+      image: "/assets/images/development-materials/dreamless-feather-41400124.webp"
     },
     {
       id: 43010001,
@@ -508,7 +508,7 @@ export const items = [
       qualityLevel: 2,
       dropLocations: ["Quests", "Huanglong Exploration", "Simulation Training"],
       sortIndex: 5,
-      image: "/src/assets/images/development-materials/basic-resonance-potion-43010001.webp"
+      image: "/assets/images/development-materials/basic-resonance-potion-43010001.webp"
     },
     {
       id: 43010002,
@@ -521,7 +521,7 @@ export const items = [
       qualityLevel: 3,
       dropLocations: ["Quests", "Huanglong Exploration", "Simulation Training"],
       sortIndex: 5,
-      image: "/src/assets/images/development-materials/medium-resonance-potion-43010002.webp"
+      image: "/assets/images/development-materials/medium-resonance-potion-43010002.webp"
     },
     {
       id: 43010003,
@@ -534,7 +534,7 @@ export const items = [
       qualityLevel: 4,
       dropLocations: ["Quests", "Huanglong Exploration", "Simulation Training"],
       sortIndex: 5,
-      image: "/src/assets/images/development-materials/advanced-resonance-potion-43010003.webp"
+      image: "/assets/images/development-materials/advanced-resonance-potion-43010003.webp"
     },
     {
       id: 43010004,
@@ -547,7 +547,7 @@ export const items = [
       qualityLevel: 5,
       dropLocations: ["Quests", "Huanglong Exploration", "Simulation Training"],
       sortIndex: 5,
-      image: "/src/assets/images/development-materials/premium-resonance-potion-43010004.webp"
+      image: "/assets/images/development-materials/premium-resonance-potion-43010004.webp"
     },
     {
       id: 43020001,
@@ -560,7 +560,7 @@ export const items = [
       qualityLevel: 2,
       dropLocations: ["Quests", "Huanglong Exploration", "Simulation Training"],
       sortIndex: 5,
-      image: "/src/assets/images/development-materials/basic-energy-core-43020001.webp"
+      image: "/assets/images/development-materials/basic-energy-core-43020001.webp"
     },
     {
       id: 43020002,
@@ -573,7 +573,7 @@ export const items = [
       qualityLevel: 3,
       dropLocations: ["Quests", "Huanglong Exploration", "Simulation Training"],
       sortIndex: 5,
-      image: "/src/assets/images/development-materials/medium-energy-core-43020002.webp"
+      image: "/assets/images/development-materials/medium-energy-core-43020002.webp"
     },
     {
       id: 43020003,
@@ -586,7 +586,7 @@ export const items = [
       qualityLevel: 4,
       dropLocations: ["Quests", "Huanglong Exploration", "Simulation Training"],
       sortIndex: 5,
-      image: "/src/assets/images/development-materials/advanced-energy-core-43020003.webp"
+      image: "/assets/images/development-materials/advanced-energy-core-43020003.webp"
     },
     {
       id: 43020004,
@@ -599,7 +599,7 @@ export const items = [
       qualityLevel: 5,
       dropLocations: ["Quests", "Huanglong Exploration", "Simulation Training"],
       sortIndex: 5,
-      image: "/src/assets/images/development-materials/premium-energy-core-43020004.webp"
+      image: "/assets/images/development-materials/premium-energy-core-43020004.webp"
     },
     {
       id: 43020011,
@@ -617,7 +617,7 @@ export const items = [
         "Weapon Shop",
       ],
       sortIndex: 5,
-      image: "/src/assets/images/development-materials/inert-metallic-drip-43020011.webp"
+      image: "/assets/images/development-materials/inert-metallic-drip-43020011.webp"
     },
     {
       id: 43020012,
@@ -631,7 +631,7 @@ export const items = [
       qualityLevel: 3,
       dropLocations: ["Synthesis", "Forgery Challenge: Flaming Remnants"],
       sortIndex: 5,
-      image: "/src/assets/images/development-materials/reactive-metallic-drip-43020012.webp"
+      image: "/assets/images/development-materials/reactive-metallic-drip-43020012.webp"
     },
     {
       id: 43020013,
@@ -645,7 +645,7 @@ export const items = [
       qualityLevel: 4,
       dropLocations: ["Synthesis", "Forgery Challenge: Flaming Remnants"],
       sortIndex: 5,
-      image: "/src/assets/images/development-materials/polarized-metallic-drip-43020013.webp"
+      image: "/assets/images/development-materials/polarized-metallic-drip-43020013.webp"
     },
     {
       id: 43020014,
@@ -659,7 +659,7 @@ export const items = [
       qualityLevel: 5,
       dropLocations: ["Synthesis", "Forgery Challenge: Flaming Remnants"],
       sortIndex: 5,
-      image: "/src/assets/images/development-materials/heterized-metallic-drip-43020014.webp",
+      image: "/assets/images/development-materials/heterized-metallic-drip-43020014.webp",
     },
     {
       id: 43020021,
@@ -677,7 +677,7 @@ export const items = [
         "Weapon Shop",
       ],
       sortIndex: 5,
-      image: "/src/assets/images/development-materials/impure-phlogiston-43020021.webp",
+      image: "/assets/images/development-materials/impure-phlogiston-43020021.webp",
     },
     {
       id: 43020022,
@@ -691,7 +691,7 @@ export const items = [
       qualityLevel: 3,
       dropLocations: ["Synthesis", "Forgery Challenge: Marigold Woods"],
       sortIndex: 5,
-      image: "/src/assets/images/development-materials/extracted-phlogiston-43020022.webp"
+      image: "/assets/images/development-materials/extracted-phlogiston-43020022.webp"
     },
     {
       id: 43020023,
@@ -705,7 +705,7 @@ export const items = [
       qualityLevel: 4,
       dropLocations: ["Synthesis", "Forgery Challenge: Marigold Woods"],
       sortIndex: 5,
-      image: "/src/assets/images/development-materials/refined-phlohiston-43020023.webp",
+      image: "/assets/images/development-materials/refined-phlohiston-43020023.webp",
     },
     {
       id: 43020024,
@@ -719,7 +719,7 @@ export const items = [
       qualityLevel: 5,
       dropLocations: ["Synthesis", "Forgery Challenge: Marigold Woods"],
       sortIndex: 5,
-      image: "/src/assets/images/development-materials/flawless-phlohiston-43020024.webp",
+      image: "/assets/images/development-materials/flawless-phlohiston-43020024.webp",
     },
     {
       id: 43020031,
@@ -737,7 +737,7 @@ export const items = [
         "Weapon Shop",
       ],
       sortIndex: 5,
-      image: "/src/assets/images/development-materials/lento-helix-43020031.webp",
+      image: "/assets/images/development-materials/lento-helix-43020031.webp",
     },
     {
       id: 43020032,
@@ -751,7 +751,7 @@ export const items = [
       qualityLevel: 3,
       dropLocations: ["Synthesis", "Forgery Challenge: Misty Forest"],
       sortIndex: 5,
-      image: "/src/assets/images/development-materials/adagio-helix-43020032.webp",
+      image: "/assets/images/development-materials/adagio-helix-43020032.webp",
     },
     {
       id: 43020033,
@@ -765,7 +765,7 @@ export const items = [
       qualityLevel: 4,
       dropLocations: ["Synthesis", "Forgery Challenge: Misty Forest"],
       sortIndex: 5,
-      image: "/src/assets/images/development-materials/andante-helix-43020033.webp",
+      image: "/assets/images/development-materials/andante-helix-43020033.webp",
     },
     {
       id: 43020034,
@@ -779,7 +779,7 @@ export const items = [
       qualityLevel: 5,
       dropLocations: ["Synthesis", "Forgery Challenge: Misty Forest"],
       sortIndex: 5,
-      image: "/src/assets/images/development-materials/presto-helix-43020034.webp",
+      image: "/assets/images/development-materials/presto-helix-43020034.webp",
     },
     {
       id: 43020041,
@@ -797,7 +797,7 @@ export const items = [
         "Weapon Shop",
       ],
       sortIndex: 5,
-      image: "/src/assets/images/development-materials/waveworn-residue-210-43020041.webp",
+      image: "/assets/images/development-materials/waveworn-residue-210-43020041.webp",
     },
     {
       id: 43020042,
@@ -811,7 +811,7 @@ export const items = [
       qualityLevel: 3,
       dropLocations: ["Synthesis", "Forgery Challenge: Eroded Ruins"],
       sortIndex: 5,
-      image: "/src/assets/images/development-materials/waveworn-residue-226-43020042.webp",
+      image: "/assets/images/development-materials/waveworn-residue-226-43020042.webp",
     },
     {
       id: 43020043,
@@ -825,7 +825,7 @@ export const items = [
       qualityLevel: 4,
       dropLocations: ["Synthesis", "Forgery Challenge: Eroded Ruins"],
       sortIndex: 5,
-      image: "/src/assets/images/development-materials/waveworn-residue-235-43020043.webp",
+      image: "/assets/images/development-materials/waveworn-residue-235-43020043.webp",
     },
     {
       id: 43020044,
@@ -839,7 +839,7 @@ export const items = [
       qualityLevel: 5,
       dropLocations: ["Synthesis", "Forgery Challenge: Eroded Ruins"],
       sortIndex: 5,
-      image: "/src/assets/images/development-materials/waveworn-residue-239-43020044.webp",
+      image: "/assets/images/development-materials/waveworn-residue-239-43020044.webp",
     },
     {
       id: 43020051,
@@ -857,7 +857,7 @@ export const items = [
         "Weapon Shop",
       ],
       sortIndex: 5,
-      image: "/src/assets/images/development-materials/cadence-seed-43020051.webp",
+      image: "/assets/images/development-materials/cadence-seed-43020051.webp",
     },
     {
       id: 43020052,
@@ -871,7 +871,7 @@ export const items = [
       qualityLevel: 3,
       dropLocations: ["Synthesis", "Forgery Challenge: Moonlit Groves"],
       sortIndex: 5,
-      image: "/src/assets/images/development-materials/cadence-bud-43020052.webp",
+      image: "/assets/images/development-materials/cadence-bud-43020052.webp",
     },
     {
       id: 43020053,
@@ -885,7 +885,7 @@ export const items = [
       qualityLevel: 4,
       dropLocations: ["Synthesis", "Forgery Challenge: Moonlit Groves"],
       sortIndex: 5,
-      image: "/src/assets/images/development-materials/cadence-leaf-43020053.webp",
+      image: "/assets/images/development-materials/cadence-leaf-43020053.webp",
     },
     {
       id: 43020054,
@@ -899,7 +899,7 @@ export const items = [
       qualityLevel: 5,
       dropLocations: ["Synthesis", "Forgery Challenge: Moonlit Groves"],
       sortIndex: 5,
-      image: "/src/assets/images/development-materials/cadence-blossom-43020054.webp",
+      image: "/assets/images/development-materials/cadence-blossom-43020054.webp",
     },
     {
       id: 36000001,
@@ -912,7 +912,7 @@ export const items = [
       qualityLevel: 2,
       dropLocations: ["Huanglong Exploration", "Tacet Field"],
       sortIndex: 0,
-      image: "/src/assets/images/development-materials/basic-sealed-tube-36000001.webp"
+      image: "/assets/images/development-materials/basic-sealed-tube-36000001.webp"
     },
     {
       id: 36000002,
@@ -925,7 +925,7 @@ export const items = [
       qualityLevel: 3,
       dropLocations: ["Huanglong Exploration", "Tacet Field"],
       sortIndex: 1,
-      image: "/src/assets/images/development-materials/medium-sealed-tube-36000002.webp",
+      image: "/assets/images/development-materials/medium-sealed-tube-36000002.webp",
     },
     {
       id: 36000003,
@@ -944,7 +944,7 @@ export const items = [
         "Simulation Training Store",
       ],
       sortIndex: 2,
-      image: "/src/assets/images/development-materials/advanced-sealed-tube-36000003.webp",
+      image: "/assets/images/development-materials/advanced-sealed-tube-36000003.webp",
     },
     {
       id: 36000004,
@@ -961,7 +961,7 @@ export const items = [
         "Simulation Training Store",
       ],
       sortIndex: 3,
-      image: "/src/assets/images/development-materials/premium-sealed-tube-36000004.webp",
+      image: "/assets/images/development-materials/premium-sealed-tube-36000004.webp",
     },
     {
       id: 41400134,
@@ -974,7 +974,7 @@ export const items = [
       qualityLevel: 4,
       dropLocations: ["Tempest Mephis"],
       sortIndex: 5,
-      image: "/src/assets/images/development-materials/hidden-thunder-tacet-core-41400134.webp",
+      image: "/assets/images/development-materials/hidden-thunder-tacet-core-41400134.webp",
     },
     {
       id: 36000011,
@@ -987,7 +987,7 @@ export const items = [
       qualityLevel: 2,
       dropLocations: ["Huanglong Exploration", "Tacet Field"],
       sortIndex: 0,
-      image: "/src/assets/images/development-materials/basic-tuner-36000011.webp",
+      image: "/assets/images/development-materials/basic-tuner-36000011.webp",
     },
     {
       id: 36000012,
@@ -1000,7 +1000,7 @@ export const items = [
       qualityLevel: 3,
       dropLocations: ["Huanglong Exploration", "Tacet Field"],
       sortIndex: 1,
-      image: "/src/assets/images/development-materials/medium-tuner-36000012.webp",
+      image: "/assets/images/development-materials/medium-tuner-36000012.webp",
     },
     {
       id: 36000013,
@@ -1013,7 +1013,7 @@ export const items = [
       qualityLevel: 4,
       dropLocations: ["Huanglong Exploration", "Tacet Field"],
       sortIndex: 2,
-      image: "/src/assets/images/development-materials/advanced-tuner-36000013.webp",
+      image: "/assets/images/development-materials/advanced-tuner-36000013.webp",
     },
     {
       id: 36000014,
@@ -1026,7 +1026,7 @@ export const items = [
       qualityLevel: 5,
       dropLocations: ["Huanglong Exploration", "Tacet Field"],
       sortIndex: 3,
-      image: "/src/assets/images/development-materials/premium-tuner-36000014.webp",
+      image: "/assets/images/development-materials/premium-tuner-36000014.webp",
     },
     {
       id: 41400144,
@@ -1040,7 +1040,7 @@ export const items = [
       qualityLevel: 4,
       dropLocations: ["Sentinel Jué"],
       sortIndex: 5,
-      image: "/src/assets/images/development-materials/sentinel-s-dagger-41400144.webp",
+      image: "/assets/images/development-materials/sentinel-s-dagger-41400144.webp",
     },
     {
       id: 41400154,
@@ -1053,7 +1053,7 @@ export const items = [
       qualityLevel: 4,
       dropLocations: ["Fallacy of No Return"],
       sortIndex: 5,
-      image: "/src/assets/images/development-materials/topological-confinement-41400154.png",
+      image: "/assets/images/development-materials/topological-confinement-41400154.png",
     },
     {
         id: 42300030,
@@ -1071,7 +1071,7 @@ export const items = [
           "Shifang Pharmacy",
         ],
         sortIndex: 0,
-        image: "/src/assets/images/development-materials/iris-42300030.png"
+        image: "/assets/images/development-materials/iris-42300030.png"
       },
       {
         id: 42300040,
@@ -1090,7 +1090,7 @@ export const items = [
           "Shifang Pharmacy",
         ],
         sortIndex: 0,
-        image: "/src/assets/images/development-materials/terraspawn-fungus-42300040.png",
+        image: "/assets/images/development-materials/terraspawn-fungus-42300040.png",
       },
       {
         id: 42300050,
@@ -1108,7 +1108,7 @@ export const items = [
           "Shifang Pharmacy",
         ],
         sortIndex: 0,
-        image: "/src/assets/images/development-materials/lanternberry-42300050.png",
+        image: "/assets/images/development-materials/lanternberry-42300050.png",
       },
       {
         id: 42300060,
@@ -1126,7 +1126,7 @@ export const items = [
           "Shifang Pharmacy",
         ],
         sortIndex: 0,
-        image: "/src/assets/images/development-materials/pecok-flower-42300060.png",
+        image: "/assets/images/development-materials/pecok-flower-42300060.png",
       },
       {
         id: 42300070,
@@ -1144,7 +1144,7 @@ export const items = [
           "Shifang Pharmacy",
         ],
         sortIndex: 0,
-        image: "/src/assets/images/development-materials/belle-poppy-42300070.png",
+        image: "/assets/images/development-materials/belle-poppy-42300070.png",
       },
       {
         id: 42300080,
@@ -1163,7 +1163,7 @@ export const items = [
           "Collection Spots",
         ],
         sortIndex: 0,
-        image: "/src/assets/images/development-materials/coriolus-42300080.png",
+        image: "/assets/images/development-materials/coriolus-42300080.png",
       },
       {
         id: 42300090,
@@ -1181,7 +1181,7 @@ export const items = [
           "Shifang Pharmacy",
         ],
         sortIndex: 0,
-        image: "/src/assets/images/development-materials/wintry-bell-42300090.png",
+        image: "/assets/images/development-materials/wintry-bell-42300090.png",
       },
       {
         id: 42300100,
@@ -1200,7 +1200,7 @@ export const items = [
           "Shifang Pharmacy",
         ],
         sortIndex: 0,
-        image: "/src/assets/images/development-materials/violet-coral-42300100.png",
+        image: "/assets/images/development-materials/violet-coral-42300100.png",
       },
       {
         id: 42310200,
@@ -1218,7 +1218,7 @@ export const items = [
           "Shifang Pharmacy",
         ],
         sortIndex: 0,
-        image: "/src/assets/images/development-materials/pavo-plum-42310200.png",
+        image: "/assets/images/development-materials/pavo-plum-42310200.png",
       },
       {
         id: 42310210,
@@ -1236,7 +1236,7 @@ export const items = [
           "Shifang Pharmacy",
         ],
         sortIndex: 0,
-        image: "/src/assets/images/development-materials/loongs-pearl-42310210.png",
+        image: "/assets/images/development-materials/loongs-pearl-42310210.png",
       },
       {
         id: 42310230,
@@ -1249,7 +1249,7 @@ export const items = [
         qualityLevel: 1,
         dropLocations: ["Black Shores", "Collection Spots", "KU-Money's Shop"],
         sortIndex: 0,
-        image: "/src/assets/images/development-materials/nova-42310230.png",
+        image: "/assets/images/development-materials/nova-42310230.png",
       },
       {
         id: null,
@@ -1262,7 +1262,7 @@ export const items = [
         qualityLevel: 1,
         dropLocations: ["Rosemary's Apothecary", "Collection Spots", "Nimbus Sanctum", "Overworld Collection"],
         sortIndex: 0,
-        image: "/src/assets/images/development-materials/firecracker-jewelweed.png",
+        image: "/assets/images/development-materials/firecracker-jewelweed.png",
       },
       {
         id: null,
@@ -1275,7 +1275,7 @@ export const items = [
         qualityLevel: 1,
         dropLocations: ["Rosemary's Apothecary", "Collection Spots", "Penitent's End", "Overworld Collection"],
         sortIndex: 0,
-        image: "/src/assets/images/development-materials/golden-fleece.png",
+        image: "/assets/images/development-materials/golden-fleece.png",
       },
       {
         id: null,
@@ -1288,7 +1288,7 @@ export const items = [
         qualityLevel: 1,
         dropLocations: ["Rosemary's Apothecary", "Collection Spots", "Ragunna", "Egla Town", "Averardo Vault", "Overworld Collection"],
         sortIndex: 0,
-        image: "/src/assets/images/development-materials/sword-acorus.png",
+        image: "/assets/images/development-materials/sword-acorus.png",
       },
   ];
 
@@ -1352,8 +1352,8 @@ export const characterlist = [
   { name: "Aalto",
     element: "aero",
     weapon: "Pistols",
-    charactericon: "/src/assets/images/character-icons-small/aalto-icon.webp",
-    characterportrait: "/src/assets/images/portraits/aalto.webp",
+    charactericon: "/assets/images/character-icons-small/aalto-icon.webp",
+    characterportrait: "/assets/images/portraits/aalto.webp",
     rarity: 4,
     version: 1.0,
     talent: [
@@ -1433,8 +1433,8 @@ export const characterlist = [
   { name: "Baizhi",
     element: "glacio",
     weapon: "Rectifier",
-    charactericon: "/src/assets/images/character-icons-small/baizhi-icon.webp",
-    characterportrait: "/src/assets/images/portraits/baizhi.webp",
+    charactericon: "/assets/images/character-icons-small/baizhi-icon.webp",
+    characterportrait: "/assets/images/portraits/baizhi.webp",
     rarity: 4,
     version: 1.0,
     talent: [
@@ -1514,8 +1514,8 @@ export const characterlist = [
   {   name: "Calcharo",
       element: "electro",
       weapon: "Broadblade",
-      charactericon: "/src/assets/images/character-icons-small/calcharo-icon.webp",
-      characterportrait: "/src/assets/images/portraits/calcharo.webp",
+      charactericon: "/assets/images/character-icons-small/calcharo-icon.webp",
+      characterportrait: "/assets/images/portraits/calcharo.webp",
       rarity: 5,
       version: 1.0,
       talent: [
@@ -1597,8 +1597,8 @@ export const characterlist = [
   {   name: "Changli",
       element: "fusion",
       weapon: "Sword",
-      charactericon: "/src/assets/images/character-icons-small/changli-icon.webp",
-      characterportrait: "/src/assets/images/portraits/changli.webp",
+      charactericon: "/assets/images/character-icons-small/changli-icon.webp",
+      characterportrait: "/assets/images/portraits/changli.webp",
       rarity: 5,
       version: 1.1,
       talent: [
@@ -1680,8 +1680,8 @@ export const characterlist = [
   {   name: "Chixia",
       element: "fusion",
       weapon: "Pistols",
-      charactericon: "/src/assets/images/character-icons-small/chixia-icon.webp",
-      characterportrait: "/src/assets/images/portraits/chixia.webp",
+      charactericon: "/assets/images/character-icons-small/chixia-icon.webp",
+      characterportrait: "/assets/images/portraits/chixia.webp",
       rarity: 4,
       version: 1.0,
       talent: [
@@ -1760,8 +1760,8 @@ export const characterlist = [
   {   name: "Danjin",
       element: "havoc",
       weapon: "Sword",
-      charactericon: "/src/assets/images/character-icons-small/danjin-icon.webp",
-      characterportrait: "/src/assets/images/portraits/danjin.webp",
+      charactericon: "/assets/images/character-icons-small/danjin-icon.webp",
+      characterportrait: "/assets/images/portraits/danjin.webp",
       rarity: 4,
       version: 1.0,
       talent: [
@@ -1845,8 +1845,8 @@ export const characterlist = [
   {   name: "Encore",
       element: "fusion",
       weapon: "Rectifier",
-      charactericon: "/src/assets/images/character-icons-small/encore-icon.webp",
-      characterportrait: "/src/assets/images/portraits/encore.webp",
+      charactericon: "/assets/images/character-icons-small/encore-icon.webp",
+      characterportrait: "/assets/images/portraits/encore.webp",
       rarity: 5,
       version: 1.0,
       talent: [
@@ -1931,8 +1931,8 @@ export const characterlist = [
   {   name: "Jianxin",
       element: "aero",
       weapon: "Gauntlets",
-      charactericon: "/src/assets/images/character-icons-small/jianxin-icon.webp",
-      characterportrait: "/src/assets/images/portraits/jianxin.webp",
+      charactericon: "/assets/images/character-icons-small/jianxin-icon.webp",
+      characterportrait: "/assets/images/portraits/jianxin.webp",
       rarity: 5,
       version: 1.0,
       talent: [
@@ -2013,8 +2013,8 @@ export const characterlist = [
   {   name: "Jinhsi",
       element: "spectro",
       weapon: "Broadblade",
-      charactericon: "/src/assets/images/character-icons-small/jinhsi-icon.webp",
-      characterportrait: "/src/assets/images/portraits/jinhsi.webp",
+      charactericon: "/assets/images/character-icons-small/jinhsi-icon.webp",
+      characterportrait: "/assets/images/portraits/jinhsi.webp",
       rarity: 5,
       version: 1.1,
       talent: [
@@ -2095,8 +2095,8 @@ export const characterlist = [
   {   name: "Jiyan",
       element: "aero",
       weapon: "Broadblade",
-      charactericon: "/src/assets/images/character-icons-small/jiyan-icon.webp",
-      characterportrait: "/src/assets/images/portraits/jiyan.webp",
+      charactericon: "/assets/images/character-icons-small/jiyan-icon.webp",
+      characterportrait: "/assets/images/portraits/jiyan.webp",
       rarity: 5,
       version: 1.0,
       talent: [
@@ -2180,8 +2180,8 @@ export const characterlist = [
   {   name: "Lingyang",
       element: "glacio",
       weapon: "Gauntlets",
-      charactericon: "/src/assets/images/character-icons-small/lingyang-icon.webp",
-      characterportrait: "/src/assets/images/portraits/lingyang.webp",
+      charactericon: "/assets/images/character-icons-small/lingyang-icon.webp",
+      characterportrait: "/assets/images/portraits/lingyang.webp",
       rarity: 5,
       version: 1.0,
       talent: [
@@ -2264,8 +2264,8 @@ export const characterlist = [
   {   name: "Mortefi",
       element: "fusion",
       weapon: "Pistols",
-      charactericon: "/src/assets/images/character-icons-small/mortefi-icon.webp",
-      characterportrait: "/src/assets/images/portraits/mortefi.webp",
+      charactericon: "/assets/images/character-icons-small/mortefi-icon.webp",
+      characterportrait: "/assets/images/portraits/mortefi.webp",
       rarity: 4,
       version: 1.0,
       talent: [
@@ -2345,8 +2345,8 @@ export const characterlist = [
   {   name: "Havoc Rover",
       element: "havoc",
       weapon: "Sword",
-      charactericon: "/src/assets/images/character-icons-small/rover-female-icon.webp",
-      characterportrait: "/src/assets/images/portraits/rover-havoc.webp",
+      charactericon: "/assets/images/character-icons-small/rover-female-icon.webp",
+      characterportrait: "/assets/images/portraits/rover-havoc.webp",
       rarity: 5,
       version: 1.0,
       talent: [
@@ -2425,8 +2425,8 @@ export const characterlist = [
   {   name: "Spectro Rover",
       element: "spectro",
       weapon: "Sword",
-      charactericon: "/src/assets/images/character-icons-small/rover-havoc-male-icon.webp",
-      characterportrait: "/src/assets/images/portraits/rover-spectro.webp",
+      charactericon: "/assets/images/character-icons-small/rover-havoc-male-icon.webp",
+      characterportrait: "/assets/images/portraits/rover-spectro.webp",
       rarity: 5,
       version: 1.0,
       talent: [
@@ -2508,8 +2508,8 @@ export const characterlist = [
   {   name: "Sanhua", //Gikapoy nako ari na part
       element: "glacio",
       weapon: "Sword",
-      charactericon: "/src/assets/images/character-icons-small/sanhua-icon.webp",
-      characterportrait: "/src/assets/images/portraits/sanhua.webp",
+      charactericon: "/assets/images/character-icons-small/sanhua-icon.webp",
+      characterportrait: "/assets/images/portraits/sanhua.webp",
       rarity: 4,
       version: 1.0,
       talent: [
@@ -2589,8 +2589,8 @@ export const characterlist = [
   {   name: "Taoqi",
       element: "havoc",
       weapon: "Broadblade",
-      charactericon: "/src/assets/images/character-icons-small/taoqi-icon.webp",
-      characterportrait: "/src/assets/images/portraits/taoqi.webp",
+      charactericon: "/assets/images/character-icons-small/taoqi-icon.webp",
+      characterportrait: "/assets/images/portraits/taoqi.webp",
       rarity: 4,
       version: 1.0,
       talent: [
@@ -2670,8 +2670,8 @@ export const characterlist = [
   {   name: "Verina",
       element: "spectro",
       weapon: "Rectifier",
-      charactericon: "/src/assets/images/character-icons-small/verina-icon.webp",
-      characterportrait: "/src/assets/images/portraits/verina.webp",
+      charactericon: "/assets/images/character-icons-small/verina-icon.webp",
+      characterportrait: "/assets/images/portraits/verina.webp",
       rarity: 4,
       version: 1.0,
       talent: [
@@ -2751,8 +2751,8 @@ export const characterlist = [
   {   name: "Yangyang",
       element: "aero",
       weapon: "Sword",
-      charactericon: "/src/assets/images/character-icons-small/yangyang-icon.webp",
-      characterportrait: "/src/assets/images/portraits/yangyang.webp",
+      charactericon: "/assets/images/character-icons-small/yangyang-icon.webp",
+      characterportrait: "/assets/images/portraits/yangyang.webp",
       rarity: 4,
       version: 1.0,
       talent: [
@@ -2832,8 +2832,8 @@ export const characterlist = [
   {   name: "Yinlin",
       element: "electro",
       weapon: "Rectifier",
-      charactericon: "/src/assets/images/character-icons-small/yinlin-icon.webp",
-      characterportrait: "/src/assets/images/portraits/yinlin.webp",
+      charactericon: "/assets/images/character-icons-small/yinlin-icon.webp",
+      characterportrait: "/assets/images/portraits/yinlin.webp",
       rarity: 5,
       version: 1.0,
       talent: [
@@ -2913,8 +2913,8 @@ export const characterlist = [
   {   name: "Yuanwu",
       element: "electro",
       weapon: "Gauntlets",
-      charactericon: "/src/assets/images/character-icons-small/yuanwu-icon.webp",
-      characterportrait: "/src/assets/images/portraits/yuanwu.webp",
+      charactericon: "/assets/images/character-icons-small/yuanwu-icon.webp",
+      characterportrait: "/assets/images/portraits/yuanwu.webp",
       rarity: 4,
       version: 1.0,
       talent: [
@@ -2994,8 +2994,8 @@ export const characterlist = [
   {   name: "Zhezhi",
       element: "glacio",
       weapon: "Rectifier",
-      charactericon: "/src/assets/images/character-icons-small/zhezhi-icon.webp",
-      characterportrait: "/src/assets/images/portraits/zhezhi.webp",
+      charactericon: "/assets/images/character-icons-small/zhezhi-icon.webp",
+      characterportrait: "/assets/images/portraits/zhezhi.webp",
       rarity: 5,
       version: 1.2,
       talent: [

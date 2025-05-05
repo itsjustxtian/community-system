@@ -9,6 +9,9 @@ import icon from 'astro-icon';
 import netlify from '@astrojs/netlify';
 
 
+import vercel from '@astrojs/vercel';
+
+
 // https://astro.build/config
 export default defineConfig({
   integrations: [
@@ -21,5 +24,5 @@ export default defineConfig({
   },
   output: 'static',
 
-  adapter: netlify()
+  adapter: vercel()
 });

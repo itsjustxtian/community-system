@@ -15,7 +15,7 @@ export const regionalspecialty = [
           "Shifang Pharmacy",
         ],
         sortIndex: 0,
-        image: "@/assets/images/development-materials/iris-42300030.png"
+        image: "/assets/images/development-materials/iris-42300030.png"
       },
       {
         id: 42300040,
@@ -34,7 +34,7 @@ export const regionalspecialty = [
           "Shifang Pharmacy",
         ],
         sortIndex: 0,
-        image: "@/assets/images/development-materials/terraspawn-fungus-42300040.png",
+        image: "/assets/images/development-materials/terraspawn-fungus-42300040.png",
       },
       {
         id: 42300050,
@@ -52,7 +52,7 @@ export const regionalspecialty = [
           "Shifang Pharmacy",
         ],
         sortIndex: 0,
-        image: "@/assets/images/development-materials/lanternberry-42300050.png",
+        image: "/assets/images/development-materials/lanternberry-42300050.png",
       },
       {
         id: 42300060,
@@ -70,7 +70,7 @@ export const regionalspecialty = [
           "Shifang Pharmacy",
         ],
         sortIndex: 0,
-        image: "@/assets/images/development-materials/pecok-flower-42300060.png",
+        image: "/assets/images/development-materials/pecok-flower-42300060.png",
       },
       {
         id: 42300070,
@@ -88,7 +88,7 @@ export const regionalspecialty = [
           "Shifang Pharmacy",
         ],
         sortIndex: 0,
-        image: "@/assets/images/development-materials/belle-poppy-42300070.png",
+        image: "/assets/images/development-materials/belle-poppy-42300070.png",
       },
       {
         id: 42300080,
@@ -107,7 +107,7 @@ export const regionalspecialty = [
           "Collection Spots",
         ],
         sortIndex: 0,
-        image: "@/assets/images/development-materials/coriolus-42300080.png",
+        image: "/assets/images/development-materials/coriolus-42300080.png",
       },
       {
         id: 42300090,
@@ -125,7 +125,7 @@ export const regionalspecialty = [
           "Shifang Pharmacy",
         ],
         sortIndex: 0,
-        image: "@/assets/images/development-materials/wintry-bell-42300090.png",
+        image: "/assets/images/development-materials/wintry-bell-42300090.png",
       },
       {
         id: 42300100,
@@ -144,7 +144,7 @@ export const regionalspecialty = [
           "Shifang Pharmacy",
         ],
         sortIndex: 0,
-        image: "@/assets/images/development-materials/violet-coral-42300100.png",
+        image: "/assets/images/development-materials/violet-coral-42300100.png",
       },
       {
         id: 42310200,
@@ -162,7 +162,7 @@ export const regionalspecialty = [
           "Shifang Pharmacy",
         ],
         sortIndex: 0,
-        image: "@/assets/images/development-materials/pavo-plum-42310200.png",
+        image: "/assets/images/development-materials/pavo-plum-42310200.png",
       },
       {
         id: 42310210,
@@ -180,7 +180,7 @@ export const regionalspecialty = [
           "Shifang Pharmacy",
         ],
         sortIndex: 0,
-        image: "@/assets/images/development-materials/loongs-pearl-42310210.png",
+        image: "/assets/images/development-materials/loongs-pearl-42310210.png",
       },
       {
         id: 42310230,
@@ -193,7 +193,7 @@ export const regionalspecialty = [
         qualityLevel: 1,
         dropLocations: ["Black Shores", "Collection Spots", "KU-Money's Shop"],
         sortIndex: 0,
-        image: "@/assets/images/development-materials/nova-42310230.png",
+        image: "/assets/images/development-materials/nova-42310230.png",
       },
       {
         id: null,
@@ -206,7 +206,7 @@ export const regionalspecialty = [
         qualityLevel: 1,
         dropLocations: ["Rosemary's Apothecary", "Collection Spots", "Nimbus Sanctum", "Overworld Collection"],
         sortIndex: 0,
-        image: "@/assets/images/development-materials/firecracker-jewelweed.png",
+        image: "/assets/images/development-materials/firecracker-jewelweed.png",
       },
       {
         id: null,
@@ -219,7 +219,7 @@ export const regionalspecialty = [
         qualityLevel: 1,
         dropLocations: ["Rosemary's Apothecary", "Collection Spots", "Penitent's End", "Overworld Collection"],
         sortIndex: 0,
-        image: "@/assets/images/development-materials/golden-fleece.png",
+        image: "/assets/images/development-materials/golden-fleece.png",
       },
       {
         id: null,
@@ -232,6 +232,6 @@ export const regionalspecialty = [
         qualityLevel: 1,
         dropLocations: ["Rosemary's Apothecary", "Collection Spots", "Ragunna", "Egla Town", "Averardo Vault", "Overworld Collection"],
         sortIndex: 0,
-        image: "@/assets/images/development-materials/sword-acorus.png",
+        image: "/assets/images/development-materials/sword-acorus.png",
       },
 ]
