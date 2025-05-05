@@ -248,3 +248,7 @@ input::-webkit-inner-spin-button {
 input[type=number] {
   -moz-appearance: textfield;
 }
+
+.cal-sans-regular {
+  font-family: "Cal Sans", sans-serif;
+}

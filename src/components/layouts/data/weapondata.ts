@@ -675,7 +675,9 @@ export const weapons = [
             }
         ],
     },
-    {/*
+    
+]
+{/*
         name: "Pistols#26",
         rarity: 4,
         image: "/src/assets/images/weapons/pistols26.webp",
@@ -824,9 +826,7 @@ export const weapons = [
         rarity: 4,
         image: "/src/assets/images/weapons/waltz-in-masquerade.webp",
         type: "Rectifier",
-    */},
-]
-
+    */}
 export const weaponrecipe = [
     {
         level: "1",

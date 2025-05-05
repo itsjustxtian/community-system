@@ -1639,7 +1639,6 @@ export const characterlist = [
             name: "Inherent Skill: Secret Strategist",
             description: {
               "": "When Changli releases Basic Attack: True Sight - Conquest or Basic Attack: True Sight - Charge, for each stack of Enflamement, Changli's Fusion DMG Bonus is increased by 5%.",
-              "": "",
             }
           },
           inherent_skill_2: {

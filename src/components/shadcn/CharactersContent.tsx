@@ -78,7 +78,7 @@ const CharactersContent = () => {
             ))}
         </div>
 
-        <DialogContent className="popup-background">
+        <DialogContent className="popup-background !w-[800px] !max-w-none">
             <DialogHeader hidden>
             <DialogTitle >Are you absolutely sure?</DialogTitle>
             <DialogDescription >
